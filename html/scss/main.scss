@@ -1,0 +1,36 @@
+html{
+    background-color: #191919;
+    body{
+        background-color: #191919;
+    }
+}
+
+#header{
+    width: 100%;
+    background-color: #000;
+    .headerContainer{
+        width: 1920px;
+        margin: 0 auto;
+        h1{
+            a{
+                img{}
+            }
+        }
+        nav{
+            .navDepth01{
+                li{
+                    a{
+                        color: #fff;
+                    }
+                    .navDepth02{
+                        li{
+                            a{
+                                color: #fff;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

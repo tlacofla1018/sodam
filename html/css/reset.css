@@ -7,8 +7,12 @@
     padding: 0; 
 }
 
-ul[role='list'], ol[role='list']{
-    list-style: none; 
+ul,ol,dl{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
 }
 
 html:focus-within{
