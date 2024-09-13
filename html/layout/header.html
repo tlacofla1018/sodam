@@ -13,9 +13,14 @@
     <meta name="theme-color" content="#ffffff">
     <!---------------------------------------------------------------------------->
     <link rel="stylesheet" href="/css/reset.css">
-    <link rel="stylesheet" href="/scss/sample.min.css?var=<?php echo time(); ?>">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css"> <!--XE아이콘 CDN-->
+    <link rel="stylesheet" href="/scss/header.min.css?var=<?php echo time(); ?>">
+    <link rel="stylesheet" href="/scss/main.min.css?var=<?php echo time(); ?>">
 </head>
 <body>
+    <div class="topBanner">
+        <button class="xi-close"></button>
+    </div>
     <header id="header">
         <div class="headerContainer">
             <h1>
@@ -140,21 +145,18 @@
             </nav>
             <ul class="utilMenu">
                 <li>
-                    <a href="#">로그인</a>
+                    <a href="#" class="xi-log-in"></a>
                 </li>
                 <li>
-                    <a href="#">회원가입</a>
+                    <a href="#" class="xi-user-plus-o"></a>
                 </li>
                 <li>
-                    <a href="#">멤버십</a>
+                    <a href="#" class="xi-coupon"></a>
                 </li>
                 <li>
-                    <a href="#">빠른예매</a>
-                </li>
-                <li>
-                    <input type="search" placeholder="'베테랑2' 9월 13일 대개봉!">
-                    <button></button>
+                    <button type="submit" class="xi-search"></button>
                 </li>
             </ul>
         </div>
+        <div class="headerfakeBg"></div>
     </header>
