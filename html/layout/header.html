@@ -17,10 +17,17 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/> <!--Swiper JS CDN-->
     <link rel="stylesheet" href="/scss/header.min.css?var=<?php echo time(); ?>">
     <link rel="stylesheet" href="/scss/main.min.css?var=<?php echo time(); ?>">
+    <link rel="stylesheet" href="/scss/footer.min.css?var=<?php echo time(); ?>">
 </head>
 <body>
     <div class="topBanner">
-        <button class="xi-close"></button>
+        <div class="btnBox">
+            <div>
+                <input type="checkbox" value="close24h" id="close24hBtn">
+                <label for="close24hBtn">오늘 하루동안 보지 않기</label>
+            </div>
+            <button>닫기</button>
+        </div>
     </div>
     <header id="header">
         <div class="headerContainer">

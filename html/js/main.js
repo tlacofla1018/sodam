@@ -1,5 +1,7 @@
 // mainBanner Swiper
-var swiper01 = new Swiper("#mainBanner.swiper.mySwiper", {});
+var swiper01 = new Swiper("#mainBanner.swiper.mySwiper", {
+  
+});
 
 // movieRank01 Swiper
 let appendNumber02 = 600;
