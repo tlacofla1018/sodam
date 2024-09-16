@@ -1,127 +1,161 @@
 html{
     background-color: #191919;
     body{
+        // 구글폰트 Noto Sans KR (100-900)
+        .noto-sans-kr-light-300 {
+            font-family: "Noto Sans KR", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 300;
+            font-style: normal;
+        }
+        .noto-sans-kr-regular-400 {
+            font-family: "Noto Sans KR", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 400;
+            font-style: normal;
+        }
+        .noto-sans-kr-medium-500 {
+            font-family: "Noto Sans KR", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 500;
+            font-style: normal;
+        }
+        .noto-sans-kr-bold-700 {
+            font-family: "Noto Sans KR", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 700;
+            font-style: normal;
+        }
+        //구글폰트 Roboto (En, 100-900, italic)
+        .roboto-bold-italic {
+            font-family: "Roboto", sans-serif;
+            font-weight: 700;
+            font-style: italic;
+        }          
+        
         background-color: #191919;
+        font-family: "Noto Sans KR", sans-serif;
+        font-weight: 400;
         font-size: 16px;
-        overflow: visible;
         height: 100vh;
-        .topBanner{
-            width: 100%;
-            height: 80px;
-            background-color: #333;
-            position: relative;
-            .btnBox{
-                font-size: .875rem;
-                display: flex;
-                align-items: center;
-                justify-content: flex-end;
-                gap: 10px;
-                position: absolute;
-                bottom: 16px;
-                right: 16px;
-                width: 100%;
-                div{
-                    display: inline-block;
+    }
+}
+
+.topBanner{
+    width: 100%;
+    height: 80px;
+    background-color: #333;
+    position: relative;
+    .btnBox{
+        font-size: .875rem;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 10px;
+        position: absolute;
+        bottom: 16px;
+        right: 16px;
+        width: 100%;
+        div{
+            display: inline-block;
+        }
+    }
+}
+#header{
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background: linear-gradient(to bottom,rgb(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4),rgba(0, 0, 0, 0));
+    z-index: 3;
+    .headerContainer{
+        width: 1440px;
+        padding: 0 60px;
+        margin: 0 auto;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: space-between;
+        h1{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            a{
+                display: block;
+                img{
+                    display: block;
+                    width: 180px;
+                    height: 100%;
+                    object-fit: contain;
                 }
             }
         }
-        #header{
-            position: sticky;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 60px;
-            background: linear-gradient(to bottom,rgb(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4),rgba(0, 0, 0, 0));
-            z-index: 3;
-            .headerContainer{
-                width: 1440px;
-                padding: 0 60px;
-                margin: 0 auto;
-                box-sizing: border-box;
+        nav{
+            width: 40%;
+            text-align: center;
+            .navDepth01{
+                width: 100%;
                 display: flex;
                 justify-content: space-between;
-                h1{
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: center;
-                    a{
+                > li{
+                    position: relative;
+                    width: 20%;
+                    > a{
                         display: block;
-                        img{
-                            display: block;
-                            width: 180px;
-                            height: 100%;
-                            object-fit: contain;
-                        }
+                        line-height: 60px;
+                        color: #fff;
                     }
-                }
-                nav{
-                    width: 40%;
-                    text-align: center;
-                    .navDepth01{
+                    .navDepth02{
+                        position: absolute;
+                        top: 100%;
+                        left: 0;
                         width: 100%;
-                        display: flex;
-                        justify-content: space-between;
-                        > li{
-                            position: relative;
-                            width: 20%;
-                            > a{
+                        height: 0;
+                        overflow: hidden;
+                        li{
+                            a{
                                 display: block;
                                 line-height: 60px;
                                 color: #fff;
                             }
-                            .navDepth02{
-                                position: absolute;
-                                top: 100%;
-                                left: 0;
-                                width: 100%;
-                                height: 0;
-                                overflow: hidden;
-                                li{
-                                    a{
-                                        display: block;
-                                        line-height: 60px;
-                                        color: #fff;
-                                    }
-                                }
-                            }
-                        }
-                    }
-                    &hover .navDepth02{
-                        height: 540px;
-                    }
-                }
-                .utilMenu{
-                    display: flex;
-                    gap: 6px;
-                    li{
-                        a{
-                            display: block;
-                            width: 24px;
-                            line-height: 60px;
-                            font-size: 14px;
-                            color: #fff;
-                        }
-                        button{
-                            width: 24px;
-                            line-height: 60px;
-                            display: inline-block;
-                            color: #fff;
-                            background-color: transparent;
-                            cursor: pointer;
-                            border: 0;
                         }
                     }
                 }
             }
-            .headerfakeBg{
-                position: absolute;
-                width: 100%;
-                height: 0;
-                top: 0;
-                left: 0;
-                background-color: #ccc;
-                z-index: -1;
+            &hover .navDepth02{
+                height: 540px;
             }
-        }        
+        }
+        .utilMenu{
+            display: flex;
+            gap: 6px;
+            li{
+                a{
+                    display: block;
+                    width: 24px;
+                    line-height: 60px;
+                    font-size: 14px;
+                    color: #fff;
+                }
+                button{
+                    width: 24px;
+                    line-height: 60px;
+                    display: inline-block;
+                    color: #fff;
+                    background-color: transparent;
+                    cursor: pointer;
+                    border: 0;
+                }
+            }
+        }
     }
-}
+    .headerfakeBg{
+        position: absolute;
+        width: 100%;
+        height: 0;
+        top: 0;
+        left: 0;
+        background-color: #ccc;
+        z-index: -1;
+    }
+}        

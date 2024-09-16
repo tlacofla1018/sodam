@@ -1,31 +1,34 @@
 // mainBanner Swiper
 var swiper01 = new Swiper("#mainBanner.swiper.mySwiper", {
-  
-});
-
-// movieRank01 Swiper
-let appendNumber02 = 600;
-let prependNumber02 = 1;
-const swiper02 = new Swiper('#nowMovieRankContents01.swiper', {
-    slidesPerView: 5,
-    centeredSlides: false,
-    spaceBetween: 20,
+    slidesPerView: 1,
+    spaceBetween: 0,
+    autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+        },
+    loop: true,
     pagination: {
-    el: '#nowMovieRankContents01 .swiper-pagination',
-    type: 'fraction',
+        el: ".swiper-pagination",
+        clickable: true,
     },
     navigation: {
-        nextEl: '#nowMovieRankContents01 .swiper-button-next',
-        prevEl: '#nowMovieRankContents01 .swiper-button-prev',
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
     },
-    virtual: {
-        slides: (function () {
-            const slides = [];
-            for (var i = 0; i < 600; i += 1) {
-                slides.push('Slide ' + (i + 1));
-            }
-            return slides;
-        })(),
+});
+
+// nowMovieRank Swiper
+var swiper02 = new Swiper("#nowMovieRank.swiper.mySwiper", {
+    slidesPerView: 1,
+    spaceBetween: 30,
+    loop: true,
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+    },
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
     },
 });
 
