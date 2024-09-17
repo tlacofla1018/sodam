@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ol,ul,dl{
+            list-style: none;
+        }
+        a{
+            text-decoration: none;
+        }
+
+        main{
+            width: 1280px;
+            margin: 0 auto;
+        }
+        main h2{}
+
+        main form fieldset{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .joinSearchBtn{
+            display: flex;
+            gap: 6px;
+            align-items: center;
+        }
+        .joinSearchBtn li{
+            display: flex;
+            gap: 6px;
+            align-items: center;
+        }
+        .joinSearchBtn li::after{
+            content: '';
+            display: block;
+            width: 1px;
+            height: 14px;
+            background-color: #333;
+        }
+        .joinSearchBtn li:last-child::after{
+            display: none;
+        }
+        .joinSearchBtn li a{
+            display: block;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h2>로그인</h2>
+        <ul>
+            <li><a href="#">회원 로그인</a></li>
+            <li><a href="#">비회원 로그인</a></li>
+            <li><a href="#">QR 로그인</a></li>
+        </ul>
+        <form action="">
+            <!-- 회원 -->
+            <fieldset>
+                <legend>회원 로그인</legend>
+                <span>
+                    <input type="text" id="loginUserId" name="loginUserId" placeholder="아이디 또는 이메일을 입력해 주세요">
+                </span>
+                <span>
+                    <input type="password" id="loginUserPw" name="loginUserPw" placeholder="비밀번호를 입력해 주세요">
+                </span>
+                <span>
+                    <input type="checkbox" id="autoLogin" name="autoLogin" value="autoLogin">
+                    <label for="autoLogin">로그인 상태 유지</label>
+                </span>
+                <span>
+                    <input type="submit" value="memberLogin">
+                </span>
+            </fieldset>
+            <!-- 비회원 -->
+            <fieldset>
+                <legend>비회원 로그인</legend>
+                <span>
+                    <input type="text" id="loginUserName" name="loginUserName" placeholder="이름을 입력해 주세요">
+                </span>
+                <span>
+                    <input type="text" id="loginUserPn" name="loginUserPn" placeholder="휴대폰 번호 11자리를 입력해주세요 (-생략)">
+                </span>
+                <span>
+                    <input type="password" id="loginBookNum01" name="loginBookNum01" placeholder="예매 비밀번호 6-10자리를 입력해주세요">
+                </span>
+                <span>
+                    <input type="password" id="loginBookNum02" name="loginBookNum02" placeholder="예매 비밀번호 6-10자리를 재입력해주세요">
+                </span>
+                <span>
+                    <input type="submit" value="nonMemberLogin">
+                </span>
+            </fieldset>
+            <!-- QR -->
+            <fieldset>
+                <legend>QR 로그인</legend>
+                <span></span>
+                <span>
+                    <span>
+                        <img src="" alt="">
+                    </span>
+                    <span></span>
+                </span>
+                <span>
+                    <input type="submit" value="qrLogin">
+                </span>
+            </fieldset>
+        </form>
+        <ul class="joinSearchBtn">
+            <li>
+                <a href="#">회원가입</a>
+            </li>
+            <li>
+                <a href="#">아이디 찾기</a>
+            </li>
+            <li>
+                <a href="#">비밀번호 찾기</a>
+            </li>
+        </ul>
+        <div class="otherLoginBox">
+            <button type="button">
+                <span><img src="" alt=""></span>
+                <span>Facebook 계정으로 로그인</span>
+            </button>
+            <button type="button">
+                <span><img src="" alt=""></span>
+                <span>Google 계정으로 로그인</span>
+            </button>
+            <button type="button">
+                <span><img src="" alt=""></span>
+                <span>Naver 계정으로 로그인</span>
+            </button>
+            <button type="button">
+                <span><img src="" alt=""></span>
+                <span>Kakao 계정으로 로그인</span>
+            </button>
+        </div>
+    </main>
+</body>
+</html>
