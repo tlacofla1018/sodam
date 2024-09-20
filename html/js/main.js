@@ -17,8 +17,8 @@ var swiper01 = new Swiper("#mainBanner.swiper.mySwiper", {
     },
 });
 
-// nowMovieRank Swiper
-var swiper02 = new Swiper("#nowMovieRank.swiper.mySwiper", {
+// nowRankContent Swiper
+var swiper02 = new Swiper("#nowRankContent.swiper.mySwiper", {
     slidesPerView: 1,
     spaceBetween: 30,
     loop: true,
@@ -27,8 +27,53 @@ var swiper02 = new Swiper("#nowMovieRank.swiper.mySwiper", {
         clickable: true,
     },
     navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
+        nextEl: ".swiper-button.nextBtn",
+        prevEl: ".swiper-button.prevBtn",
+    },
+});
+
+// recentRankContent Swiper
+var swiper03 = new Swiper("#recentRankContent.swiper.mySwiper", {
+    slidesPerView: 1,
+    spaceBetween: 30,
+    loop: true,
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+    },
+    navigation: {
+        nextEl: ".nextBtn",
+        prevEl: ".prevBtn",
+    },
+});
+
+// scheduledRankContent Swiper
+var swiper04 = new Swiper("#scheduledRankContent.swiper.mySwiper", {
+    slidesPerView: 1,
+    spaceBetween: 30,
+    loop: true,
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+    },
+    navigation: {
+        nextEl: ".nextBtn",
+        prevEl: ".prevBtn",
+    },
+});
+
+// dDayRankContent Swiper
+var swiper05 = new Swiper("#dDayRankContent.swiper.mySwiper", {
+    slidesPerView: 1,
+    spaceBetween: 30,
+    loop: true,
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+    },
+    navigation: {
+        nextEl: ".nextBtn",
+        prevEl: ".prevBtn",
     },
 });
 

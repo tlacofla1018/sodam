@@ -20,7 +20,7 @@ html:focus-within{
 }
 
 a:not([class]){
-    text-decoration-skip-ink: auto; 
+    /* text-decoration-skip-ink: auto; */
 }
 
 img, picture, svg, video, canvas{
@@ -50,6 +50,5 @@ input, button, textarea, select{
 }
 
 body, html{
-    height: 100vh; 
     scroll-behavior: smooth; 
 }

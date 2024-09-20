@@ -1,119 +1,120 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        *{
-            margin: 0;
-            padding: 0;
-        }
-        ol,ul,dl{
-            list-style: none;
-        }
-        a{
-            text-decoration: none;
-        }
+<?php include_once("../layout/header.html"); ?>
 
-        main{
-            width: 1280px;
-            margin: 0 auto;
-        }
-        main h2{}
 
-        main form fieldset{
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-        }
-
-        .joinSearchBtn{
-            display: flex;
-            gap: 6px;
-            align-items: center;
-        }
-        .joinSearchBtn li{
-            display: flex;
-            gap: 6px;
-            align-items: center;
-        }
-        .joinSearchBtn li::after{
-            content: '';
-            display: block;
-            width: 1px;
-            height: 14px;
-            background-color: #333;
-        }
-        .joinSearchBtn li:last-child::after{
-            display: none;
-        }
-        .joinSearchBtn li a{
-            display: block;
-            color: #333;
-        }
-    </style>
-</head>
-<body>
-    <main>
+<main id="loginMain">
+    <div id="loginTabBox">
         <h2>로그인</h2>
-        <ul>
-            <li><a href="#">회원 로그인</a></li>
-            <li><a href="#">비회원 로그인</a></li>
-            <li><a href="#">QR 로그인</a></li>
+        <!-- Nav tabs -->
+        <ul id="loginTab" class="nav nav-underline justify-content-center" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#member" type="button" role="tab" aria-controls="home" aria-selected="true">회원 로그인</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#nonMember" type="button" role="tab" aria-controls="profile" aria-selected="false">비회원 로그인</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="messages-tab" data-bs-toggle="tab" data-bs-target="#sns" type="button" role="tab" aria-controls="messages" aria-selected="false">SNS 로그인</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="messages-tab" data-bs-toggle="tab" data-bs-target="#qr" type="button" role="tab" aria-controls="messages" aria-selected="false">QR 로그인</button>
+            </li>
         </ul>
-        <form action="">
-            <!-- 회원 -->
-            <fieldset>
-                <legend>회원 로그인</legend>
-                <span>
-                    <input type="text" id="loginUserId" name="loginUserId" placeholder="아이디 또는 이메일을 입력해 주세요">
-                </span>
-                <span>
-                    <input type="password" id="loginUserPw" name="loginUserPw" placeholder="비밀번호를 입력해 주세요">
-                </span>
-                <span>
-                    <input type="checkbox" id="autoLogin" name="autoLogin" value="autoLogin">
-                    <label for="autoLogin">로그인 상태 유지</label>
-                </span>
-                <span>
-                    <input type="submit" value="memberLogin">
-                </span>
-            </fieldset>
-            <!-- 비회원 -->
-            <fieldset>
-                <legend>비회원 로그인</legend>
-                <span>
-                    <input type="text" id="loginUserName" name="loginUserName" placeholder="이름을 입력해 주세요">
-                </span>
-                <span>
-                    <input type="text" id="loginUserPn" name="loginUserPn" placeholder="휴대폰 번호 11자리를 입력해주세요 (-생략)">
-                </span>
-                <span>
-                    <input type="password" id="loginBookNum01" name="loginBookNum01" placeholder="예매 비밀번호 6-10자리를 입력해주세요">
-                </span>
-                <span>
-                    <input type="password" id="loginBookNum02" name="loginBookNum02" placeholder="예매 비밀번호 6-10자리를 재입력해주세요">
-                </span>
-                <span>
-                    <input type="submit" value="nonMemberLogin">
-                </span>
-            </fieldset>
-            <!-- QR -->
-            <fieldset>
-                <legend>QR 로그인</legend>
-                <span></span>
-                <span>
-                    <span>
-                        <img src="" alt="">
-                    </span>
-                    <span></span>
-                </span>
-                <span>
-                    <input type="submit" value="qrLogin">
-                </span>
-            </fieldset>
-        </form>
+    </div>
+
+    <div id="loginContentBox">
+        <!-- Tab panes -->
+        <div class="tab-content">
+            <div class="tab-pane active" id="member" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
+                <form action="">
+                    <fieldset>
+                        <legend>회원 로그인</legend>
+                        <div class="fieldsetContainer">
+                            <span class="inputBox">
+                                <span>
+                                    <input type="text" id="loginUserId" name="loginUserId" placeholder="아이디 또는 이메일을 입력해 주세요" autofocus required>
+                                </span>
+                                <span>
+                                    <input type="password" id="loginUserPw" name="loginUserPw" placeholder="비밀번호를 입력해 주세요" required>
+                                </span>
+                            </span>
+                            <span class="loginCheckBox">
+                                <input type="checkbox" id="autoLogin" name="autoLogin" value="autoLogin">
+                                <label for="autoLogin">로그인 상태 유지</label>
+                            </span>
+                        </div>
+                        <span class="submitBtn">
+                            <input type="submit" value="memberLogin">
+                        </span>
+                    </fieldset>
+                </form>
+            </div>
+            <div class="tab-pane" id="nonMember" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
+                <form action="">
+                    <fieldset>
+                        <legend>비회원 로그인</legend>
+                        <span class="inputBox">
+                            <span>
+                                <input type="text" id="loginUserName" name="loginUserName" placeholder="이름을 입력해 주세요" autofocus required>
+                            </span>
+                            <span>
+                                <input type="text" id="loginUserPn" name="loginUserPn" placeholder="휴대폰 번호 11자리를 입력해주세요 (-생략)" required>
+                            </span>
+                            <span>
+                                <input type="password" id="loginBookNum01" name="loginBookNum01" placeholder="예매 비밀번호 6-10자리를 입력해주세요" required>
+                            </span>
+                            <span>
+                                <input type="password" id="loginBookNum02" name="loginBookNum02" placeholder="예매 비밀번호 6-10자리를 재입력해주세요" required>
+                            </span>
+                        </span>
+                        <span class="submitBtn">
+                            <input type="submit" value="nonMemberLogin">
+                        </span>
+                    </fieldset>
+                </form>
+            </div>
+            <div class="tab-pane" id="sns" role="tabpanel" aria-labelledby="messages-tab" tabindex="0">
+                <form action="">
+                    <fieldset>
+                        <legend>SNS 로그인</legend>
+                        <div class="otherLoginBox">
+                            <button type="button">
+                                <span><img src="" alt=""></span>
+                                <span>Facebook 계정으로 로그인</span>
+                            </button>
+                            <button type="button">
+                                <span><img src="" alt=""></span>
+                                <span>Google 계정으로 로그인</span>
+                            </button>
+                            <button type="button">
+                                <span><img src="" alt=""></span>
+                                <span>Naver 계정으로 로그인</span>
+                            </button>
+                            <button type="button">
+                                <span><img src="" alt=""></span>
+                                <span>Kakao 계정으로 로그인</span>
+                            </button>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+            <div class="tab-pane" id="qr" role="tabpanel" aria-labelledby="messages-tab" tabindex="0">
+                <form action="">
+                    <fieldset>
+                        <legend>QR 로그인</legend>
+                        <span class="qrCode">
+                            <span>
+                                <img src="" alt="">
+                            </span>
+                            <span>유효시간</span>
+                        </span>
+                        <span class="submitBtn">
+                            <input type="submit" value="qrLogin">
+                        </span>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+
         <ul class="joinSearchBtn">
             <li>
                 <a href="#">회원가입</a>
@@ -125,24 +126,9 @@
                 <a href="#">비밀번호 찾기</a>
             </li>
         </ul>
-        <div class="otherLoginBox">
-            <button type="button">
-                <span><img src="" alt=""></span>
-                <span>Facebook 계정으로 로그인</span>
-            </button>
-            <button type="button">
-                <span><img src="" alt=""></span>
-                <span>Google 계정으로 로그인</span>
-            </button>
-            <button type="button">
-                <span><img src="" alt=""></span>
-                <span>Naver 계정으로 로그인</span>
-            </button>
-            <button type="button">
-                <span><img src="" alt=""></span>
-                <span>Kakao 계정으로 로그인</span>
-            </button>
-        </div>
-    </main>
-</body>
-</html>
+    </div>
+
+</main>
+
+
+<?php include_once("../layout/footer.html"); ?>

@@ -1,0 +1,313 @@
+@mixin contentsTitleStyle{
+    line-height: 34px;
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #fff;
+}
+@mixin plusBtnStyle{
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    color: #FFF;
+}
+@mixin rankNumberStyle{
+    font-family: "Roboto", sans-serif;
+    font-style: italic;
+    font-weight: 700;
+    font-size: 3rem;
+    line-height: 56px;
+    color: #fff;
+    position: absolute;
+    top: 294px;
+    left: 0;
+    padding-left: 12px;
+    width: 100%;
+}
+@mixin movieName{
+    font-size: 1.125rem;
+    font-weight: 600;
+    line-height: 26px;
+}
+@mixin afterLine14px{
+    content: '';
+    width: 1px;
+    height: 14px;
+    background-color: #fff;
+    display: inline-block;
+}
+
+#movieMain{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 140px;
+    padding-bottom: 140px;
+    section{
+        display: flex;
+        flex-direction: column;
+        gap: 100px;
+        .titleBox{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .contentsTitle{
+                @include contentsTitleStyle;
+            }
+            .plusBtn{
+                display: flex;
+                gap: 4px;
+                align-items: center;
+                span{
+                    display: block;
+                    @include plusBtnStyle;
+                }
+                img{
+                    display: block;
+                    width: 14px;
+                    height: 14px;
+                    object-fit: cover;
+                    transform: rotate(180deg);
+                }
+            }
+        }
+    }
+    #mainBannerBox{
+        width: 100%;
+        max-width: 1920px;
+        height: 700px;
+        #mainBanner{
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            .swiper-wrapper{
+                .swiper-slide{
+                    a{
+                        img{
+                            display: block;
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    #movieRankBox{
+        width: 1280px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        article{
+            display: flex;
+            flex-direction: column;
+            // gap: 10px;
+            .swiper.mySwiper{
+                width: 100%;
+                height: 100%;
+                margin: 0 auto;
+                > .swiper-wrapper{
+                    width: 100%;
+                    display: flex;
+                    > .swiper-slide{
+                        width: 100%;
+                        display: flex;
+                        gap: 30px;
+                        > div{
+                            width: 232px;
+                            position: relative;
+                            .topContent{
+                                display: block;
+                                position: relative;
+                                padding-bottom: 20px;
+                                &::before{
+                                    content: '';
+                                    display: block;
+                                    position: absolute;
+                                    left: 0;
+                                    top: 0;
+                                    width: 100%;
+                                    height: 330px;
+                                    border-radius: 10px;
+                                    background-color: transparent;
+                                    transition: all 0.4s ease-in-out;
+                                    z-index: 1;
+                                }
+                                &:hover::before{
+                                    background-color: rgb(0, 0, 0, .7);
+                                    border: solid 1px rgb(229, 9, 20, .7);
+                                }
+                                > img{
+                                    display: block;
+                                    width: 100%;
+                                    height: 330px;
+                                    object-fit: cover;
+                                    border-radius: 10px;
+                                    border: solid 1px rgb(255, 255, 255, .4);
+                                    box-sizing: border-box;
+                                }
+                                .rankNumber{
+                                    @include rankNumberStyle;
+                                    display: block;
+                                    z-index: 3;
+                                    &::after{
+                                        content: '';
+                                        display: block;
+                                        width: 100%;
+                                        height: 50px;
+                                        position: absolute;
+                                        bottom: 20px;
+                                        left: 0;
+                                        border-radius: 10px;
+                                        background: linear-gradient(to top, rgb(0, 0, 0, .6), rgb(0, 0, 0, 0));
+                                        z-index: -1;
+                                    }
+                                }
+                                .likeBtn{
+                                    position: absolute;
+                                    top: 10px;
+                                    right: 10px;
+                                    display: none;
+                                    align-items: center;
+                                    justify-content: center;
+                                    width: 36px;
+                                    height: 36px;
+                                    // background-color: rgb(0, 0, 0, 0.6);
+                                    border-radius: 50%;
+                                    cursor: pointer;
+                                    transition: all 0.4s ease-in-out;
+                                    z-index: 3;
+                                    > img{
+                                        display: block;
+                                        width: 24px;
+                                        height: 24px;
+                                        object-fit: cover;
+                                    }
+                                }
+                                &:hover .likeBtn{
+                                    display: flex;
+                                }
+                                .hoverBtn{
+                                    display: none;
+                                    flex-direction: column;
+                                    gap: 10px;
+                                    justify-content: center;
+                                    align-items: center;
+                                    position: absolute;
+                                    top: 0;
+                                    left: 0;
+                                    width: 100%;
+                                    height: 330px;
+                                    transition: all 0.4s ease-in-out;
+                                    z-index: 2;
+                                    a{
+                                        display: block;
+                                        font-weight: 500;
+                                        line-height: 26px;
+                                        padding: 6px 66px;
+                                        color: #fff;
+                                        border: solid 1px #FFF;
+                                        border-radius: 6px;
+                                    }
+                                }
+                                &:hover .hoverBtn{
+                                    display: flex;
+                                }
+                            }
+                            > a{
+                                color: #fff;
+                                display: block;
+                                .middleContent{
+                                    display: flex;
+                                    gap: 6px;
+                                    justify-content: center;
+                                    align-items: center;
+                                    margin-bottom: 6px;
+                                    img{
+                                        display: inline-block;
+                                        width: 24px;
+                                        height: 24px;
+                                        object-fit: cover;
+                                    }
+                                    strong{
+                                        @include movieName;
+                                        display: inline-block;
+                                    }
+                                }
+                                .bottomContent{
+                                    display: flex;
+                                    gap: 6px;
+                                    justify-content: center;
+                                    align-items: center;
+                                    > span{
+                                        display: flex;
+                                        gap: 4px;
+                                        align-items: center;
+                                        &::after{
+                                            @include afterLine14px;
+                                            margin-left: 2px;
+                                        }
+                                        &:last-child::after{
+                                            display: none;
+                                        }
+                                        span{
+                                            display: inline-block;
+                                            font-size: 14px;
+                                            line-height: 20px;
+                                        }
+                                        .numText{
+                                            display: inline-block;
+                                            font-weight: 600;
+                                            font-size: 14px;
+                                            line-height: 20px;
+                                        }
+                                        img{
+                                            display: inline-block;
+                                            width: 14px;
+                                            height: 14px;
+                                            object-fit: cover;
+                                        }
+                                    }
+                                }
+                            }
+                            .adClock{
+                                display: flex;
+                                align-items: center;
+                                justify-content: flex-end;
+                                gap: 4px;
+                                color: #fff;
+                                padding-right: 8px;
+                                img{
+                                    display: block;
+                                    width: 14px;
+                                    height: 14px;
+                                    object-fit: cover;
+                                }
+                                span{
+                                    display: block;
+                                    font-size: 12px;
+                                    line-height: 20px;
+                                }
+                            }
+                        }
+                    }
+                }
+                // 스와이퍼 페이지네이션
+                .swiper-pagination-bullet {
+                    width: 14px;
+                    height: 14px;
+                    text-align: center;
+                    line-height: 20px;
+                    font-size: 12px;
+                    color: #000;
+                    opacity: 1;
+                    background: rgba(0, 0, 0, 0.2);
+                }
+                .swiper-pagination-bullet-active {
+                    color: #fff;
+                    background: #007aff;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,144 @@
+#loginMain{
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    width: 1280px;
+    margin: 0 auto;
+    padding: 100px 0;
+    #loginTabBox{
+        display: flex;
+        justify-content: space-between;
+        h2{
+            color: #fff;
+        }
+        #loginTab{
+            .nav-item{
+                .nav-link{
+                    color: #969696;
+                }
+                .active{
+                    color: #fff;
+                }
+            }
+        }
+    }
+    #loginContentBox{
+        width: 60%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        .tab-content{
+            width: 100%;
+            padding: 50px 30px;
+            box-sizing: border-box;
+            border: solid 1px #fff;
+            border-radius: 14px;
+            .tab-pane{
+                &.active{
+                    color: #fff;
+                }
+                form{
+                    fieldset{
+                        display: flex;
+                        flex-direction: column;
+                        gap: 40px;
+                        legend{}
+                        .inputBox{
+                            display: flex;
+                            flex-direction: column;
+                            gap: 10px;
+                            span{
+                                input{
+                                    line-height: 60px;
+                                    width: 100%;
+                                    border-radius: 10px;
+                                    background-color: #000;
+                                    border: solid 1px #fff;
+                                    outline: 0;
+                                    color: #fff;
+                                    padding: 0 20px;
+                                    box-sizing: border-box;
+                                    &::placeholder{
+                                        color: #ccc;
+                                    }
+                                }
+                            }
+                        }
+                        .submitBtn{
+                            input{
+                                background-color: #fff;
+                                border-radius: 10px;
+                                border: 0;
+                            }
+                        }
+                        .fieldsetContainer{
+                            display: flex;
+                            flex-direction: column;
+                            gap: 14px;
+                            .loginCheckBox{
+                                display: flex;
+                                align-items: center;
+                                justify-content: flex-end;
+                                gap: 10px;
+                                padding: 0 20px;
+                            }
+                        }
+                        .submitBtn{
+                            input{
+                                display: block;
+                                line-height: 60px;
+                                width: 100%;
+                            }
+                        }
+                    }
+                    .otherLoginBox{
+                        display: flex;
+                        flex-direction: column;
+                        gap: 10px;
+                        button{
+                            line-height: 60px;
+                            width: 100%;
+                            border-radius: 10px;
+                        }
+                    }
+                    .qrCode{
+                        width: 50%;
+                        margin: 0 auto;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        gap: 10px;
+                        span{
+                            text-align: center;
+                        }
+                    }
+                }
+            }
+        }
+        .joinSearchBtn{
+            display: flex;
+            gap: 10px;
+            justify-content: flex-end;
+            padding: 0 20px;
+            li{
+                display: flex;
+                gap: 10px;
+                align-items: center;
+                &::after{
+                    content: '';
+                    display: block;
+                    width: 1px;
+                    height: 16px;
+                    background-color: #fff;
+                }
+                &:last-child::after{
+                    display: none;
+                }
+                a{
+                    color: #fff;
+                }
+            }
+        }
+    }
+}
