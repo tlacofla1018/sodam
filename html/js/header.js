@@ -28,3 +28,23 @@ function closePopUp() {
         setCookie("popup", "done", 1); // 쿠키를 하루 동안 유지
     }
 } 
+
+addEventListener('scroll', function(){
+    const header = document.querySelector('#header');
+    if(window.scrollY > 820){
+        header.classList.add('scrolledBg');
+    }else{
+        header.classList.remove('scrolledBg');
+    }
+    
+    const headerLogo = document.querySelector('.headerLogo');
+    const headerLogoSticky = document.querySelector('.headerLogoSticky');
+    if(window.scrollY > 60){
+        headerLogo.classList.remove('activeHeader');
+        headerLogoSticky.classList.add('activeHeader');
+        
+    }else{
+        headerLogo.classList.add('activeHeader');
+        headerLogoSticky.classList.remove('activeHeader');
+    }
+});

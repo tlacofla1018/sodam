@@ -17,8 +17,8 @@ var swiper01 = new Swiper("#mainBanner.swiper.mySwiper", {
     },
 });
 
-// nowRankContent Swiper
-var swiper02 = new Swiper("#nowRankContent.swiper.mySwiper", {
+// nowRecentRankContent Swiper
+var swiper03 = new Swiper(".rankContent01 .swiper.mySwiper", {
     slidesPerView: 1,
     spaceBetween: 30,
     loop: true,
@@ -27,13 +27,13 @@ var swiper02 = new Swiper("#nowRankContent.swiper.mySwiper", {
         clickable: true,
     },
     navigation: {
-        nextEl: ".swiper-button.nextBtn",
-        prevEl: ".swiper-button.prevBtn",
+        nextEl: ".rankContent01 .nextBtn",
+        prevEl: ".rankContent01 .prevBtn",
     },
 });
 
-// recentRankContent Swiper
-var swiper03 = new Swiper("#recentRankContent.swiper.mySwiper", {
+// scheduledDdayRankContent Swiper
+var swiper04 = new Swiper(".rankContent02 .swiper.mySwiper", {
     slidesPerView: 1,
     spaceBetween: 30,
     loop: true,
@@ -42,38 +42,8 @@ var swiper03 = new Swiper("#recentRankContent.swiper.mySwiper", {
         clickable: true,
     },
     navigation: {
-        nextEl: ".nextBtn",
-        prevEl: ".prevBtn",
-    },
-});
-
-// scheduledRankContent Swiper
-var swiper04 = new Swiper("#scheduledRankContent.swiper.mySwiper", {
-    slidesPerView: 1,
-    spaceBetween: 30,
-    loop: true,
-    pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-    },
-    navigation: {
-        nextEl: ".nextBtn",
-        prevEl: ".prevBtn",
-    },
-});
-
-// dDayRankContent Swiper
-var swiper05 = new Swiper("#dDayRankContent.swiper.mySwiper", {
-    slidesPerView: 1,
-    spaceBetween: 30,
-    loop: true,
-    pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-    },
-    navigation: {
-        nextEl: ".nextBtn",
-        prevEl: ".prevBtn",
+        nextEl: ".rankContent02 .nextBtn",
+        prevEl: ".rankContent02 .prevBtn",
     },
 });
 
