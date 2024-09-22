@@ -36,6 +36,25 @@
     background-color: #fff;
     display: inline-block;
 }
+@keyframes logo-scroll01 {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(calc(-250px * 7));
+    }
+}
+
+@keyframes logo-scroll02 {
+    0% {
+        transform: translateX(calc(-250px * 7));
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
 
 .titleBox{
     display: flex;
@@ -67,8 +86,8 @@
     display: flex;
     flex-direction: column;
     gap: 120px;
-    transform: translateY(-80px);
-    margin: 0 0 -80px;
+    transform: translateY(-160px);
+    margin: 0 0 -160px;
 
     // 섹션1 - 메인배너
     #mainBannerBox{
@@ -103,7 +122,7 @@
             display: flex;
             flex-direction: column;
             gap: 60px;
-            border-radius: 12px;
+            border-radius: 8px;
             padding: 20px 30px;
             background-color: #333;
             .movieRank{
@@ -156,22 +175,22 @@
                                             top: 0;
                                             width: 100%;
                                             height: 330px;
-                                            border-radius: 10px;
+                                            border-radius: 8px;
                                             background-color: transparent;
                                             transition: all 0.4s ease-in-out;
                                             z-index: 1;
                                         }
                                         &:hover::before{
-                                            background-color: rgb(0, 0, 0, .7);
-                                            border: solid 1px rgb(229, 9, 20, .7);
+                                            background-color: rgb(0, 0, 0, .6);
+                                            border: solid 1px rgb(229, 9, 20, .6);
                                         }
                                         > img{
                                             display: block;
                                             width: 100%;
                                             height: 330px;
                                             object-fit: cover;
-                                            border-radius: 10px;
-                                            border: solid 1px rgb(255, 255, 255, .4);
+                                            border-radius: 8px;
+                                            border: solid 1px rgb(255, 255, 255, .1);
                                             box-sizing: border-box;
                                         }
                                         .rankNumber{
@@ -186,7 +205,7 @@
                                                 position: absolute;
                                                 bottom: 20px;
                                                 left: 0;
-                                                border-radius: 10px;
+                                                border-radius: 8px;
                                                 background: linear-gradient(to top, rgb(0, 0, 0, .6), rgb(0, 0, 0, 0));
                                                 z-index: -1;
                                             }
@@ -210,9 +229,9 @@
                                                 width: 24px;
                                                 height: 24px;
                                                 object-fit: cover;
-                                            }
-                                            .heartBtn:hover{
-                                                content: 'url(/img/icon/fillHeartIcon.svg)';
+                                                &:hover{
+                                                    content: 'url(/img/icon/fillHeartIcon.svg)';
+                                                }
                                             }
                                         }
                                         &:hover .likeBtn{
@@ -238,7 +257,7 @@
                                                 padding: 6px 66px;
                                                 color: #fff;
                                                 border: solid 1px #FFF;
-                                                border-radius: 6px;
+                                                border-radius: 8px;
                                             }
                                         }
                                         &:hover .hoverBtn{
@@ -383,13 +402,13 @@
                 justify-content: space-between;
                 width: 416px;
                 height: 228px;
-                border-radius: 14px;
+                border-radius: 8px;
                 padding: 14px 16px;
-                border: solid 1px rgb(255, 255, 255, .2);
+                border: solid 1px rgb(255, 255, 255, .1);
                 box-sizing: border-box;
                 &:hover{
                     background-color: rgba(255, 255, 255, .2);
-                    border: solid 1px rgb(229, 9, 20, .7);
+                    border: solid 1px rgb(229, 9, 20, .6);
                 }
                 .reviewLeft{
                     position: relative;
@@ -436,7 +455,7 @@
                             left: 0;
                             position: absolute;
                             border-radius: 8px;
-                            background: linear-gradient(to top, rgb(0, 0, 0, .8), rgb(0, 0, 0, 0));
+                            background: linear-gradient(to top, rgb(0, 0, 0, .6), rgb(0, 0, 0, 0));
                         }
                     }
                 }
@@ -553,8 +572,8 @@
                         width: 640px;
                         height: 330px;
                         object-fit: cover;
-                        border-radius: 10px;
-                        border: solid 1px rgb(255, 255, 255, .4);
+                        border-radius: 8px;
+                        border: solid 1px rgb(255, 255, 255, .1);
                         box-sizing: border-box;
                     }
                 }
@@ -617,24 +636,59 @@
         display: flex;
         flex-direction: column;
         gap: 20px;
-        #previewList{
+        .previewContent{
+            width: 100%;
+            max-width: 1280px;
+            display: flex;
+            justify-content: space-between;
+            li{
+                width: 16%;
+                &.previewHover{
+                    width: 32%;
+                }
+                a{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    gap: 10px;
+                    img{
+                        width: 100%;
+                        height: 200px;
+                        object-fit: cover;
+                        border-radius: 8px;
+                        border: solid 1px rgb(255, 255, 255, .1);
+                    }
+                }
+            }
+        }
+    }
+
+    // 섹션 7 - 스토어
+    #storeBox{
+        width: 100%;
+        max-width: 1280px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        #storeList{
             display: flex;
             gap: 16px;
-            .previewContent{
+            .storeContent{
                 position: relative;
                 overflow: hidden;
                 width: 416px;
                 height: 228px;
-                border: solid 1px rgb(255, 255, 255, .4);
-                border-radius: 14px;
+                border: solid 1px rgb(255, 255, 255, .1);
+                border-radius: 8px;
                 &:hover{
-                    border: solid 1px rgb(229, 9, 20, .7);
+                    border: solid 1px rgb(229, 9, 20, .6);
                 }
                 &:hover img{
-                    transform: scale(1.2);
+                    transform: scale(1.1);
                 }
                 .region{
-                    background-color: rgb(229, 9, 20, .8);
+                    background-color: rgb(229, 9, 20, .6);
                     color: #fff;
                     padding: 2px 12px;
                     border-radius: 14px;
@@ -642,43 +696,41 @@
                     top: 10px;
                     right: 10px;
                 }
-                .previewTitle{
+                .storeText{
                     display: flex;
-                    align-items: baseline;
-                    gap: 6px;
-                    line-height: 40px;
+                    flex-direction: column;
+                    align-items: center;
                     position: absolute;
                     bottom: 0;
                     left: 0;
                     width: 100%;
-                    padding: 0 14px;
                     box-sizing: border-box;
                     z-index: 3;
-                    &::after{
-                        content: '';
-                        display: block;
-                        width: 100%;
-                        height: 50px;
-                        position: absolute;
-                        bottom: 0;
-                        left: 0;
-                        border-radius: 10px;
-                        background-color: rgb(0, 0, 0, .6);
-                        z-index: -1;
-                    }
+                    background-color: rgb(0, 0, 0, .6);
                     span{
                         color: #fff;
                     }
-                    .movieName{
-                        font-size: 1.125rem;
-                        font-weight: 500;
+                    .storeTitle{
+                        display: flex;
+                        align-items: baseline;
+                        gap: 6px;
+                        line-height: 40px;
+                        padding: 0 14px;
+                        box-sizing: border-box;
+                        .itemName{
+                            font-size: 1.125rem;
+                            font-weight: 500;
+                        }
+                    }
+                    .storeInfo{
+                        font-size: .875rem;
+                        text-align: center;
                     }
                 }
                 img{
                     width: 416px;
                     height: 228px;
                     object-fit: cover;
-                    border-radius: 14px;
                     box-sizing: border-box;
                     transition: all .8s ease-in-out;
                 }
@@ -686,25 +738,40 @@
         }
     }
 
-    // 섹션 7 - 스토어
-    #storeBox{}
-
     // 섹션 8 - 인스타그램
     #instagramBox{
         width: 100%;
-        max-width: 1920px;
+        max-width: 1280px;
+        margin: 0 auto;
         display: flex;
         flex-direction: column;
         gap: 20px;
-        .instagramList{
-            display: flex;
-            flex-wrap: wrap;
-            li{
-                width: 200px;
-                height: 300px;
-                background-color: #fff;
-                a{
-                    text-align: center;
+        .logo-slider{
+            overflow: hidden;
+            position: relative;
+            width: 100%;
+            .logo-slide-track01{
+                animation: logo-scroll01 60s linear infinite;
+                display: flex;
+                gap: 20px;
+                width: calc(200px * 10);
+                animation-duration: 30s;
+                animation-iteration-count: infinite;
+                .slide{
+                    height: 200px;
+                    width: 200px;
+                }
+            }
+            .logo-slide-track02{
+                animation: logo-scroll02 60s linear infinite;
+                display: flex;
+                gap: 20px;
+                width: calc(200px * 10);
+                animation-duration: 30s;
+                animation-iteration-count: infinite;
+                .slide{
+                    height: 200px;
+                    width: 200px;
                 }
             }
         }
@@ -725,7 +792,7 @@
             display: flex;
             flex-direction: column;
             gap: 20px;
-            background-color: #000;
+            background-color: #191919;
             padding: 30px;
             ul{
                 display: flex;
@@ -780,7 +847,7 @@
             display: flex;
             flex-direction: column;
             gap: 20px;
-            background-color: #000;
+            background-color: #191919;
             padding: 30px;
         }
     }

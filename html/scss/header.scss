@@ -43,7 +43,7 @@ html{
 
 // header
 .scrolledBg{
-    background-color: #000;
+    background-color: #000 !important;
 }
 .activeHeader{
     display: block !important;
@@ -91,6 +91,19 @@ html{
     top: 0;
     left: 0;
     z-index: 10;
+    border-bottom: solid 1px rgb(255, 255, 255, .6);
+    transition: all 0.4s ease-in-out;
+    &::before{
+        backdrop-filter: blur(6px);
+        content: '';
+        display: block;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+    }
+    a{
+        color: #fff;
+    }
     #headerContainer{
         width: 100%;
         max-width: 1920px;
@@ -99,12 +112,14 @@ html{
             width: 100%;
             display: none;
             a{
+                display: block;
+                color: #fff;
+                text-align: center;
                 line-height: 0;
-                display: flex;
-                justify-content: center;
-                align-items: center;
+                padding-top: 20px;
+                box-sizing: border-box;
                 img{
-                    width: 200%;
+                    width: 180px;
                     height: 40px;
                     object-fit: contain;
                 }
@@ -130,7 +145,15 @@ html{
                 // width: 100%;
                 display: none;
                 a{
-                    
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    height: 60px;
+                    img{
+                        width: 180px;
+                        height: 40px;
+                        object-fit: contain;
+                    }
                 }
             }
             .gnb{
@@ -158,7 +181,6 @@ html{
                             top: 100%;
                             left: 0;
                             width: 100%;
-                            background-color: #000;
                             height: 0;
                             opacity: 0;
                             overflow: hidden;
@@ -171,6 +193,12 @@ html{
                         }
                     }
                 }
+                &:hover + .gnbBg,
+                & .gnbDepth01:hover .gnbDepth02{
+                    height: 320px;
+                    opacity: 1;
+                    background-color: #000;
+                }
             }
             .gnbBg{
                 position: absolute;
@@ -180,19 +208,19 @@ html{
                 height: 0;
                 z-index: -1;
                 overflow: hidden;
-                background-color: #000;
                 transition: all 0.4s ease-in-out;
+                &::before{
+                    backdrop-filter: blur(6px);
+                    content: '';
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                }
             }
             .backBtn{
                 display: none;
             }
         }
     }
-}
-
-// header hover
-#headerContainer .gnbContainer .gnb:hover + .gnbBg,
-#headerContainer .gnbContainer .gnb .gnbDepth01:hover .gnbDepth02{
-    height: 320px;
-    opacity: 1;
 }

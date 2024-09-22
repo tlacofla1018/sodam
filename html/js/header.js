@@ -27,18 +27,28 @@ function closePopUp() {
     if (close24hBtn && close24hBtn.checked) {
         setCookie("popup", "done", 1); // 쿠키를 하루 동안 유지
     }
-} 
+}
+
+const header = document.querySelector('#header');
+const headerLogo = document.querySelector('.headerLogo');
+const headerLogoSticky = document.querySelector('.headerLogoSticky');
+const gnb = document.querySelector('.gnb');
+
+gnb.addEventListener('mouseenter', () => {
+    header.style.backgroundColor = '#000'; // 호버 시 배경색
+});
+
+gnb.addEventListener('mouseleave', () => {
+    header.style.backgroundColor = 'transparent'; // 기본 배경색
+});
 
 addEventListener('scroll', function(){
-    const header = document.querySelector('#header');
-    if(window.scrollY > 820){
+    if(window.scrollY > 400){
         header.classList.add('scrolledBg');
     }else{
         header.classList.remove('scrolledBg');
     }
     
-    const headerLogo = document.querySelector('.headerLogo');
-    const headerLogoSticky = document.querySelector('.headerLogoSticky');
     if(window.scrollY > 60){
         headerLogo.classList.remove('activeHeader');
         headerLogoSticky.classList.add('activeHeader');
