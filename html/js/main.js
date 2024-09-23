@@ -12,40 +12,64 @@ var swiper01 = new Swiper("#mainBanner.swiper.mySwiper", {
         clickable: true,
     },
     navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
+        nextEl: ".swiper-button.nextBtn",
+        prevEl: ".swiper-button.prevBtn",
     },
 });
 
 // nowRecentRankContent Swiper
-var swiper03 = new Swiper(".rankContent01 .swiper.mySwiper", {
+var swiper02 = new Swiper("#nowRankContent.swiper.mySwiper", {
     slidesPerView: 1,
     spaceBetween: 30,
     loop: true,
-    pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-    },
     navigation: {
-        nextEl: ".rankContent01 .nextBtn",
-        prevEl: ".rankContent01 .prevBtn",
+        nextEl: "#nowRankContent .nextBtn",
+        prevEl: "#nowRankContent .prevBtn",
+    },
+});
+
+var swiper03 = new Swiper("#recentRankContent.swiper.mySwiper", {
+    slidesPerView: 1,
+    spaceBetween: 30,
+    loop: true,
+    navigation: {
+        nextEl: "#recentRankContent .nextBtn",
+        prevEl: "#recentRankContent .prevBtn",
     },
 });
 
 // scheduledDdayRankContent Swiper
-var swiper04 = new Swiper(".rankContent02 .swiper.mySwiper", {
+var swiper04 = new Swiper(".scheduledRankContent.swiper.mySwiper", {
     slidesPerView: 1,
     spaceBetween: 30,
     loop: true,
-    pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-    },
     navigation: {
-        nextEl: ".rankContent02 .nextBtn",
-        prevEl: ".rankContent02 .prevBtn",
+        nextEl: "#scheduledRankContent .nextBtn",
+        prevEl: "#scheduledRankContent .prevBtn",
     },
 });
 
+var swiper05 = new Swiper(".dDayRankContent.swiper.mySwiper", {
+    slidesPerView: 1,
+    spaceBetween: 30,
+    loop: true,
+    navigation: {
+        nextEl: "#dDayRankContent .nextBtn",
+        prevEl: "#dDayRankContent .prevBtn",
+    },
+});
+
+
+function fullheart() {
+    var click = document.getElementById('heart');
+    if(click.src.match("fullHeartIcon")) {
+        click.src = "/img/icon/heartIcon.svg";
+    } else {
+        click.src = "/img/icon/fullHeartIcon.svg";
+    }
+}
+
 // middleBanner Swiper
-var swiper03 = new Swiper("#middleBanner.swiper.mySwiper", {});
+// var swiper03 = new Swiper("#middleBanner.swiper.mySwiper", {});
+
+// previewContent
