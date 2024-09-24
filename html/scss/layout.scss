@@ -1,0 +1,219 @@
+html,body{
+    background-color: #000;
+}
+
+// PC Header
+#header{
+    position: sticky;
+    width: 100%;
+    max-width: 1920px;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    border-bottom: solid 1px rgb(255, 255, 255, .6);
+    transition: all 0.2s ease-in-out;
+    &::before{
+        backdrop-filter: blur(6px);
+        content: '';
+        display: block;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+    }
+    a{
+        color: #fff;
+    }
+    .headerLogo{
+        position: absolute;
+        top: 0;
+        left: 40px;
+        // width: 100%;
+        display: none;
+        a{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: 60px;
+            img{
+                width: 180px;
+                height: 40px;
+                object-fit: contain;
+            }
+        }
+    }
+    .gnb{
+        width: 100%;
+        max-width: 1280px;
+        margin: 0 auto;
+        .gnbDepth01{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 14%;
+            width: 100%;
+            max-width: 1280px;
+            box-sizing: border-box;
+            text-align: center;
+            > li{
+                position: relative;
+                width: 20%;
+                > a{
+                    display: block;
+                    line-height: 60px;
+                    &:hover{
+                        background-color: #333;
+                    }
+                }
+                .gnbDepth02{
+                    position: absolute;
+                    top: 100%;
+                    left: 0;
+                    width: 100%;
+                    height: 0;
+                    opacity: 0;
+                    overflow: hidden;
+                    transition: all 0.2s ease-in-out;
+                    li{
+                        width: 100%;
+                        a{
+                            display: block;
+                            line-height: 50px;
+                            &:hover{
+                                background-color: #333;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &:hover + .gnbBg,
+        & .gnbDepth01:hover .gnbDepth02{
+            height: 400px;
+            opacity: 1;
+            background-color: #000;
+        }
+    }
+    .gnbBg{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        height: 0;
+        z-index: -1;
+        overflow: hidden;
+        transition: all 0.2s ease-in-out;
+        &::before{
+            backdrop-filter: blur(6px);
+            content: '';
+            display: block;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+        }
+    }
+    .utilMenu{
+        position: absolute;
+        top: 0;
+        right: 40px;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        li{
+            a{
+                display: block;
+                width: 24px;
+                line-height: 60px;
+                font-size: 20px;
+                color: #fff;
+            }
+            button{
+                width: 24px;
+                font-size: 20px;
+                line-height: 60px;
+                display: inline-block;
+                color: #fff;
+                background-color: transparent;
+                cursor: pointer;
+                border: 0;
+            }
+        }
+    }
+}
+
+// Mobile Header
+#mHeader{
+    position: relative;
+    .asideBtn{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 32px;
+        border: 0;
+        background-color: transparent;
+        // position: absolute;
+        // top: 0;
+        // left: 0;
+        // z-index: 99999;
+        // transition: all 0.4s linear;
+        &.slideOn{
+            left: 200px;
+            span:nth-child(1){
+                transform: rotate(45deg);
+                margin: 20px -6px -7px -6px;
+            }
+            span:nth-child(2){
+                display: none;
+            }
+            span:nth-child(3){
+                transform: rotate(-45deg);
+            }
+        }
+        span{
+            display: block;
+            width: 100%;
+            height: 2px;
+            background-color: #ffffff;
+            margin: 4px 0;
+            border-radius: 2px;
+        }
+    }
+    .gnb{
+        .utilMenu{
+            li{
+                a{
+                    width: 32px;
+                }
+            }
+        }
+    }
+    .headerLogo{
+        display: block;
+        width: 100%;
+        min-width: 320px;
+        a{
+            display: block;
+            img{
+                display: block;
+                margin: 0 auto;
+                width: 100%;
+                height: 32px;
+                object-fit: contain;
+            }
+        }
+    }
+    .backBtn{
+        width: 32px;
+        background-color: transparent;
+        border: 0;
+        span{
+            width: 18px;
+            height: 18px;
+            display: block;
+            border-right: solid 2px #fff;
+            border-top: solid 2px #fff;
+            border-radius: 2px;
+            transform: rotate(45deg);
+        }
+    }
+}

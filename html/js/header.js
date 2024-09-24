@@ -1,3 +1,8 @@
+$('.asideBtn').on('click', function(){
+    $(this).toggleClass('slideOn');
+});
+
+
 // 쿠키 생성
 function setCookie(name, value, exDay) {
     const todayDate = new Date();
@@ -47,14 +52,5 @@ addEventListener('scroll', function(){
         header.classList.add('scrolledBg');
     }else{
         header.classList.remove('scrolledBg');
-    }
-    
-    if(window.scrollY > 60){
-        headerLogo.classList.remove('activeHeader');
-        headerLogoSticky.classList.add('activeHeader');
-        
-    }else{
-        headerLogo.classList.add('activeHeader');
-        headerLogoSticky.classList.remove('activeHeader');
     }
 });

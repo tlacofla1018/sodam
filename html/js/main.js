@@ -60,15 +60,6 @@ var swiper05 = new Swiper(".dDayRankContent.swiper.mySwiper", {
 });
 
 
-function fullheart() {
-    var click = document.getElementById('heart');
-    if(click.src.match("fullHeartIcon")) {
-        click.src = "/img/icon/heartIcon.svg";
-    } else {
-        click.src = "/img/icon/fullHeartIcon.svg";
-    }
-}
-
 // middleBanner Swiper
 // var swiper03 = new Swiper("#middleBanner.swiper.mySwiper", {});
 

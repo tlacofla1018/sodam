@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css"> <!--XE아이콘 CDN-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/> <!--Swiper JS CDN-->
     <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/scss/layout.min.css?var=<?php echo time(); ?>">
     <link rel="stylesheet" href="/scss/header.min.css?var=<?php echo time(); ?>">
     <link rel="stylesheet" href="/scss/footer.min.css?var=<?php echo time(); ?>">
     <link rel="stylesheet" href="/scss/main.min.css?var=<?php echo time(); ?>">
@@ -45,214 +46,352 @@
     </section>
 
     <!------- Header ------->
-    <header id="header">
-        <div id="headerContainer">
-            <!--소담씨네 로고-->
-            <div class="headerLogo activeHeader">
-                <a href="/">
-                    <img src="/img/logo/logoEnWhite.svg" alt="소담씨네">
-                </a>
-            </div>
-            <!--GNB 영역-->
-            <div class="gnbContainer">
-                <!--모바일 카테고리탭 Btn-->
-                <button class="mobileSideMenu">
-                    <span>
-                        <span></span>
-                        <span>Mobile Navigation Open</span> <!--웹접근성을 위한 히든 텍스트-->
-                    </span>
-                </button>
-                <!--소담씨네 로고 Sticky 버전-->
-                <span class="headerLogoSticky">
-                    <a href="/">
-                        <img src="/img/logo/logoEnWhite.svg" alt="소담씨네">
-                    </a>
-                </span>
-                <!--GNB-->
-                <nav class="gnb">
-                    <!-- <h2>Site Header Navigation</h2> 웹접근성을 위한 히든 텍스트 -->
-                    <ul class="gnbDepth01">
+    <header id="header" class="d-none d-lg-flex">
+        <!--소담씨네 로고-->
+        <h1 class="headerLogo">
+            <a href="/">
+                <img src="/img/logo/logoEnWhite.svg" alt="소담씨네">
+            </a>
+        </h1>
+        <!--GNB-->
+        <nav class="gnb">
+            <ul class="gnbDepth01">
+                <li>
+                    <a href="#">예매</a>
+                    <ul class="gnbDepth02">
                         <li>
-                            <a href="#">예매</a>
-                            <ul class="gnbDepth02">
-                                <li>
-                                    <span>
-                                        <a href="#">예매하기</a>
-                                    </span>
-                                </li>
-                                <li>
-                                    <span>
-                                        <a href="#">상영시간표</a>
-                                    </span>
-                                </li>
-                                <li>
-                                    <span>
-                                        <a href="#">할인안내</a>
-                                    </span>
-                                </li>
-                            </ul>
+                            <span>
+                                <a href="#">예매하기</a>
+                            </span>
                         </li>
                         <li>
-                            <a href="/sub/movie.html">영화</a>
-                            <ul class="gnbDepth02">
-                                <li>
-                                    <span>
-                                        <a href="#">현재상영작</a>
-                                    </span>
-                                </li>
-                                <li>
-                                    <span>
-                                        <a href="#">상영예정작</a>
-                                    </span>
-                                </li>
-                            </ul>
+                            <span>
+                                <a href="#">상영시간표</a>
+                            </span>
                         </li>
                         <li>
-                            <a href="#">영화관</a>
-                            <ul class="gnbDepth02">
-                                <li>
-                                    <span>
-                                        <a href="#">서울</a>
-                                    </span>
-                                </li>
-                                <li>
-                                    <span>
-                                        <a href="#">경기/인천</a>
-                                    </span>
-                                </li>
-                                <li>
-                                    <span>
-                                        <a href="#">충청/대전</a>
-                                    </span>
-                                </li>
-                                <li>
-                                    <span>
-                                        <a href="#">전라/광주</a>
-                                    </span>
-                                </li>
-                                <li>
-                                    <span>
-                                        <a href="#">경북/대구</a>
-                                    </span>
-                                </li>
-                                <li>
-                                    <span>
-                                        <a href="#">경남/울산/부산</a>
-                                    </span>
-                                </li>
-                                <li>
-                                    <span>
-                                        <a href="#">강원</a>
-                                    </span>
-                                </li>
-                                <li>
-                                    <span>
-                                        <a href="#">제주</a>
-                                    </span>
-                                </li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="/sub/event.html">이벤트</a>
-                            <ul class="gnbDepth02">
-                                <li>
-                                    <span>
-                                        <a href="#">영화별 이벤트</a>
-                                    </span>
-                                </li>
-                                <li>
-                                    <span>
-                                        <a href="#">시사회/무대인사</a>
-                                    </span>
-                                </li>
-                                <li>
-                                    <span>
-                                        <a href="#">인기 이벤트</a>
-                                    </span>
-                                </li>
-                                <li>
-                                    <span>
-                                        <a href="#">제휴할인</a>
-                                    </span>
-                                </li>
-                                <li>
-                                    <span>
-                                        <a href="#">지역별 이벤트</a>
-                                    </span>
-                                </li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="#">스토어</a>
-                            <ul class="gnbDepth02">
-                                <li>
-                                    <span>
-                                        <a href="#">베스트</a>
-                                    </span>
-                                </li>
-                                <li>
-                                    <span>
-                                        <a href="#">관람권</a>
-                                    </span>
-                                </li>
-                                <li>
-                                    <span>
-                                        <a href="#">스낵/음료</a>
-                                    </span>
-                                </li>
-                                <li>
-                                    <span>
-                                        <a href="#">굿즈</a>
-                                    </span>
-                                </li>
-                                <li>
-                                    <span>
-                                        <a href="#">포토카드</a>
-                                    </span>
-                                </li>
-                            </ul>
+                            <span>
+                                <a href="#">할인안내</a>
+                            </span>
                         </li>
                     </ul>
-                </nav>
-                <!--GNB BG-->
-                <div class="gnbBg"></div>
-                <!-- Util Menu -->
-                <ul class="utilMenu">
-                    <li>
-                        <a href="/sub/login.html" class="xi-log-in xi-2x"></a>
-                    </li>
-                    <li>
-                        <a href="#" class="xi-user-plus-o xi-2x"></a>
-                    </li>
-                    <li>
-                        <a href="#" class="xi-coupon xi-2x"></a>
-                    </li>
-                    <li>
-                        <button type="submit" class="xi-search xi-2x"></button>
-                    </li>
-                </ul>
-                <!--뒤로가기 Btn-->
-                <button class="backBtn" onclick="window.history.back()">
-                    <span>
-                        <span>뒤로 가기</span>
-                    </span>
-                </button>
-            </div>
-        </div>
-        <!--KO/EN 언어변경 Btn-->
-        <!-- <div>
-            <h2>Language</h2> 웹접근성을 위한 히든 텍스트
-            <div>
-                <span>
-                    <a href="#">
-                        <span>KO</span>
-                    </a>
-                </span>
-                <span>
-                    <a href="#">
-                        <span>EN</span>
-                    </a>
-                </span>
-            </div>
-        </div> -->
+                </li>
+                <li>
+                    <a href="/sub/movie.html">영화</a>
+                    <ul class="gnbDepth02">
+                        <li>
+                            <span>
+                                <a href="#">현재상영작</a>
+                            </span>
+                        </li>
+                        <li>
+                            <span>
+                                <a href="#">상영예정작</a>
+                            </span>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">영화관</a>
+                    <ul class="gnbDepth02">
+                        <li>
+                            <span>
+                                <a href="#">서울</a>
+                            </span>
+                        </li>
+                        <li>
+                            <span>
+                                <a href="#">경기/인천</a>
+                            </span>
+                        </li>
+                        <li>
+                            <span>
+                                <a href="#">충청/대전</a>
+                            </span>
+                        </li>
+                        <li>
+                            <span>
+                                <a href="#">전라/광주</a>
+                            </span>
+                        </li>
+                        <li>
+                            <span>
+                                <a href="#">경북/대구</a>
+                            </span>
+                        </li>
+                        <li>
+                            <span>
+                                <a href="#">경남/울산/부산</a>
+                            </span>
+                        </li>
+                        <li>
+                            <span>
+                                <a href="#">강원</a>
+                            </span>
+                        </li>
+                        <li>
+                            <span>
+                                <a href="#">제주</a>
+                            </span>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="/sub/event.html">이벤트</a>
+                    <ul class="gnbDepth02">
+                        <li>
+                            <span>
+                                <a href="#">영화별 이벤트</a>
+                            </span>
+                        </li>
+                        <li>
+                            <span>
+                                <a href="#">시사회/무대인사</a>
+                            </span>
+                        </li>
+                        <li>
+                            <span>
+                                <a href="#">인기 이벤트</a>
+                            </span>
+                        </li>
+                        <li>
+                            <span>
+                                <a href="#">제휴할인</a>
+                            </span>
+                        </li>
+                        <li>
+                            <span>
+                                <a href="#">지역별 이벤트</a>
+                            </span>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">스토어</a>
+                    <ul class="gnbDepth02">
+                        <li>
+                            <span>
+                                <a href="#">베스트</a>
+                            </span>
+                        </li>
+                        <li>
+                            <span>
+                                <a href="#">관람권</a>
+                            </span>
+                        </li>
+                        <li>
+                            <span>
+                                <a href="#">스낵/음료</a>
+                            </span>
+                        </li>
+                        <li>
+                            <span>
+                                <a href="#">굿즈</a>
+                            </span>
+                        </li>
+                        <li>
+                            <span>
+                                <a href="#">포토카드</a>
+                            </span>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <!--GNB BG-->
+        <div class="gnbBg"></div>
+        <!-- Util Menu -->
+        <ul class="utilMenu">
+            <li>
+                <a href="/sub/login.html">
+                    <span></span>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="xi-user-plus-o xi-2x"></a>
+            </li>
+            <li>
+                <a href="#" class="xi-coupon xi-2x"></a>
+            </li>
+            <li>
+                <button type="submit" class="xi-search xi-2x"></button>
+            </li>
+        </ul>
     </header>
+    <section id="mHeader" class="d-flex justify-content-between py-2 d-lg-none">
+        <button class="asideBtn mx-3">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <nav class="gnb">
+            <!-- Util Menu -->
+            <ul class="utilMenu">
+                <li>
+                    <a href="/sub/login.html" class="xi-user-o xi-2x"></a>
+                </li>
+                <li>
+                    <a href="#" class="xi-user-plus-o xi-2x"></a>
+                </li>
+                <li>
+                    <a href="#" class="xi-coupon xi-2x"></a>
+                </li>
+            </ul>
+            <!-- GNB Menu -->
+            <ul class="gnbDepth01">
+                <li>
+                    <a href="#">예매</a>
+                    <ul class="gnbDepth02 d-flex flex-wrap">
+                        <li>
+                            <span>
+                                <a href="#">예매하기</a>
+                            </span>
+                        </li>
+                        <li>
+                            <span>
+                                <a href="#">상영시간표</a>
+                            </span>
+                        </li>
+                        <li>
+                            <span>
+                                <a href="#">할인안내</a>
+                            </span>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="/sub/movie.html">영화</a>
+                    <ul class="gnbDepth02 d-flex flex-wrap">
+                        <li>
+                            <span>
+                                <a href="#">현재상영작</a>
+                            </span>
+                        </li>
+                        <li>
+                            <span>
+                                <a href="#">상영예정작</a>
+                            </span>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">영화관</a>
+                    <ul class="gnbDepth02 d-flex flex-wrap">
+                        <li>
+                            <span>
+                                <a href="#">서울</a>
+                            </span>
+                        </li>
+                        <li>
+                            <span>
+                                <a href="#">경기/인천</a>
+                            </span>
+                        </li>
+                        <li>
+                            <span>
+                                <a href="#">충청/대전</a>
+                            </span>
+                        </li>
+                        <li>
+                            <span>
+                                <a href="#">전라/광주</a>
+                            </span>
+                        </li>
+                        <li>
+                            <span>
+                                <a href="#">경북/대구</a>
+                            </span>
+                        </li>
+                        <li>
+                            <span>
+                                <a href="#">경남/울산/부산</a>
+                            </span>
+                        </li>
+                        <li>
+                            <span>
+                                <a href="#">강원</a>
+                            </span>
+                        </li>
+                        <li>
+                            <span>
+                                <a href="#">제주</a>
+                            </span>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="/sub/event.html">이벤트</a>
+                    <ul class="gnbDepth02 d-flex flex-wrap">
+                        <li>
+                            <span>
+                                <a href="#">영화별 이벤트</a>
+                            </span>
+                        </li>
+                        <li>
+                            <span>
+                                <a href="#">시사회/무대인사</a>
+                            </span>
+                        </li>
+                        <li>
+                            <span>
+                                <a href="#">인기 이벤트</a>
+                            </span>
+                        </li>
+                        <li>
+                            <span>
+                                <a href="#">제휴할인</a>
+                            </span>
+                        </li>
+                        <li>
+                            <span>
+                                <a href="#">지역별 이벤트</a>
+                            </span>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">스토어</a>
+                    <ul class="gnbDepth02 d-flex flex-wrap">
+                        <li>
+                            <span>
+                                <a href="#">베스트</a>
+                            </span>
+                        </li>
+                        <li>
+                            <span>
+                                <a href="#">관람권</a>
+                            </span>
+                        </li>
+                        <li>
+                            <span>
+                                <a href="#">스낵/음료</a>
+                            </span>
+                        </li>
+                        <li>
+                            <span>
+                                <a href="#">굿즈</a>
+                            </span>
+                        </li>
+                        <li>
+                            <span>
+                                <a href="#">포토카드</a>
+                            </span>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <!--소담씨네 로고-->
+        <h1 class="headerLogo">
+            <a href="/">
+                <img src="/img/logo/logoEnWhite.svg" alt="소담씨네">
+            </a>
+        </h1>
+        <button class="backBtn mx-3">
+            <span></span>
+        </button>
+    </section>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+<script src="/js/header.js"></script>
+</body>
+</html>

@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SODAM CINE</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
+    <link rel="manifest" href="/img/site.webmanifest">
+    <link rel="mask-icon" href="/img/safari-pinned-tab.svg" color="#da532c">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <!---------------------------------------------------------------------------->
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/bootstrap-5.3.3-css-js/css/bootstrap.css"> <!--부트스트랩-->
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css"> <!--XE아이콘 CDN-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/> <!--Swiper JS CDN-->
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/scss/header.min.css?var=<?php echo time(); ?>">
+    <link rel="stylesheet" href="/scss/footer.min.css?var=<?php echo time(); ?>">
+    <link rel="stylesheet" href="/scss/main.min.css?var=<?php echo time(); ?>">
+    <link rel="stylesheet" href="/scss/login.min.css?var=<?php echo time(); ?>">
+    <link rel="stylesheet" href="/scss/movie.min.css?var=<?php echo time(); ?>">
+    <link rel="stylesheet" href="/scss/event.min.css?var=<?php echo time(); ?>">
+    <style>
+        /* Noto Sans KR 구글 폰트 */
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+        /* Robot 구글 폰트 */
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,700&display=swap');
+    </style>
+</head>
+<body>
+    <!------- Top Banner ------->
+    <section class="topBanner">
+        <div class="adCloseBtnBox">
+            <div>
+                <input type="checkbox" value="close24h" id="close24hBtn">
+                <label for="close24hBtn">오늘 하루동안 보지 않기</label>
+            </div>
+            <button>
+                <img src="/img/icon/closeIcon.svg" alt="닫기 버튼">
+            </button>
+        </div>
+    </section>
+
+    <!------- Header ------->
+    <header id="header">
+        <div id="headerContainer">
+            <!--GNB 영역-->
+            <div class="gnbContainer">
+                <!--모바일 카테고리탭 Btn-->
+                <button class="mobileSideMenu">
+                    <span>
+                        <span></span>
+                        <span>Mobile Navigation Open</span> <!--웹접근성을 위한 히든 텍스트-->
+                    </span>
+                </button>
+                <!--소담씨네 로고 Sticky 버전-->
+                <span class="headerLogoSticky">
+                    <a href="/">
+                        <img src="/img/logo/logoEnWhite.svg" alt="소담씨네">
+                    </a>
+                </span>
+                <!--GNB-->
+                <nav class="gnb">
+                    <!-- <h2>Site Header Navigation</h2> 웹접근성을 위한 히든 텍스트 -->
+                    <ul class="gnbDepth01">
+                        <li>
+                            <a href="#">예매</a>
+                            <ul class="gnbDepth02">
+                                <li>
+                                    <span>
+                                        <a href="#">예매하기</a>
+                                    </span>
+                                </li>
+                                <li>
+                                    <span>
+                                        <a href="#">상영시간표</a>
+                                    </span>
+                                </li>
+                                <li>
+                                    <span>
+                                        <a href="#">할인안내</a>
+                                    </span>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="/sub/movie.html">영화</a>
+                            <ul class="gnbDepth02">
+                                <li>
+                                    <span>
+                                        <a href="#">현재상영작</a>
+                                    </span>
+                                </li>
+                                <li>
+                                    <span>
+                                        <a href="#">상영예정작</a>
+                                    </span>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">영화관</a>
+                            <ul class="gnbDepth02">
+                                <li>
+                                    <span>
+                                        <a href="#">서울</a>
+                                    </span>
+                                </li>
+                                <li>
+                                    <span>
+                                        <a href="#">경기/인천</a>
+                                    </span>
+                                </li>
+                                <li>
+                                    <span>
+                                        <a href="#">충청/대전</a>
+                                    </span>
+                                </li>
+                                <li>
+                                    <span>
+                                        <a href="#">전라/광주</a>
+                                    </span>
+                                </li>
+                                <li>
+                                    <span>
+                                        <a href="#">경북/대구</a>
+                                    </span>
+                                </li>
+                                <li>
+                                    <span>
+                                        <a href="#">경남/울산/부산</a>
+                                    </span>
+                                </li>
+                                <li>
+                                    <span>
+                                        <a href="#">강원</a>
+                                    </span>
+                                </li>
+                                <li>
+                                    <span>
+                                        <a href="#">제주</a>
+                                    </span>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="/sub/event.html">이벤트</a>
+                            <ul class="gnbDepth02">
+                                <li>
+                                    <span>
+                                        <a href="#">영화별 이벤트</a>
+                                    </span>
+                                </li>
+                                <li>
+                                    <span>
+                                        <a href="#">시사회/무대인사</a>
+                                    </span>
+                                </li>
+                                <li>
+                                    <span>
+                                        <a href="#">인기 이벤트</a>
+                                    </span>
+                                </li>
+                                <li>
+                                    <span>
+                                        <a href="#">제휴할인</a>
+                                    </span>
+                                </li>
+                                <li>
+                                    <span>
+                                        <a href="#">지역별 이벤트</a>
+                                    </span>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">스토어</a>
+                            <ul class="gnbDepth02">
+                                <li>
+                                    <span>
+                                        <a href="#">베스트</a>
+                                    </span>
+                                </li>
+                                <li>
+                                    <span>
+                                        <a href="#">관람권</a>
+                                    </span>
+                                </li>
+                                <li>
+                                    <span>
+                                        <a href="#">스낵/음료</a>
+                                    </span>
+                                </li>
+                                <li>
+                                    <span>
+                                        <a href="#">굿즈</a>
+                                    </span>
+                                </li>
+                                <li>
+                                    <span>
+                                        <a href="#">포토카드</a>
+                                    </span>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+                <!--GNB BG-->
+                <div class="gnbBg"></div>
+                <!-- Util Menu -->
+                <ul class="utilMenu">
+                    <li>
+                        <a href="/sub/login.html" class="xi-user-o xi-2x"></a>
+                    </li>
+                    <li>
+                        <a href="#" class="xi-user-plus-o xi-2x"></a>
+                    </li>
+                    <li>
+                        <a href="#" class="xi-coupon xi-2x"></a>
+                    </li>
+                    <li>
+                        <button type="submit" class="xi-search xi-2x"></button>
+                    </li>
+                </ul>
+                <!--뒤로가기 Btn-->
+                <button class="backBtn" onclick="window.history.back()">
+                    <span>
+                        <span>뒤로 가기</span>
+                    </span>
+                </button>
+            </div>
+        </div>
+        <!--KO/EN 언어변경 Btn-->
+        <!-- <div>
+            <h2>Language</h2> 웹접근성을 위한 히든 텍스트
+            <div>
+                <span>
+                    <a href="#">
+                        <span>KO</span>
+                    </a>
+                </span>
+                <span>
+                    <a href="#">
+                        <span>EN</span>
+                    </a>
+                </span>
+            </div>
+        </div> -->
+    </header>
