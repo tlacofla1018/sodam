@@ -1,0 +1,110 @@
+// 미디어쿼리
+@media all {
+    html,body {
+        font-size: 16px;
+        font-weight: 400;
+        min-width: 320px;
+    }
+    #header{
+        width: 100%;
+        .gnb{
+            width: 100%;
+            max-width: 1280px;
+            .gnbDepth01{
+                width: 100%;
+            }
+        }
+    }
+}
+@media(max-width: 1720px) {
+    #header{
+        .gnb{
+            .gnbDepth01{
+                width: 90%;
+            }
+        }
+    }
+}
+@media(max-width: 1600px) {
+    #header{
+        .gnb{
+            .gnbDepth01{
+                width: 80%;
+            }
+        }
+    }
+}
+@media(max-width: 1500px) {
+    #header{
+        .gnb{
+            .gnbDepth01{
+                width: 70%;
+            }
+        }
+    }
+}
+@media(max-width: 1380px) {
+    #header{
+        .gnb{
+            .gnbDepth01{
+                width: 60%;
+            }
+        }
+    }
+}
+@media(max-width: 1200px) {
+    #header{
+        .gnb{
+            .gnbDepth01{
+                width: 50%;
+                font-size: 0.9rem;
+            }
+        }
+    }
+}
+@media (max-width: 1280px) {
+    #mHeader{
+        .gnbDepth02{
+            li{
+                width: 25%;
+            }
+        }
+    }
+}
+@media (max-width: 990px) {}
+@media (max-width: 880px) {}
+@media (max-width: 768px) {}
+@media (max-width: 662px) {}
+@media (max-width: 650px) {
+    html,body {
+        font-size: 14px;
+    }
+    #mHeader{
+        .gnbDepth02{
+            li{
+                width: 33.333%;
+            }
+        }
+    }
+}
+@media (max-width: 580px) {}
+@media (max-width: 480px) {
+    #mHeader{
+        .gnbDepth02{
+            li{
+                width: 50%;
+                font-size: 1.15rem;
+            }
+        }
+    }
+}
+@media (max-width: 385px) {
+    html,body {
+        font-size: 12px;
+    }
+}
+@media (max-width: 320px) {
+    html,body {
+        font-size: 10px;
+    }
+}

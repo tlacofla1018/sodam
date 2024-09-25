@@ -18,12 +18,12 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/> <!--Swiper JS CDN-->
     <link rel="stylesheet" href="/css/common.css">
     <link rel="stylesheet" href="/scss/layout.min.css?var=<?php echo time(); ?>">
-    <link rel="stylesheet" href="/scss/header.min.css?var=<?php echo time(); ?>">
     <link rel="stylesheet" href="/scss/footer.min.css?var=<?php echo time(); ?>">
     <link rel="stylesheet" href="/scss/main.min.css?var=<?php echo time(); ?>">
     <link rel="stylesheet" href="/scss/login.min.css?var=<?php echo time(); ?>">
     <link rel="stylesheet" href="/scss/movie.min.css?var=<?php echo time(); ?>">
     <link rel="stylesheet" href="/scss/event.min.css?var=<?php echo time(); ?>">
+    <link rel="stylesheet" href="/scss/media.min.css?var=<?php echo time(); ?>">
     <style>
         /* Noto Sans KR 구글 폰트 */
         @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
@@ -36,17 +36,19 @@
     <section class="topBanner">
         <div class="adCloseBtnBox">
             <div>
-                <input type="checkbox" value="close24h" id="close24hBtn">
+                <input type="checkbox" value="close24h" id="close24hBtn" name="close24hBtn">
                 <label for="close24hBtn">오늘 하루동안 보지 않기</label>
             </div>
-            <button>
+            <button class="closeBtn">
                 <img src="/img/icon/closeIcon.svg" alt="닫기 버튼">
             </button>
         </div>
     </section>
 
-    <!------- Header ------->
-    <header id="header" class="d-none d-lg-flex">
+
+
+    <!------------ PC Header ------------>
+    <header id="header" class="d-none d-lg-flex mx-auto">
         <!--소담씨네 로고-->
         <h1 class="headerLogo">
             <a href="/">
@@ -54,8 +56,8 @@
             </a>
         </h1>
         <!--GNB-->
-        <nav class="gnb">
-            <ul class="gnbDepth01">
+        <nav class="gnb mx-auto">
+            <ul class="gnbDepth01 d-flex justify-content-center align-items-center mx-auto">
                 <li>
                     <a href="#">예매</a>
                     <ul class="gnbDepth02">
@@ -203,9 +205,7 @@
         <!-- Util Menu -->
         <ul class="utilMenu">
             <li>
-                <a href="/sub/login.html">
-                    <span></span>
-                </a>
+                <a href="/sub/login.html" class="xi-user-o xi-2x"></a>
             </li>
             <li>
                 <a href="#" class="xi-user-plus-o xi-2x"></a>
@@ -218,30 +218,48 @@
             </li>
         </ul>
     </header>
+
+
+
+    <!------------ Mobile Header ------------>
     <section id="mHeader" class="d-flex justify-content-between py-2 d-lg-none">
-        <button class="asideBtn mx-3">
+        <button class="backBtn mx-4">
+            <span></span>
+        </button>
+        <!--소담씨네 로고-->
+        <h1 class="headerLogo">
+            <a href="/" class="mx-auto">
+                <img src="/img/logo/logoEnWhite.svg" alt="소담씨네">
+            </a>
+        </h1>
+        <button class="navBtn mx-3">
             <span></span>
             <span></span>
             <span></span>
         </button>
         <nav class="gnb">
             <!-- Util Menu -->
-            <ul class="utilMenu">
-                <li>
-                    <a href="/sub/login.html" class="xi-user-o xi-2x"></a>
-                </li>
-                <li>
-                    <a href="#" class="xi-user-plus-o xi-2x"></a>
-                </li>
-                <li>
-                    <a href="#" class="xi-coupon xi-2x"></a>
-                </li>
-            </ul>
+            <div class="utilMenu d-flex justify-content-between align-items-center my-5 p-4">
+                <a href="/sub/login.html" class="utilLogin d-flex align-items-center">
+                    <span class="loginIcon xi-user-o xi-2x me-2"></span>
+                    <span class="loginText d-flex align-items-baseline">
+                        <span>로그인</span>
+                        <span class="px-1">해주세요</span>
+                        <span></span>
+                    </span>
+                </a>
+                <a href="#none" class="utilJoin">
+                    회원가입
+                </a>
+            </div>
             <!-- GNB Menu -->
             <ul class="gnbDepth01">
-                <li>
-                    <a href="#">예매</a>
-                    <ul class="gnbDepth02 d-flex flex-wrap">
+                <li class="py-2">
+                    <span class="d-flex justify-content-between align-items-center">
+                        <a href="#">예매</a>
+                        <span class="depthMenuBtn mx-2"></span>
+                    </span>
+                    <ul class="gnbDepth02 flex-wrap">
                         <li>
                             <span>
                                 <a href="#">예매하기</a>
@@ -259,9 +277,12 @@
                         </li>
                     </ul>
                 </li>
-                <li>
-                    <a href="/sub/movie.html">영화</a>
-                    <ul class="gnbDepth02 d-flex flex-wrap">
+                <li class="py-2">
+                    <span class="d-flex justify-content-between align-items-center">
+                        <a href="/sub/movie.html">영화</a>
+                        <span class="depthMenuBtn mx-2"></span>
+                    </span>
+                    <ul class="gnbDepth02 flex-wrap">
                         <li>
                             <span>
                                 <a href="#">현재상영작</a>
@@ -274,9 +295,12 @@
                         </li>
                     </ul>
                 </li>
-                <li>
-                    <a href="#">영화관</a>
-                    <ul class="gnbDepth02 d-flex flex-wrap">
+                <li class="py-2">
+                    <span class="d-flex justify-content-between align-items-center">
+                        <a href="#">영화관</a>
+                        <span class="depthMenuBtn mx-2"></span>
+                    </span>
+                    <ul class="gnbDepth02 flex-wrap">
                         <li>
                             <span>
                                 <a href="#">서울</a>
@@ -319,9 +343,12 @@
                         </li>
                     </ul>
                 </li>
-                <li>
-                    <a href="/sub/event.html">이벤트</a>
-                    <ul class="gnbDepth02 d-flex flex-wrap">
+                <li class="py-2">
+                    <span class="d-flex justify-content-between align-items-center">
+                        <a href="/sub/event.html">이벤트</a>
+                        <span class="depthMenuBtn mx-2"></span>
+                    </span>
+                    <ul class="gnbDepth02 flex-wrap">
                         <li>
                             <span>
                                 <a href="#">영화별 이벤트</a>
@@ -349,9 +376,12 @@
                         </li>
                     </ul>
                 </li>
-                <li>
-                    <a href="#">스토어</a>
-                    <ul class="gnbDepth02 d-flex flex-wrap">
+                <li class="py-2">
+                    <span class="d-flex justify-content-between align-items-center">
+                        <a href="#">스토어</a>
+                        <span class="depthMenuBtn mx-2"></span>
+                    </span>
+                    <ul class="gnbDepth02 flex-wrap">
                         <li>
                             <span>
                                 <a href="#">베스트</a>
@@ -381,17 +411,6 @@
                 </li>
             </ul>
         </nav>
-        <!--소담씨네 로고-->
-        <h1 class="headerLogo">
-            <a href="/">
-                <img src="/img/logo/logoEnWhite.svg" alt="소담씨네">
-            </a>
-        </h1>
-        <button class="backBtn mx-3">
-            <span></span>
-        </button>
     </section>
-<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-<script src="/js/header.js"></script>
 </body>
 </html>

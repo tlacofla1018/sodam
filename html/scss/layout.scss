@@ -5,8 +5,6 @@ html,body{
 // PC Header
 #header{
     position: sticky;
-    width: 100%;
-    max-width: 1920px;
     top: 0;
     left: 0;
     z-index: 10;
@@ -19,6 +17,8 @@ html,body{
         width: 100%;
         height: 100%;
         position: absolute;
+        top: 0;
+        left: 0;
     }
     a{
         color: #fff;
@@ -28,7 +28,7 @@ html,body{
         top: 0;
         left: 40px;
         // width: 100%;
-        display: none;
+        display: block;
         a{
             display: flex;
             flex-direction: column;
@@ -42,16 +42,7 @@ html,body{
         }
     }
     .gnb{
-        width: 100%;
-        max-width: 1280px;
-        margin: 0 auto;
         .gnbDepth01{
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0 14%;
-            width: 100%;
-            max-width: 1280px;
             box-sizing: border-box;
             text-align: center;
             > li{
@@ -87,7 +78,7 @@ html,body{
             }
         }
         &:hover + .gnbBg,
-        & .gnbDepth01:hover .gnbDepth02{
+        &:hover .gnbDepth01:hover .gnbDepth02{
             height: 400px;
             opacity: 1;
             background-color: #000;
@@ -140,27 +131,84 @@ html,body{
     }
 }
 
+
+
 // Mobile Header
 #mHeader{
-    position: relative;
-    .asideBtn{
+    position: sticky;
+    width: 100%;
+    min-width: 320px;
+    height: 56px;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    border-bottom: solid 1px rgb(255, 255, 255, .6);
+    transition: all 0.2s ease-in-out;
+    &::before{
+        backdrop-filter: blur(6px);
+        content: '';
+        display: block;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+    }
+    .backBtn{
+        width: 32px;
+        background-color: transparent;
+        border: 0;
+        position: absolute;
+        top: 19px;
+        left: 0;
+        z-index: 99999;
+        span{
+            width: 18px;
+            height: 18px;
+            display: block;
+            border-left: solid 2px #fff;
+            border-top: solid 2px #fff;
+            transform: rotate(-45deg);
+        }
+    }
+    .headerLogo{
+        position: absolute;
+        top: 12px;
+        left: 0;
+        width: 100%;
+        z-index: 99999;
+        a{
+            display: block;
+            width: 140px;
+            img{
+                display: block;
+                margin: 0 auto;
+                width: 100%;
+                height: 32px;
+                object-fit: contain;
+            }
+        }
+    }
+    .navBtn{
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        width: 32px;
+        width: 28px;
         border: 0;
         background-color: transparent;
-        // position: absolute;
-        // top: 0;
-        // left: 0;
-        // z-index: 99999;
+        position: absolute;
+        top: 13px;
+        right: 2px;
+        z-index: 99999;
         // transition: all 0.4s linear;
         &.slideOn{
-            left: 200px;
+            right: 0;
+            margin-top: 20px;
             span:nth-child(1){
                 transform: rotate(45deg);
-                margin: 20px -6px -7px -6px;
+                margin: -6px;
             }
             span:nth-child(2){
                 display: none;
@@ -175,45 +223,225 @@ html,body{
             height: 2px;
             background-color: #ffffff;
             margin: 4px 0;
-            border-radius: 2px;
         }
     }
     .gnb{
+        position: absolute;
+        top: 0;
+        right: 120%;
+        width: 100%;
+        height: 100vh;
+        padding: 56px 30px;
+        background-color: #000;
+        opacity: 0;
+        transition: all 0.4s ease-in-out;
+        &.slideOn{
+            opacity: 1;
+            right: 0;
+        }
         .utilMenu{
-            li{
-                a{
-                    width: 32px;
+            background-color: #191919;
+            border-radius: 0.6rem;
+            a{
+                color: #fff;
+            }
+            .utilLogin{
+                .loginIcon{
+                    border-radius: 50%;
+                    border: solid 2px #fff;
+                }
+                .loginText{
+                    span:nth-child(1){
+                        font-size: 1.5rem;
+                        font-weight: 500;
+                    }
+                    span:nth-child(2){
+                        font-size: 0.88rem;
+                    }
+                    span:nth-child(3){
+                        width: 0.6rem;
+                        height: 0.6rem;
+                        display: block;
+                        border-right: solid 2px #fff;
+                        border-top: solid 2px #fff;
+                        transform: rotate(45deg);
+                    }
+                }
+            }
+            .utilJoin{
+                font-size: 0.75rem;
+            }
+        }
+        .gnbDepth01{
+            > li{
+                > span{
+                    > a{
+                        display: block;
+                        line-height: 40px;
+                        color: #fff;
+                        font-size: 1.25rem;
+                    }
+                    .depthMenuBtn{
+                        width: 0.8rem;
+                        height: 0.8rem;
+                        display: block;
+                        border-right: solid 2px #fff;
+                        border-top: solid 2px #fff;
+                        transform: rotate(135deg);
+                        &.slideOn{
+                            transform: rotate(-45deg);
+                        }
+                    }
+                }
+                .gnbDepth02{
+                    display: none;
+                    li{
+                        padding: 0 1.25rem;
+                        a{
+                            display: block;
+                            line-height: 40px;
+                            color: #fff;
+                        }
+                    }
+                    &.slideOn{
+                        display: flex;
+                    }
                 }
             }
         }
     }
-    .headerLogo{
-        display: block;
-        width: 100%;
-        min-width: 320px;
-        a{
-            display: block;
-            img{
-                display: block;
-                margin: 0 auto;
-                width: 100%;
-                height: 32px;
-                object-fit: contain;
+}
+
+
+
+// Footer
+#footer{
+    width: 100%;
+    background-color: #000;
+    a{
+        color: #fff;
+    }
+    .footerContianer01{
+        border-bottom: solid 1px #333;
+        .footerTopMenu{
+            width: 100%;
+            max-width: 1280px;
+            gap: 10px;
+            li{
+                gap: 10px;
+                a{
+                    font-size: 1rem;
+                    line-height: 60px;
+                    display: inline-block;
+                    text-align: center;
+                    padding: 0 20px;
+                }
+                span{
+                    display: inline-block;
+                    width: 1px;
+                    height: 1rem;
+                    background-color: #fff;
+                }
+                &:last-child span{
+                    display: none;
+                }
             }
         }
     }
-    .backBtn{
-        width: 32px;
-        background-color: transparent;
-        border: 0;
-        span{
-            width: 18px;
-            height: 18px;
-            display: block;
-            border-right: solid 2px #fff;
-            border-top: solid 2px #fff;
-            border-radius: 2px;
-            transform: rotate(45deg);
+    .footerContianer02{
+        .footerBottomBox{
+            width: 100%;
+            max-width: 1280px;
+            .footerLeft{
+                gap: 20px;
+                h3{
+                    a{
+                        img{
+                            width: 180px;
+                            object-fit: contain;
+                        }
+                    }
+                }
+                .companyInfo{
+                    color: #fff;
+                    .boldText{
+                        font-weight: 500;
+                    }
+                    li{
+                        gap: 20px;
+                        span{
+                            gap: 10px;
+                        }
+                    }
+                }
+            }
+            .footerRight{
+                gap: 24px;
+                .familySiteBox{
+                    position: relative;
+                    width: 200px;
+                    height: 40px;
+                    border: solid 1px #fff;
+                    border-radius: 10px;
+                    box-sizing: border-box;
+                    button{
+                        width: 100%;
+                        line-height: 40px;
+                        padding: 0 20px;
+                        color: #fff;
+                        background-color: transparent;
+                        border: 0;
+                    }
+                    ul{
+                        position: absolute;
+                        bottom: 100%;
+                        left: 0;
+                        width: 100%;
+                        background-color: #000;
+                        border: solid 1px #fff;
+                        border-radius: 10px;
+                        box-sizing: border-box;
+                        li{
+                            a{
+                                display: block;
+                                line-height: 40px;
+                                padding: 0 20px;
+                                border-bottom: solid 1px #fff;
+                            }
+                            &:last-child a{
+                                border: 0;
+                            }
+                        }
+                    }
+                }
+                .contactBox{
+                    gap: 14px;
+                    li{
+                        a{
+                            font-size: 1.2rem;
+                            gap: 10px;
+                        }
+                    }
+                }
+            }
         }
     }
+}
+
+// Top Button
+#toTop {
+    width: 42px;
+    height: 42px;
+    background-color: #ccc;
+    color: #555;
+    border: 2px solid #ccc;
+    border-radius: 10%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 9;
 }
