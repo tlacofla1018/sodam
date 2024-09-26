@@ -14,8 +14,8 @@ window.addEventListener('scroll', _.throttle(function () {
     }
 }, 300));
 
-toTop.addEventListener('click', function () {
-    gsap.to(window, .7, {
-        scrollTo: 0
-    });
-});
+// toTop.addEventListener('click', function () {
+//     gsap.to(window, .7, {
+//         scrollTo: 0
+//     });
+// });

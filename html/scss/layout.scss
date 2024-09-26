@@ -2,6 +2,53 @@ html,body{
     background-color: #000;
 }
 
+// header
+.scrolledBg{
+    background-color: #000 !important;
+}
+.activeHeader{
+    display: block !important;
+}
+
+.topBanner{
+    width: 100%;
+    height: 60px;
+    position: relative;
+    background: url(/img/banner/topB/TransformersOne_9808022.jpg);
+    .adCloseBtnBox{
+        background-color: rgba(0, 0, 0, 0.6);
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        position: absolute;
+        bottom: 0;
+        right: 10px;
+        width: auto;
+        padding: 4px;
+        gap: 10px;
+        div{
+            color: #fff;
+            line-height: 1px;
+            font-size: 14px;
+            input{
+                border: 0;
+            }
+        }
+        button{
+            display: block;
+            width: .875rem;
+            height: .875rem;
+            background: transparent;
+            border: 0;
+            img{
+                display: block;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+}
 // PC Header
 #header{
     position: sticky;
@@ -429,19 +476,19 @@ html,body{
 }
 
 // Top Button
-#toTop {
-    width: 42px;
-    height: 42px;
-    background-color: #ccc;
-    color: #555;
-    border: 2px solid #ccc;
-    border-radius: 10%;
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    z-index: 9;
-}
+// #toTop {
+//     width: 42px;
+//     height: 42px;
+//     background-color: #ccc;
+//     color: #555;
+//     border: 2px solid #ccc;
+//     border-radius: 10%;
+//     cursor: pointer;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     position: fixed;
+//     bottom: 30px;
+//     right: 30px;
+//     z-index: 9;
+// }
