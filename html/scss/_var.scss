@@ -1,0 +1,13 @@
+@mixin SwiperButtonDesign ($width: 42px, $height: 42px, $bgColor: rgba(0, 0, 0, 0.2)) {
+    width: $width;
+    height: $height;
+    background-color: $bgColor;
+    border-radius: 50%;
+}
+@mixin spanAngleBracket ($width: 32px, $height: 32px, $border: 2px, $borderColor: #fff, $angle: 180) {
+    width: $width;
+    height: $height;
+    border: solid #{$border} #{$borderColor};
+    transform: rotate(#{$angle}deg);
+    display: block;
+}
