@@ -1,0 +1,3216 @@
+<?php include_once("./layout/header.html"); ?>
+
+
+<main id="mainMain" class="d-flex flex-column">
+    <section id="mainBannerBox">
+
+    </section>
+    <section id="movieRankBox">
+        <span class="titleBox">
+            <h2 class="contentsTitle">영화 Top20</h2>
+            <a class="plusBtn" href="#">
+                <span>더보기</span>
+                <img src="/img/icon/arrowIcon.svg" alt="더보기 아이콘">
+            </a>
+        </span>
+        <div class="rankContainer">
+            <!-- 현재상영작 & 최신개봉작 -->
+            <div class="movieRank">
+                <ul class="rankTitle nav" id="pills-tab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="now" data-bs-toggle="pill" data-bs-target="#nowRankContent" type="button" role="tab" aria-controls="pills-home" aria-selected="true">현재상영작</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="recent" data-bs-toggle="pill" data-bs-target="#recentRankContent" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">최신개봉작</button>
+                    </li>
+                </ul>
+                <div class="rankContent tab-content" id="pills-tabContent">
+                    <div id="nowRankContent" class="swiper mySwiper tab-pane fade show active" role="tabpanel" aria-labelledby="now" tabindex="0">
+                        <div class="swiper-wrapper">
+                            <!-- 1~4 -->
+                                <div class="swiper-slide">
+                                    <span class="topContent">
+                                        <img src="/img/poster/iTheExecutioner2024-p01.jpeg" alt="'베테랑2' 포스터 이미지">
+                                        <em class="rankNumber">1</em>
+                                        <span class="likeBtn">
+                                            <img id="heart" src="/img/icon/heartIcon.svg" alt="좋아요 아이콘">
+                                        </span>
+                                        <span class="hoverBtn">
+                                            <a href="#">예매하기</a>
+                                            <a href="#">상세보기</a>
+                                        </span>
+                                    </span>
+                                    <a href="#">
+                                        <span class="middleContent">
+                                            <img src="/img/age/age15.svg" alt="15세 이상 관람가 아이콘">
+                                            <strong>베테랑2</strong>
+                                        </span>
+                                        <span class="bottomContent">
+                                            <span>
+                                                <span>예매율</span>
+                                                <span class="numText">72.1%</span>
+                                            </span>
+                                            <span>
+                                                <img src="/img/icon/starIcon.svg" alt="노란색 별모양 평점 아이콘">
+                                                <span class="numText">8.9</span>
+                                            </span>
+                                        </span>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <span class="topContent">
+                                        <img src="/img/poster/myDearestFuBao-p01.jpeg" alt="'안녕, 할부지' 포스터 이미지">
+                                        <em class="rankNumber">2</em>
+                                        <span class="likeBtn">
+                                            <img id="heart" src="/img/icon/heartIcon.svg" alt="좋아요 아이콘">
+                                        </span>
+                                        <span class="hoverBtn">
+                                            <a href="#">예매하기</a>
+                                            <a href="#">상세보기</a>
+                                        </span>
+                                    </span>
+                                    <a href="#">
+                                        <span class="middleContent">
+                                            <img src="/img/age/ageAll.svg" alt="전체 관람가 아이콘">
+                                            <strong>안녕, 할부지</strong>
+                                        </span>
+                                        <span class="bottomContent">
+                                            <span>
+                                                <span>예매율</span>
+                                                <span class="numText">8.1%</span>
+                                            </span>
+                                            <span>
+                                                <img src="/img/icon/starIcon.svg" alt="노란색 별모양 평점 아이콘">
+                                                <span class="numText">8.57</span>
+                                            </span>
+                                        </span>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <span class="topContent">
+                                        <img src="/img/poster/beginAgain-p01.jpeg" alt="'비긴 어게인' 포스터 이미지">
+                                        <em class="rankNumber">3</em>
+                                        <span class="likeBtn">
+                                            <img id="heart" src="/img/icon/heartIcon.svg" alt="좋아요 아이콘">
+                                        </span>
+                                        <span class="hoverBtn">
+                                            <a href="#">예매하기</a>
+                                            <a href="#">상세보기</a>
+                                        </span>
+                                    </span>
+                                    <a href="#">
+                                        <span class="middleContent">
+                                            <img src="/img/age/age15.svg" alt="15세 이상 관람가 아이콘">
+                                            <strong>비긴 어게인</strong>
+                                        </span>
+                                        <span class="bottomContent">
+                                            <span>
+                                                <span>예매율</span>
+                                                <span class="numText">7.9%</span>
+                                            </span>
+                                            <span>
+                                                <img src="/img/icon/starIcon.svg" alt="노란색 별모양 평점 아이콘">
+                                                <span class="numText">9.13</span>
+                                            </span>
+                                        </span>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <span class="topContent">
+                                        <img src="/img/poster/alienRomulus-p01.jpeg" alt="'에이리언: 로물루스' 포스터 이미지">
+                                        <em class="rankNumber">4</em>
+                                        <span class="likeBtn">
+                                            <img id="heart" src="/img/icon/heartIcon.svg" alt="좋아요 아이콘">
+                                        </span>
+                                        <span class="hoverBtn">
+                                            <a href="#">예매하기</a>
+                                            <a href="#">상세보기</a>
+                                        </span>
+                                    </span>
+                                    <a href="#">
+                                        <span class="middleContent">
+                                            <img src="/img/age/age15.svg" alt="15세 이상 관람가 아이콘">
+                                            <strong>에이리언: 로물루스</strong>
+                                        </span>
+                                        <span class="bottomContent">
+                                            <span>
+                                                <span>예매율</span>
+                                                <span class="numText">1.2%</span>
+                                            </span>
+                                            <span>
+                                                <img src="/img/icon/starIcon.svg" alt="노란색 별모양 평점 아이콘">
+                                                <span class="numText">8.76</span>
+                                            </span>
+                                        </span>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <span class="topContent">
+                                        <img src="/img/poster/workToDo-p01.jpeg" alt="'해야 할 일' 포스터 이미지">
+                                        <span class="rankNumber">AD</span>
+                                        <span class="likeBtn">
+                                            <img id="heart" src="/img/icon/heartIcon.svg" alt="좋아요 아이콘">
+                                        </span>
+                                        <span class="hoverBtn">
+                                            <a href="#">상세보기</a>
+                                        </span>
+                                    </span>
+                                    <span class="adClock">
+                                        <img src="/img/icon/clockIcon.svg" alt="시계 모양 아이콘">
+                                        <span>2024.10.01. 12:00 기준</span>
+                                    </span>
+                                </div>
+                            <!-- 5~8 -->
+                                <div class="swiper-slide">
+                                    <span class="topContent">
+                                        <img src="/img/poster/pilot-p01.jpeg" alt="'파일럿' 포스터 이미지">
+                                        <em class="rankNumber">5</em>
+                                        <span class="likeBtn">
+                                            <img id="heart" src="/img/icon/heartIcon.svg" alt="좋아요 아이콘">
+                                        </span>
+                                        <span class="hoverBtn">
+                                            <a href="#">예매하기</a>
+                                            <a href="#">상세보기</a>
+                                        </span>
+                                    </span>
+                                    <a href="#">
+                                        <span class="middleContent">
+                                            <img src="/img/age/age12.svg" alt="12세 이상 관람가 아이콘">
+                                            <strong>파일럿</strong>
+                                        </span>
+                                        <span class="bottomContent">
+                                            <span>
+                                                <span>예매율</span>
+                                                <span class="numText">1.0%</span>
+                                            </span>
+                                            <span>
+                                                <img src="/img/icon/starIcon.svg" alt="노란색 별모양 평점 아이콘">
+                                                <span class="numText">7.72</span>
+                                            </span>
+                                        </span>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <span class="topContent">
+                                        <img src="/img/poster/speakNoEvil-p01.jpeg" alt="'스픽 노 이블' 포스터 이미지">
+                                        <em class="rankNumber">6</em>
+                                        <span class="likeBtn">
+                                            <img id="heart" src="/img/icon/heartIcon.svg" alt="좋아요 아이콘">
+                                        </span>
+                                        <span class="hoverBtn">
+                                            <a href="#">예매하기</a>
+                                            <a href="#">상세보기</a>
+                                        </span>
+                                    </span>
+                                    <a href="#">
+                                        <span class="middleContent">
+                                            <img src="/img/age/age15.svg" alt="15세 이상 관람가 아이콘">
+                                            <strong>스픽 노 이블</strong>
+                                        </span>
+                                        <span class="bottomContent">
+                                            <span>
+                                                <span>예매율</span>
+                                                <span class="numText">0.9%</span>
+                                            </span>
+                                            <span>
+                                                <img src="/img/icon/starIcon.svg" alt="노란색 별모양 평점 아이콘">
+                                                <span class="numText">7.62</span>
+                                            </span>
+                                        </span>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <span class="topContent">
+                                        <img src="/img/poster/betterDays-p01.jpeg" alt="'소년시절의 너' 포스터 이미지">
+                                        <em class="rankNumber">7</em>
+                                        <span class="likeBtn">
+                                            <img id="heart" src="/img/icon/heartIcon.svg" alt="좋아요 아이콘">
+                                        </span>
+                                        <span class="hoverBtn">
+                                            <a href="#">예매하기</a>
+                                            <a href="#">상세보기</a>
+                                        </span>
+                                    </span>
+                                    <a href="#">
+                                        <span class="middleContent">
+                                            <img src="/img/age/age15.svg" alt="15세 이상 관람가 아이콘">
+                                            <strong>소년시절의 너</strong>
+                                        </span>
+                                        <span class="bottomContent">
+                                            <span>
+                                                <span>예매율</span>
+                                                <span class="numText">0.7%</span>
+                                            </span>
+                                            <span>
+                                                <img src="/img/icon/starIcon.svg" alt="노란색 별모양 평점 아이콘">
+                                                <span class="numText">9.07</span>
+                                            </span>
+                                        </span>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <span class="topContent">
+                                        <img src="/img/poster/beetlejuiceBeetlejuice-p01.jpeg" alt="'비틀쥬스 비틀쥬스' 포스터 이미지">
+                                        <em class="rankNumber">8</em>
+                                        <span class="likeBtn">
+                                            <img id="heart" src="/img/icon/heartIcon.svg" alt="좋아요 아이콘">
+                                        </span>
+                                        <span class="hoverBtn">
+                                            <a href="#">예매하기</a>
+                                            <a href="#">상세보기</a>
+                                        </span>
+                                    </span>
+                                    <a href="#">
+                                        <span class="middleContent">
+                                            <img src="/img/age/age12.svg" alt="12세 이상 관람가 아이콘">
+                                            <strong>비틀쥬스 비틀쥬스</strong>
+                                        </span>
+                                        <span class="bottomContent">
+                                            <span>
+                                                <span>예매율</span>
+                                                <span class="numText">0.5%</span>
+                                            </span>
+                                            <span>
+                                                <img src="/img/icon/starIcon.svg" alt="노란색 별모양 평점 아이콘">
+                                                <span class="numText">7.55</span>
+                                            </span>
+                                        </span>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <span class="topContent">
+                                        <img src="/img/poster/julietNaked-p01.jpeg" alt="'줄리엣, 네이키드' 포스터 이미지">
+                                        <span class="rankNumber">AD</span>
+                                        <span class="likeBtn">
+                                            <img id="heart" src="/img/icon/heartIcon.svg" alt="좋아요 아이콘">
+                                        </span>
+                                        <span class="hoverBtn">
+                                            <a href="#">상세보기</a>
+                                        </span>
+                                    </span>
+                                    <span class="adClock">
+                                        <img src="/img/icon/clockIcon.svg" alt="시계 모양 아이콘">
+                                        <span>2024.10.01. 12:00 기준</span>
+                                    </span>
+                                </div>
+                            <!-- 9~12 -->
+                                <div class="swiper-slide">
+                                    <span class="topContent">
+                                        <img src="/img/poster/victory-p01.jpeg" alt="'빅토리' 포스터 이미지">
+                                        <em class="rankNumber">9</em>
+                                        <span class="likeBtn">
+                                            <img id="heart" src="/img/icon/heartIcon.svg" alt="좋아요 아이콘">
+                                        </span>
+                                        <span class="hoverBtn">
+                                            <a href="#">예매하기</a>
+                                            <a href="#">상세보기</a>
+                                        </span>
+                                    </span>
+                                    <a href="#">
+                                        <span class="middleContent">
+                                            <img src="/img/age/age12.svg" alt="12세 이상 관람가 아이콘">
+                                            <strong>빅토리</strong>
+                                        </span>
+                                        <span class="bottomContent">
+                                            <span>
+                                                <span>예매율</span>
+                                                <span class="numText">0.5%</span>
+                                            </span>
+                                            <span>
+                                                <img src="/img/icon/starIcon.svg" alt="노란색 별모양 평점 아이콘">
+                                                <span class="numText">8.22</span>
+                                            </span>
+                                        </span>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <span class="topContent">
+                                        <img src="/img/poster/blesser-p01.jpeg" alt="'그녀에게' 포스터 이미지">
+                                        <em class="rankNumber">10</em>
+                                        <span class="likeBtn">
+                                            <img id="heart" src="/img/icon/heartIcon.svg" alt="좋아요 아이콘">
+                                        </span>
+                                        <span class="hoverBtn">
+                                            <a href="#">예매하기</a>
+                                            <a href="#">상세보기</a>
+                                        </span>
+                                    </span>
+                                    <a href="#">
+                                        <span class="middleContent">
+                                            <img src="/img/age/ageAll.svg" alt="전체 관람가 아이콘">
+                                            <strong>그녀에게</strong>
+                                        </span>
+                                        <span class="bottomContent">
+                                            <span>
+                                                <span>예매율</span>
+                                                <span class="numText">0.5%</span>
+                                            </span>
+                                            <span>
+                                                <img src="/img/icon/starIcon.svg" alt="노란색 별모양 평점 아이콘">
+                                                <span class="numText">9.6</span>
+                                            </span>
+                                        </span>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <span class="topContent">
+                                        <img src="/img/poster/myLove-p01.jpeg" alt="'비긴 어게인' 포스터 이미지">
+                                        <em class="rankNumber">11</em>
+                                        <span class="likeBtn">
+                                            <img id="heart" src="/img/icon/heartIcon.svg" alt="좋아요 아이콘">
+                                        </span>
+                                        <span class="hoverBtn">
+                                            <a href="#">예매하기</a>
+                                            <a href="#">상세보기</a>
+                                        </span>
+                                    </span>
+                                    <a href="#">
+                                        <span class="middleContent">
+                                            <img src="/img/age/age15.svg" alt="15세 이상 관람가 아이콘">
+                                            <strong>비긴 어게인</strong>
+                                        </span>
+                                        <span class="bottomContent">
+                                            <span>
+                                                <span>예매율</span>
+                                                <span class="numText">0.4%</span>
+                                            </span>
+                                            <span>
+                                                <img src="/img/icon/starIcon.svg" alt="노란색 별모양 평점 아이콘">
+                                                <span class="numText">9.13</span>
+                                            </span>
+                                        </span>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <span class="topContent">
+                                        <img src="/img/poster/cashOut-p01.jpeg" alt="'캐시 아웃' 포스터 이미지">
+                                        <em class="rankNumber">12</em>
+                                        <span class="likeBtn">
+                                            <img id="heart" src="/img/icon/heartIcon.svg" alt="좋아요 아이콘">
+                                        </span>
+                                        <span class="hoverBtn">
+                                            <a href="#">예매하기</a>
+                                            <a href="#">상세보기</a>
+                                        </span>
+                                    </span>
+                                    <a href="#">
+                                        <span class="middleContent">
+                                            <img src="/img/age/age12.svg" alt="12세 이상 관람가 아이콘">
+                                            <strong>캐시 아웃</strong>
+                                        </span>
+                                        <span class="bottomContent">
+                                            <span>
+                                                <span>예매율</span>
+                                                <span class="numText">0.3%</span>
+                                            </span>
+                                            <span>
+                                                <img src="/img/icon/starIcon.svg" alt="노란색 별모양 평점 아이콘">
+                                                <span class="numText">6.79</span>
+                                            </span>
+                                        </span>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <span class="topContent">
+                                        <img src="/img/poster/guyRitchiesTheCovenant-p01.jpeg" alt="'더 커버넌트' 포스터 이미지">
+                                        <span class="rankNumber">AD</span>
+                                        <span class="likeBtn">
+                                            <img id="heart" src="/img/icon/heartIcon.svg" alt="좋아요 아이콘">
+                                        </span>
+                                        <span class="hoverBtn">
+                                            <a href="#">상세보기</a>
+                                        </span>
+                                    </span>
+                                    <span class="adClock">
+                                        <img src="/img/icon/clockIcon.svg" alt="시계 모양 아이콘">
+                                        <span>2024.10.01. 12:00 기준</span>
+                                    </span>
+                                </div>
+                            <!-- 13~16 -->
+                                <div class="swiper-slide">
+                                    <span class="topContent">
+                                        <img src="/img/poster/laTraviataAtTheEndOfSummer-p01.jpeg" alt="'여름이 끝날 무렵의 라트라비아타' 포스터 이미지">
+                                        <em class="rankNumber">13</em>
+                                        <span class="likeBtn">
+                                            <img id="heart" src="/img/icon/heartIcon.svg" alt="좋아요 아이콘">
+                                        </span>
+                                        <span class="hoverBtn">
+                                            <a href="#">예매하기</a>
+                                            <a href="#">상세보기</a>
+                                        </span>
+                                    </span>
+                                    <a href="#">
+                                        <span class="middleContent">
+                                            <img src="/img/age/ageAll.svg" alt="전체 관람가 아이콘">
+                                            <strong>여름이 끝날 무렵의 라트라비아타</strong>
+                                        </span>
+                                        <span class="bottomContent">
+                                            <span>
+                                                <span>예매율</span>
+                                                <span class="numText">0.2%</span>
+                                            </span>
+                                            <span>
+                                                <img src="/img/icon/starIcon.svg" alt="노란색 별모양 평점 아이콘">
+                                                <span class="numText">9.27</span>
+                                            </span>
+                                        </span>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <span class="topContent">
+                                        <img src="/img/poster/insideOut2-p01.jpeg" alt="'인사이드 아웃 2' 포스터 이미지">
+                                        <em class="rankNumber">14</em>
+                                        <span class="likeBtn">
+                                            <img id="heart" src="/img/icon/heartIcon.svg" alt="좋아요 아이콘">
+                                        </span>
+                                        <span class="hoverBtn">
+                                            <a href="#">예매하기</a>
+                                            <a href="#">상세보기</a>
+                                        </span>
+                                    </span>
+                                    <a href="#">
+                                        <span class="middleContent">
+                                            <img src="/img/age/ageAll.svg" alt="전체 관람가 아이콘">
+                                            <strong>인사이드 아웃 2</strong>
+                                        </span>
+                                        <span class="bottomContent">
+                                            <span>
+                                                <span>예매율</span>
+                                                <span class="numText">0.2%</span>
+                                            </span>
+                                            <span>
+                                                <img src="/img/icon/starIcon.svg" alt="노란색 별모양 평점 아이콘">
+                                                <span class="numText">8.94</span>
+                                            </span>
+                                        </span>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <span class="topContent">
+                                        <img src="/img/poster/twisters-p01.jpeg" alt="'트위스터스' 포스터 이미지">
+                                        <em class="rankNumber">15</em>
+                                        <span class="likeBtn">
+                                            <img id="heart" src="/img/icon/heartIcon.svg" alt="좋아요 아이콘">
+                                        </span>
+                                        <span class="hoverBtn">
+                                            <a href="#">예매하기</a>
+                                            <a href="#">상세보기</a>
+                                        </span>
+                                    </span>
+                                    <a href="#">
+                                        <span class="middleContent">
+                                            <img src="/img/age/age12.svg" alt="12세 이상 관람가 아이콘">
+                                            <strong>트위스터스</strong>
+                                        </span>
+                                        <span class="bottomContent">
+                                            <span>
+                                                <span>예매율</span>
+                                                <span class="numText">0.2%</span>
+                                            </span>
+                                            <span>
+                                                <img src="/img/icon/starIcon.svg" alt="노란색 별모양 평점 아이콘">
+                                                <span class="numText">8.29</span>
+                                            </span>
+                                        </span>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <span class="topContent">
+                                        <img src="/img/poster/perfectDays-p01.jpeg" alt="'퍼펙트 데이즈' 포스터 이미지">
+                                        <em class="rankNumber">16</em>
+                                        <span class="likeBtn">
+                                            <img id="heart" src="/img/icon/heartIcon.svg" alt="좋아요 아이콘">
+                                        </span>
+                                        <span class="hoverBtn">
+                                            <a href="#">예매하기</a>
+                                            <a href="#">상세보기</a>
+                                        </span>
+                                    </span>
+                                    <a href="#">
+                                        <span class="middleContent">
+                                            <img src="/img/age/age12.svg" alt="12세 이상 관람가 아이콘">
+                                            <strong>퍼펙트 데이즈</strong>
+                                        </span>
+                                        <span class="bottomContent">
+                                            <span>
+                                                <span>예매율</span>
+                                                <span class="numText">0.1%</span>
+                                            </span>
+                                            <span>
+                                                <img src="/img/icon/starIcon.svg" alt="노란색 별모양 평점 아이콘">
+                                                <span class="numText">8.74</span>
+                                            </span>
+                                        </span>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <span class="topContent">
+                                        <img src="/img/poster/loveInTheBigCity-p01.jpeg" alt="'대도시의 사랑법' 포스터 이미지">
+                                        <span class="rankNumber">AD</span>
+                                        <span class="likeBtn">
+                                            <img id="heart" src="/img/icon/heartIcon.svg" alt="좋아요 아이콘">
+                                        </span>
+                                        <span class="hoverBtn">
+                                            <a href="#">상세보기</a>
+                                        </span>
+                                    </span>
+                                    <span class="adClock">
+                                        <img src="/img/icon/clockIcon.svg" alt="시계 모양 아이콘">
+                                        <span>2024.10.01. 12:00 기준</span>
+                                    </span>
+                                </div>
+                            <!-- 17~20 -->
+                                <div class="swiper-slide">
+                                    <span class="topContent">
+                                        <img src="/img/poster/springGarden-p01.jpeg" alt="'늘봄가든' 포스터 이미지">
+                                        <em class="rankNumber">17</em>
+                                        <span class="likeBtn">
+                                            <img id="heart" src="/img/icon/heartIcon.svg" alt="좋아요 아이콘">
+                                        </span>
+                                        <span class="hoverBtn">
+                                            <a href="#">예매하기</a>
+                                            <a href="#">상세보기</a>
+                                        </span>
+                                    </span>
+                                    <a href="#">
+                                        <span class="middleContent">
+                                            <img src="/img/age/age15.svg" alt="15세 이상 관람가 아이콘">
+                                            <strong>늘봄가든</strong>
+                                        </span>
+                                        <span class="bottomContent">
+                                            <span>
+                                                <span>예매율</span>
+                                                <span class="numText">0.1%</span>
+                                            </span>
+                                            <span>
+                                                <img src="/img/icon/starIcon.svg" alt="노란색 별모양 평점 아이콘">
+                                                <span class="numText">5.79</span>
+                                            </span>
+                                        </span>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <span class="topContent">
+                                        <img src="/img/poster/deadpoolAwolverine-p01.jpeg" alt="'데드풀과 울버린' 포스터 이미지">
+                                        <em class="rankNumber">18</em>
+                                        <span class="likeBtn">
+                                            <img id="heart" src="/img/icon/heartIcon.svg" alt="좋아요 아이콘">
+                                        </span>
+                                        <span class="hoverBtn">
+                                            <a href="#">예매하기</a>
+                                            <a href="#">상세보기</a>
+                                        </span>
+                                    </span>
+                                    <a href="#">
+                                        <span class="middleContent">
+                                            <img src="/img/age/age19.svg" alt="청소년 관람불가 아이콘">
+                                            <strong>데드풀과 울버린</strong>
+                                        </span>
+                                        <span class="bottomContent">
+                                            <span>
+                                                <span>예매율</span>
+                                                <span class="numText">0.0%</span>
+                                            </span>
+                                            <span>
+                                                <img src="/img/icon/starIcon.svg" alt="노란색 별모양 평점 아이콘">
+                                                <span class="numText">7.69</span>
+                                            </span>
+                                        </span>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <span class="topContent">
+                                        <img src="/img/poster/kill-p01.jpeg" alt="'킬' 포스터 이미지">
+                                        <em class="rankNumber">19</em>
+                                        <span class="likeBtn">
+                                            <img id="heart" src="/img/icon/heartIcon.svg" alt="좋아요 아이콘">
+                                        </span>
+                                        <span class="hoverBtn">
+                                            <a href="#">예매하기</a>
+                                            <a href="#">상세보기</a>
+                                        </span>
+                                    </span>
+                                    <a href="#">
+                                        <span class="middleContent">
+                                            <img src="/img/age/age19.svg" alt="청소년 관람불가 아이콘">
+                                            <strong>킬</strong>
+                                        </span>
+                                        <span class="bottomContent">
+                                            <span>
+                                                <span>예매율</span>
+                                                <span class="numText">0.0%</span>
+                                            </span>
+                                            <span>
+                                                <img src="/img/icon/starIcon.svg" alt="노란색 별모양 평점 아이콘">
+                                                <span class="numText">6.93</span>
+                                            </span>
+                                        </span>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <span class="topContent">
+                                        <img src="/img/poster/escape-p01.jpeg" alt="'탈주' 포스터 이미지">
+                                        <em class="rankNumber">20</em>
+                                        <span class="likeBtn">
+                                            <img id="heart" src="/img/icon/heartIcon.svg" alt="좋아요 아이콘">
+                                        </span>
+                                        <span class="hoverBtn">
+                                            <a href="#">예매하기</a>
+                                            <a href="#">상세보기</a>
+                                        </span>
+                                    </span>
+                                    <a href="#">
+                                        <span class="middleContent">
+                                            <img src="/img/age/age12.svg" alt="12세 이상 관람가 아이콘">
+                                            <strong>탈주</strong>
+                                        </span>
+                                        <span class="bottomContent">
+                                            <span>
+                                                <span>예매율</span>
+                                                <span class="numText">0.0%</span>
+                                            </span>
+                                            <span>
+                                                <img src="/img/icon/starIcon.svg" alt="노란색 별모양 평점 아이콘">
+                                                <span class="numText">8.04</span>
+                                            </span>
+                                        </span>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <span class="topContent">
+                                        <img src="/img/poster/banelAadama-p01.jpeg" alt="'바넬과 아다마' 포스터 이미지">
+                                        <span class="rankNumber">AD</span>
+                                        <span class="likeBtn">
+                                            <img id="heart" src="/img/icon/heartIcon.svg" alt="좋아요 아이콘">
+                                        </span>
+                                        <span class="hoverBtn">
+                                            <a href="#">상세보기</a>
+                                        </span>
+                                    </span>
+                                    <span class="adClock">
+                                        <img src="/img/icon/clockIcon.svg" alt="시계 모양 아이콘">
+                                        <span>2024.10.01. 12:00 기준</span>
+                                    </span>
+                                </div>
+                        </div>
+                        <div class="d-none d-lg-flex swiper-button nextBtn">
+                            <img src="/img/icon/arrowIcon.svg" alt="우측 화살표 이미지">
+                        </div>
+                        <div class="d-none d-lg-flex swiper-button prevBtn">
+                            <img src="/img/icon/arrowIcon.svg" alt="좌측 화살표 이미지">
+                        </div>
+                    </div>
+                    <div id="recentRankContent" class="swiper mySwiper tab-pane fade show" role="tabpanel" aria-labelledby="recent" tabindex="0">
+                        <div class="swiper-wrapper">
+                            <!-- 1~4 -->
+                                <div class="swiper-slide">
+                                    <span class="topContent">
+                                        <img src="/img/poster/iTheExecutioner2024-p01.jpeg" alt="'베테랑2' 포스터 이미지">
+                                        <em class="rankNumber">1</em>
+                                        <span class="likeBtn">
+                                            <img id="heart" src="/img/icon/heartIcon.svg" alt="좋아요 아이콘">
+                                        </span>
+                                        <span class="hoverBtn">
+                                            <a href="#">예매하기</a>
+                                            <a href="#">상세보기</a>
+                                        </span>
+                                    </span>
+                                    <a href="#">
+                                        <span class="middleContent">
+                                            <img src="/img/age/age15.svg" alt="15세 이상 관람가 아이콘">
+                                            <strong>베테랑2</strong>
+                                        </span>
+                                        <span class="bottomContent">
+                                            <span>
+                                                <span>예매율</span>
+                                                <span class="numText">72.1%</span>
+                                            </span>
+                                            <span>
+                                                <img src="/img/icon/starIcon.svg" alt="노란색 별모양 평점 아이콘">
+                                                <span class="numText">8.9</span>
+                                            </span>
+                                        </span>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <span class="topContent">
+                                        <img src="/img/poster/myDearestFuBao-p01.jpeg" alt="'안녕, 할부지' 포스터 이미지">
+                                        <em class="rankNumber">2</em>
+                                        <span class="likeBtn">
+                                            <img id="heart" src="/img/icon/heartIcon.svg" alt="좋아요 아이콘">
+                                        </span>
+                                        <span class="hoverBtn">
+                                            <a href="#">예매하기</a>
+                                            <a href="#">상세보기</a>
+                                        </span>
+                                    </span>
+                                    <a href="#">
+                                        <span class="middleContent">
+                                            <img src="/img/age/ageAll.svg" alt="전체 관람가 아이콘">
+                                            <strong>안녕, 할부지</strong>
+                                        </span>
+                                        <span class="bottomContent">
+                                            <span>
+                                                <span>예매율</span>
+                                                <span class="numText">8.1%</span>
+                                            </span>
+                                            <span>
+                                                <img src="/img/icon/starIcon.svg" alt="노란색 별모양 평점 아이콘">
+                                                <span class="numText">8.57</span>
+                                            </span>
+                                        </span>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <span class="topContent">
+                                        <img src="/img/poster/beginAgain-p01.jpeg" alt="'비긴 어게인' 포스터 이미지">
+                                        <em class="rankNumber">3</em>
+                                        <span class="likeBtn">
+                                            <img id="heart" src="/img/icon/heartIcon.svg" alt="좋아요 아이콘">
+                                        </span>
+                                        <span class="hoverBtn">
+                                            <a href="#">예매하기</a>
+                                            <a href="#">상세보기</a>
+                                        </span>
+                                    </span>
+                                    <a href="#">
+                                        <span class="middleContent">
+                                            <img src="/img/age/age15.svg" alt="15세 이상 관람가 아이콘">
+                                            <strong>비긴 어게인</strong>
+                                        </span>
+                                        <span class="bottomContent">
+                                            <span>
+                                                <span>예매율</span>
+                                                <span class="numText">7.9%</span>
+                                            </span>
+                                            <span>
+                                                <img src="/img/icon/starIcon.svg" alt="노란색 별모양 평점 아이콘">
+                                                <span class="numText">9.13</span>
+                                            </span>
+                                        </span>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <span class="topContent">
+                                        <img src="/img/poster/alienRomulus-p01.jpeg" alt="'에이리언: 로물루스' 포스터 이미지">
+                                        <em class="rankNumber">4</em>
+                                        <span class="likeBtn">
+                                            <img id="heart" src="/img/icon/heartIcon.svg" alt="좋아요 아이콘">
+                                        </span>
+                                        <span class="hoverBtn">
+                                            <a href="#">예매하기</a>
+                                            <a href="#">상세보기</a>
+                                        </span>
+                                    </span>
+                                    <a href="#">
+                                        <span class="middleContent">
+                                            <img src="/img/age/age15.svg" alt="15세 이상 관람가 아이콘">
+                                            <strong>에이리언: 로물루스</strong>
+                                        </span>
+                                        <span class="bottomContent">
+                                            <span>
+                                                <span>예매율</span>
+                                                <span class="numText">1.2%</span>
+                                            </span>
+                                            <span>
+                                                <img src="/img/icon/starIcon.svg" alt="노란색 별모양 평점 아이콘">
+                                                <span class="numText">8.76</span>
+                                            </span>
+                                        </span>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <span class="topContent">
+                                        <img src="/img/poster/workToDo-p01.jpeg" alt="'해야 할 일' 포스터 이미지">
+                                        <span class="rankNumber">AD</span>
+                                        <span class="likeBtn">
+                                            <img id="heart" src="/img/icon/heartIcon.svg" alt="좋아요 아이콘">
+                                        </span>
+                                        <span class="hoverBtn">
+                                            <a href="#">상세보기</a>
+                                        </span>
+                                    </span>
+                                    <span class="adClock">
+                                        <img src="/img/icon/clockIcon.svg" alt="시계 모양 아이콘">
+                                        <span>2024.10.01. 12:00 기준</span>
+                                    </span>
+                                </div>
+                            <!-- 5~8 -->
+                                <div class="swiper-slide">
+                                    <span class="topContent">
+                                        <img src="/img/poster/pilot-p01.jpeg" alt="'파일럿' 포스터 이미지">
+                                        <em class="rankNumber">5</em>
+                                        <span class="likeBtn">
+                                            <img id="heart" src="/img/icon/heartIcon.svg" alt="좋아요 아이콘">
+                                        </span>
+                                        <span class="hoverBtn">
+                                            <a href="#">예매하기</a>
+                                            <a href="#">상세보기</a>
+                                        </span>
+                                    </span>
+                                    <a href="#">
+                                        <span class="middleContent">
+                                            <img src="/img/age/age12.svg" alt="12세 이상 관람가 아이콘">
+                                            <strong>파일럿</strong>
+                                        </span>
+                                        <span class="bottomContent">
+                                            <span>
+                                                <span>예매율</span>
+                                                <span class="numText">1.0%</span>
+                                            </span>
+                                            <span>
+                                                <img src="/img/icon/starIcon.svg" alt="노란색 별모양 평점 아이콘">
+                                                <span class="numText">7.72</span>
+                                            </span>
+                                        </span>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <span class="topContent">
+                                        <img src="/img/poster/speakNoEvil-p01.jpeg" alt="'스픽 노 이블' 포스터 이미지">
+                                        <em class="rankNumber">6</em>
+                                        <span class="likeBtn">
+                                            <img id="heart" src="/img/icon/heartIcon.svg" alt="좋아요 아이콘">
+                                        </span>
+                                        <span class="hoverBtn">
+                                            <a href="#">예매하기</a>
+                                            <a href="#">상세보기</a>
+                                        </span>
+                                    </span>
+                                    <a href="#">
+                                        <span class="middleContent">
+                                            <img src="/img/age/age15.svg" alt="15세 이상 관람가 아이콘">
+                                            <strong>스픽 노 이블</strong>
+                                        </span>
+                                        <span class="bottomContent">
+                                            <span>
+                                                <span>예매율</span>
+                                                <span class="numText">0.9%</span>
+                                            </span>
+                                            <span>
+                                                <img src="/img/icon/starIcon.svg" alt="노란색 별모양 평점 아이콘">
+                                                <span class="numText">7.62</span>
+                                            </span>
+                                        </span>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <span class="topContent">
+                                        <img src="/img/poster/betterDays-p01.jpeg" alt="'소년시절의 너' 포스터 이미지">
+                                        <em class="rankNumber">7</em>
+                                        <span class="likeBtn">
+                                            <img id="heart" src="/img/icon/heartIcon.svg" alt="좋아요 아이콘">
+                                        </span>
+                                        <span class="hoverBtn">
+                                            <a href="#">예매하기</a>
+                                            <a href="#">상세보기</a>
+                                        </span>
+                                    </span>
+                                    <a href="#">
+                                        <span class="middleContent">
+                                            <img src="/img/age/age15.svg" alt="15세 이상 관람가 아이콘">
+                                            <strong>소년시절의 너</strong>
+                                        </span>
+                                        <span class="bottomContent">
+                                            <span>
+                                                <span>예매율</span>
+                                                <span class="numText">0.7%</span>
+                                            </span>
+                                            <span>
+                                                <img src="/img/icon/starIcon.svg" alt="노란색 별모양 평점 아이콘">
+                                                <span class="numText">9.07</span>
+                                            </span>
+                                        </span>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <span class="topContent">
+                                        <img src="/img/poster/beetlejuiceBeetlejuice-p01.jpeg" alt="'비틀쥬스 비틀쥬스' 포스터 이미지">
+                                        <em class="rankNumber">8</em>
+                                        <span class="likeBtn">
+                                            <img id="heart" src="/img/icon/heartIcon.svg" alt="좋아요 아이콘">
+                                        </span>
+                                        <span class="hoverBtn">
+                                            <a href="#">예매하기</a>
+                                            <a href="#">상세보기</a>
+                                        </span>
+                                    </span>
+                                    <a href="#">
+                                        <span class="middleContent">
+                                            <img src="/img/age/age12.svg" alt="12세 이상 관람가 아이콘">
+                                            <strong>비틀쥬스 비틀쥬스</strong>
+                                        </span>
+                                        <span class="bottomContent">
+                                            <span>
+                                                <span>예매율</span>
+                                                <span class="numText">0.5%</span>
+                                            </span>
+                                            <span>
+                                                <img src="/img/icon/starIcon.svg" alt="노란색 별모양 평점 아이콘">
+                                                <span class="numText">7.55</span>
+                                            </span>
+                                        </span>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <span class="topContent">
+                                        <img src="/img/poster/julietNaked-p01.jpeg" alt="'줄리엣, 네이키드' 포스터 이미지">
+                                        <span class="rankNumber">AD</span>
+                                        <span class="likeBtn">
+                                            <img id="heart" src="/img/icon/heartIcon.svg" alt="좋아요 아이콘">
+                                        </span>
+                                        <span class="hoverBtn">
+                                            <a href="#">상세보기</a>
+                                        </span>
+                                    </span>
+                                    <span class="adClock">
+                                        <img src="/img/icon/clockIcon.svg" alt="시계 모양 아이콘">
+                                        <span>2024.10.01. 12:00 기준</span>
+                                    </span>
+                                </div>
+                            <!-- 9~12 -->
+                                <div class="swiper-slide">
+                                    <span class="topContent">
+                                        <img src="/img/poster/victory-p01.jpeg" alt="'빅토리' 포스터 이미지">
+                                        <em class="rankNumber">9</em>
+                                        <span class="likeBtn">
+                                            <img id="heart" src="/img/icon/heartIcon.svg" alt="좋아요 아이콘">
+                                        </span>
+                                        <span class="hoverBtn">
+                                            <a href="#">예매하기</a>
+                                            <a href="#">상세보기</a>
+                                        </span>
+                                    </span>
+                                    <a href="#">
+                                        <span class="middleContent">
+                                            <img src="/img/age/age12.svg" alt="12세 이상 관람가 아이콘">
+                                            <strong>빅토리</strong>
+                                        </span>
+                                        <span class="bottomContent">
+                                            <span>
+                                                <span>예매율</span>
+                                                <span class="numText">0.5%</span>
+                                            </span>
+                                            <span>
+                                                <img src="/img/icon/starIcon.svg" alt="노란색 별모양 평점 아이콘">
+                                                <span class="numText">8.22</span>
+                                            </span>
+                                        </span>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <span class="topContent">
+                                        <img src="/img/poster/blesser-p01.jpeg" alt="'그녀에게' 포스터 이미지">
+                                        <em class="rankNumber">10</em>
+                                        <span class="likeBtn">
+                                            <img id="heart" src="/img/icon/heartIcon.svg" alt="좋아요 아이콘">
+                                        </span>
+                                        <span class="hoverBtn">
+                                            <a href="#">예매하기</a>
+                                            <a href="#">상세보기</a>
+                                        </span>
+                                    </span>
+                                    <a href="#">
+                                        <span class="middleContent">
+                                            <img src="/img/age/ageAll.svg" alt="전체 관람가 아이콘">
+                                            <strong>그녀에게</strong>
+                                        </span>
+                                        <span class="bottomContent">
+                                            <span>
+                                                <span>예매율</span>
+                                                <span class="numText">0.5%</span>
+                                            </span>
+                                            <span>
+                                                <img src="/img/icon/starIcon.svg" alt="노란색 별모양 평점 아이콘">
+                                                <span class="numText">9.6</span>
+                                            </span>
+                                        </span>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <span class="topContent">
+                                        <img src="/img/poster/myLove-p01.jpeg" alt="'비긴 어게인' 포스터 이미지">
+                                        <em class="rankNumber">11</em>
+                                        <span class="likeBtn">
+                                            <img id="heart" src="/img/icon/heartIcon.svg" alt="좋아요 아이콘">
+                                        </span>
+                                        <span class="hoverBtn">
+                                            <a href="#">예매하기</a>
+                                            <a href="#">상세보기</a>
+                                        </span>
+                                    </span>
+                                    <a href="#">
+                                        <span class="middleContent">
+                                            <img src="/img/age/age15.svg" alt="15세 이상 관람가 아이콘">
+                                            <strong>비긴 어게인</strong>
+                                        </span>
+                                        <span class="bottomContent">
+                                            <span>
+                                                <span>예매율</span>
+                                                <span class="numText">0.4%</span>
+                                            </span>
+                                            <span>
+                                                <img src="/img/icon/starIcon.svg" alt="노란색 별모양 평점 아이콘">
+                                                <span class="numText">9.13</span>
+                                            </span>
+                                        </span>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <span class="topContent">
+                                        <img src="/img/poster/cashOut-p01.jpeg" alt="'캐시 아웃' 포스터 이미지">
+                                        <em class="rankNumber">12</em>
+                                        <span class="likeBtn">
+                                            <img id="heart" src="/img/icon/heartIcon.svg" alt="좋아요 아이콘">
+                                        </span>
+                                        <span class="hoverBtn">
+                                            <a href="#">예매하기</a>
+                                            <a href="#">상세보기</a>
+                                        </span>
+                                    </span>
+                                    <a href="#">
+                                        <span class="middleContent">
+                                            <img src="/img/age/age12.svg" alt="12세 이상 관람가 아이콘">
+                                            <strong>캐시 아웃</strong>
+                                        </span>
+                                        <span class="bottomContent">
+                                            <span>
+                                                <span>예매율</span>
+                                                <span class="numText">0.3%</span>
+                                            </span>
+                                            <span>
+                                                <img src="/img/icon/starIcon.svg" alt="노란색 별모양 평점 아이콘">
+                                                <span class="numText">6.79</span>
+                                            </span>
+                                        </span>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <span class="topContent">
+                                        <img src="/img/poster/guyRitchiesTheCovenant-p01.jpeg" alt="'더 커버넌트' 포스터 이미지">
+                                        <span class="rankNumber">AD</span>
+                                        <span class="likeBtn">
+                                            <img id="heart" src="/img/icon/heartIcon.svg" alt="좋아요 아이콘">
+                                        </span>
+                                        <span class="hoverBtn">
+                                            <a href="#">상세보기</a>
+                                        </span>
+                                    </span>
+                                    <span class="adClock">
+                                        <img src="/img/icon/clockIcon.svg" alt="시계 모양 아이콘">
+                                        <span>2024.10.01. 12:00 기준</span>
+                                    </span>
+                                </div>
+                            <!-- 13~16 -->
+                                <div class="swiper-slide">
+                                    <span class="topContent">
+                                        <img src="/img/poster/laTraviataAtTheEndOfSummer-p01.jpeg" alt="'여름이 끝날 무렵의 라트라비아타' 포스터 이미지">
+                                        <em class="rankNumber">13</em>
+                                        <span class="likeBtn">
+                                            <img id="heart" src="/img/icon/heartIcon.svg" alt="좋아요 아이콘">
+                                        </span>
+                                        <span class="hoverBtn">
+                                            <a href="#">예매하기</a>
+                                            <a href="#">상세보기</a>
+                                        </span>
+                                    </span>
+                                    <a href="#">
+                                        <span class="middleContent">
+                                            <img src="/img/age/ageAll.svg" alt="전체 관람가 아이콘">
+                                            <strong>여름이 끝날 무렵의 라트라비아타</strong>
+                                        </span>
+                                        <span class="bottomContent">
+                                            <span>
+                                                <span>예매율</span>
+                                                <span class="numText">0.2%</span>
+                                            </span>
+                                            <span>
+                                                <img src="/img/icon/starIcon.svg" alt="노란색 별모양 평점 아이콘">
+                                                <span class="numText">9.27</span>
+                                            </span>
+                                        </span>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <span class="topContent">
+                                        <img src="/img/poster/insideOut2-p01.jpeg" alt="'인사이드 아웃 2' 포스터 이미지">
+                                        <em class="rankNumber">14</em>
+                                        <span class="likeBtn">
+                                            <img id="heart" src="/img/icon/heartIcon.svg" alt="좋아요 아이콘">
+                                        </span>
+                                        <span class="hoverBtn">
+                                            <a href="#">예매하기</a>
+                                            <a href="#">상세보기</a>
+                                        </span>
+                                    </span>
+                                    <a href="#">
+                                        <span class="middleContent">
+                                            <img src="/img/age/ageAll.svg" alt="전체 관람가 아이콘">
+                                            <strong>인사이드 아웃 2</strong>
+                                        </span>
+                                        <span class="bottomContent">
+                                            <span>
+                                                <span>예매율</span>
+                                                <span class="numText">0.2%</span>
+                                            </span>
+                                            <span>
+                                                <img src="/img/icon/starIcon.svg" alt="노란색 별모양 평점 아이콘">
+                                                <span class="numText">8.94</span>
+                                            </span>
+                                        </span>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <span class="topContent">
+                                        <img src="/img/poster/twisters-p01.jpeg" alt="'트위스터스' 포스터 이미지">
+                                        <em class="rankNumber">15</em>
+                                        <span class="likeBtn">
+                                            <img id="heart" src="/img/icon/heartIcon.svg" alt="좋아요 아이콘">
+                                        </span>
+                                        <span class="hoverBtn">
+                                            <a href="#">예매하기</a>
+                                            <a href="#">상세보기</a>
+                                        </span>
+                                    </span>
+                                    <a href="#">
+                                        <span class="middleContent">
+                                            <img src="/img/age/age12.svg" alt="12세 이상 관람가 아이콘">
+                                            <strong>트위스터스</strong>
+                                        </span>
+                                        <span class="bottomContent">
+                                            <span>
+                                                <span>예매율</span>
+                                                <span class="numText">0.2%</span>
+                                            </span>
+                                            <span>
+                                                <img src="/img/icon/starIcon.svg" alt="노란색 별모양 평점 아이콘">
+                                                <span class="numText">8.29</span>
+                                            </span>
+                                        </span>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <span class="topContent">
+                                        <img src="/img/poster/perfectDays-p01.jpeg" alt="'퍼펙트 데이즈' 포스터 이미지">
+                                        <em class="rankNumber">16</em>
+                                        <span class="likeBtn">
+                                            <img id="heart" src="/img/icon/heartIcon.svg" alt="좋아요 아이콘">
+                                        </span>
+                                        <span class="hoverBtn">
+                                            <a href="#">예매하기</a>
+                                            <a href="#">상세보기</a>
+                                        </span>
+                                    </span>
+                                    <a href="#">
+                                        <span class="middleContent">
+                                            <img src="/img/age/age12.svg" alt="12세 이상 관람가 아이콘">
+                                            <strong>퍼펙트 데이즈</strong>
+                                        </span>
+                                        <span class="bottomContent">
+                                            <span>
+                                                <span>예매율</span>
+                                                <span class="numText">0.1%</span>
+                                            </span>
+                                            <span>
+                                                <img src="/img/icon/starIcon.svg" alt="노란색 별모양 평점 아이콘">
+                                                <span class="numText">8.74</span>
+                                            </span>
+                                        </span>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <span class="topContent">
+                                        <img src="/img/poster/loveInTheBigCity-p01.jpeg" alt="'대도시의 사랑법' 포스터 이미지">
+                                        <span class="rankNumber">AD</span>
+                                        <span class="likeBtn">
+                                            <img id="heart" src="/img/icon/heartIcon.svg" alt="좋아요 아이콘">
+                                        </span>
+                                        <span class="hoverBtn">
+                                            <a href="#">상세보기</a>
+                                        </span>
+                                    </span>
+                                    <span class="adClock">
+                                        <img src="/img/icon/clockIcon.svg" alt="시계 모양 아이콘">
+                                        <span>2024.10.01. 12:00 기준</span>
+                                    </span>
+                                </div>
+                            <!-- 17~20 -->
+                                <div class="swiper-slide">
+                                    <span class="topContent">
+                                        <img src="/img/poster/springGarden-p01.jpeg" alt="'늘봄가든' 포스터 이미지">
+                                        <em class="rankNumber">17</em>
+                                        <span class="likeBtn">
+                                            <img id="heart" src="/img/icon/heartIcon.svg" alt="좋아요 아이콘">
+                                        </span>
+                                        <span class="hoverBtn">
+                                            <a href="#">예매하기</a>
+                                            <a href="#">상세보기</a>
+                                        </span>
+                                    </span>
+                                    <a href="#">
+                                        <span class="middleContent">
+                                            <img src="/img/age/age15.svg" alt="15세 이상 관람가 아이콘">
+                                            <strong>늘봄가든</strong>
+                                        </span>
+                                        <span class="bottomContent">
+                                            <span>
+                                                <span>예매율</span>
+                                                <span class="numText">0.1%</span>
+                                            </span>
+                                            <span>
+                                                <img src="/img/icon/starIcon.svg" alt="노란색 별모양 평점 아이콘">
+                                                <span class="numText">5.79</span>
+                                            </span>
+                                        </span>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <span class="topContent">
+                                        <img src="/img/poster/deadpoolAwolverine-p01.jpeg" alt="'데드풀과 울버린' 포스터 이미지">
+                                        <em class="rankNumber">18</em>
+                                        <span class="likeBtn">
+                                            <img id="heart" src="/img/icon/heartIcon.svg" alt="좋아요 아이콘">
+                                        </span>
+                                        <span class="hoverBtn">
+                                            <a href="#">예매하기</a>
+                                            <a href="#">상세보기</a>
+                                        </span>
+                                    </span>
+                                    <a href="#">
+                                        <span class="middleContent">
+                                            <img src="/img/age/age19.svg" alt="청소년 관람불가 아이콘">
+                                            <strong>데드풀과 울버린</strong>
+                                        </span>
+                                        <span class="bottomContent">
+                                            <span>
+                                                <span>예매율</span>
+                                                <span class="numText">0.0%</span>
+                                            </span>
+                                            <span>
+                                                <img src="/img/icon/starIcon.svg" alt="노란색 별모양 평점 아이콘">
+                                                <span class="numText">7.69</span>
+                                            </span>
+                                        </span>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <span class="topContent">
+                                        <img src="/img/poster/kill-p01.jpeg" alt="'킬' 포스터 이미지">
+                                        <em class="rankNumber">19</em>
+                                        <span class="likeBtn">
+                                            <img id="heart" src="/img/icon/heartIcon.svg" alt="좋아요 아이콘">
+                                        </span>
+                                        <span class="hoverBtn">
+                                            <a href="#">예매하기</a>
+                                            <a href="#">상세보기</a>
+                                        </span>
+                                    </span>
+                                    <a href="#">
+                                        <span class="middleContent">
+                                            <img src="/img/age/age19.svg" alt="청소년 관람불가 아이콘">
+                                            <strong>킬</strong>
+                                        </span>
+                                        <span class="bottomContent">
+                                            <span>
+                                                <span>예매율</span>
+                                                <span class="numText">0.0%</span>
+                                            </span>
+                                            <span>
+                                                <img src="/img/icon/starIcon.svg" alt="노란색 별모양 평점 아이콘">
+                                                <span class="numText">6.93</span>
+                                            </span>
+                                        </span>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <span class="topContent">
+                                        <img src="/img/poster/escape-p01.jpeg" alt="'탈주' 포스터 이미지">
+                                        <em class="rankNumber">20</em>
+                                        <span class="likeBtn">
+                                            <img id="heart" src="/img/icon/heartIcon.svg" alt="좋아요 아이콘">
+                                        </span>
+                                        <span class="hoverBtn">
+                                            <a href="#">예매하기</a>
+                                            <a href="#">상세보기</a>
+                                        </span>
+                                    </span>
+                                    <a href="#">
+                                        <span class="middleContent">
+                                            <img src="/img/age/age12.svg" alt="12세 이상 관람가 아이콘">
+                                            <strong>탈주</strong>
+                                        </span>
+                                        <span class="bottomContent">
+                                            <span>
+                                                <span>예매율</span>
+                                                <span class="numText">0.0%</span>
+                                            </span>
+                                            <span>
+                                                <img src="/img/icon/starIcon.svg" alt="노란색 별모양 평점 아이콘">
+                                                <span class="numText">8.04</span>
+                                            </span>
+                                        </span>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <span class="topContent">
+                                        <img src="/img/poster/banelAadama-p01.jpeg" alt="'바넬과 아다마' 포스터 이미지">
+                                        <span class="rankNumber">AD</span>
+                                        <span class="likeBtn">
+                                            <img id="heart" src="/img/icon/heartIcon.svg" alt="좋아요 아이콘">
+                                        </span>
+                                        <span class="hoverBtn">
+                                            <a href="#">상세보기</a>
+                                        </span>
+                                    </span>
+                                    <span class="adClock">
+                                        <img src="/img/icon/clockIcon.svg" alt="시계 모양 아이콘">
+                                        <span>2024.10.01. 12:00 기준</span>
+                                    </span>
+                                </div>
+                        </div>
+                        <div class="d-none d-lg-flex swiper-button nextBtn">
+                            <img src="/img/icon/arrowIcon.svg" alt="우측 화살표 이미지">
+                        </div>
+                        <div class="d-none d-lg-flex swiper-button prevBtn">
+                            <img src="/img/icon/arrowIcon.svg" alt="좌측 화살표 이미지">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 개봉예정일 & 예매율순 -->
+            <div class="movieRank">
+                <ul class="rankTitle nav" id="pills-tab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#scheduledRankContent" type="button" role="tab" aria-controls="pills-home" aria-selected="true">상영예정작</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#dDayRankContent" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">개봉예정일순</button>
+                    </li>
+                </ul>
+                <div class="rankContent tab-content" id="pills-tabContent">
+                    <div id="scheduledRankContent" class="swiper mySwiper tab-pane fade show active" role="tabpanel" aria-labelledby="pills-home-tab" tabindex="0">
+                        <div class="swiper-wrapper">
+                            <!-- 1~4 -->
+                                <div class="swiper-slide">
+                                    <span class="topContent">
+                                        <img src="/img/poster/iTheExecutioner2024-p01.jpeg" alt="'베테랑2' 포스터 이미지">
+                                        <em class="rankNumber">1</em>
+                                        <span class="likeBtn">
+                                            <img id="heart" src="/img/icon/heartIcon.svg" alt="좋아요 아이콘">
+                                        </span>
+                                        <span class="hoverBtn">
+                                            <a href="#">예매하기</a>
+                                            <a href="#">상세보기</a>
+                                        </span>
+                                    </span>
+                                    <a href="#">
+                                        <span class="middleContent">
+                                            <img src="/img/age/age15.svg" alt="15세 이상 관람가 아이콘">
+                                            <strong>베테랑2</strong>
+                                        </span>
+                                        <span class="bottomContent">
+                                            <span>
+                                                <span>예매율</span>
+                                                <span class="numText">72.1%</span>
+                                            </span>
+                                            <span>
+                                                <img src="/img/icon/starIcon.svg" alt="노란색 별모양 평점 아이콘">
+                                                <span class="numText">8.9</span>
+                                            </span>
+                                        </span>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <span class="topContent">
+                                        <img src="/img/poster/myDearestFuBao-p01.jpeg" alt="'안녕, 할부지' 포스터 이미지">
+                                        <em class="rankNumber">2</em>
+                                        <span class="likeBtn">
+                                            <img id="heart" src="/img/icon/heartIcon.svg" alt="좋아요 아이콘">
+                                        </span>
+                                        <span class="hoverBtn">
+                                            <a href="#">예매하기</a>
+                                            <a href="#">상세보기</a>
+                                        </span>
+                                    </span>
+                                    <a href="#">
+                                        <span class="middleContent">
+                                            <img src="/img/age/ageAll.svg" alt="전체 관람가 아이콘">
+                                            <strong>안녕, 할부지</strong>
+                                        </span>
+                                        <span class="bottomContent">
+                                            <span>
+                                                <span>예매율</span>
+                                                <span class="numText">8.1%</span>
+                                            </span>
+                                            <span>
+                                                <img src="/img/icon/starIcon.svg" alt="노란색 별모양 평점 아이콘">
+                                                <span class="numText">8.57</span>
+                                            </span>
+                                        </span>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <span class="topContent">
+                                        <img src="/img/poster/beginAgain-p01.jpeg" alt="'비긴 어게인' 포스터 이미지">
+                                        <em class="rankNumber">3</em>
+                                        <span class="likeBtn">
+                                            <img id="heart" src="/img/icon/heartIcon.svg" alt="좋아요 아이콘">
+                                        </span>
+                                        <span class="hoverBtn">
+                                            <a href="#">예매하기</a>
+                                            <a href="#">상세보기</a>
+                                        </span>
+                                    </span>
+                                    <a href="#">
+                                        <span class="middleContent">
+                                            <img src="/img/age/age15.svg" alt="15세 이상 관람가 아이콘">
+                                            <strong>비긴 어게인</strong>
+                                        </span>
+                                        <span class="bottomContent">
+                                            <span>
+                                                <span>예매율</span>
+                                                <span class="numText">7.9%</span>
+                                            </span>
+                                            <span>
+                                                <img src="/img/icon/starIcon.svg" alt="노란색 별모양 평점 아이콘">
+                                                <span class="numText">9.13</span>
+                                            </span>
+                                        </span>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <span class="topContent">
+                                        <img src="/img/poster/alienRomulus-p01.jpeg" alt="'에이리언: 로물루스' 포스터 이미지">
+                                        <em class="rankNumber">4</em>
+                                        <span class="likeBtn">
+                                            <img id="heart" src="/img/icon/heartIcon.svg" alt="좋아요 아이콘">
+                                        </span>
+                                        <span class="hoverBtn">
+                                            <a href="#">예매하기</a>
+                                            <a href="#">상세보기</a>
+                                        </span>
+                                    </span>
+                                    <a href="#">
+                                        <span class="middleContent">
+                                            <img src="/img/age/age15.svg" alt="15세 이상 관람가 아이콘">
+                                            <strong>에이리언: 로물루스</strong>
+                                        </span>
+                                        <span class="bottomContent">
+                                            <span>
+                                                <span>예매율</span>
+                                                <span class="numText">1.2%</span>
+                                            </span>
+                                            <span>
+                                                <img src="/img/icon/starIcon.svg" alt="노란색 별모양 평점 아이콘">
+                                                <span class="numText">8.76</span>
+                                            </span>
+                                        </span>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <span class="topContent">
+                                        <img src="/img/poster/workToDo-p01.jpeg" alt="'해야 할 일' 포스터 이미지">
+                                        <span class="rankNumber">AD</span>
+                                        <span class="likeBtn">
+                                            <img id="heart" src="/img/icon/heartIcon.svg" alt="좋아요 아이콘">
+                                        </span>
+                                        <span class="hoverBtn">
+                                            <a href="#">상세보기</a>
+                                        </span>
+                                    </span>
+                                    <span class="adClock">
+                                        <img src="/img/icon/clockIcon.svg" alt="시계 모양 아이콘">
+                                        <span>2024.10.01. 12:00 기준</span>
+                                    </span>
+                                </div>
+                            <!-- 5~8 -->
+                                <div class="swiper-slide">
+                                    <span class="topContent">
+                                        <img src="/img/poster/pilot-p01.jpeg" alt="'파일럿' 포스터 이미지">
+                                        <em class="rankNumber">5</em>
+                                        <span class="likeBtn">
+                                            <img id="heart" src="/img/icon/heartIcon.svg" alt="좋아요 아이콘">
+                                        </span>
+                                        <span class="hoverBtn">
+                                            <a href="#">예매하기</a>
+                                            <a href="#">상세보기</a>
+                                        </span>
+                                    </span>
+                                    <a href="#">
+                                        <span class="middleContent">
+                                            <img src="/img/age/age12.svg" alt="12세 이상 관람가 아이콘">
+                                            <strong>파일럿</strong>
+                                        </span>
+                                        <span class="bottomContent">
+                                            <span>
+                                                <span>예매율</span>
+                                                <span class="numText">1.0%</span>
+                                            </span>
+                                            <span>
+                                                <img src="/img/icon/starIcon.svg" alt="노란색 별모양 평점 아이콘">
+                                                <span class="numText">7.72</span>
+                                            </span>
+                                        </span>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <span class="topContent">
+                                        <img src="/img/poster/speakNoEvil-p01.jpeg" alt="'스픽 노 이블' 포스터 이미지">
+                                        <em class="rankNumber">6</em>
+                                        <span class="likeBtn">
+                                            <img id="heart" src="/img/icon/heartIcon.svg" alt="좋아요 아이콘">
+                                        </span>
+                                        <span class="hoverBtn">
+                                            <a href="#">예매하기</a>
+                                            <a href="#">상세보기</a>
+                                        </span>
+                                    </span>
+                                    <a href="#">
+                                        <span class="middleContent">
+                                            <img src="/img/age/age15.svg" alt="15세 이상 관람가 아이콘">
+                                            <strong>스픽 노 이블</strong>
+                                        </span>
+                                        <span class="bottomContent">
+                                            <span>
+                                                <span>예매율</span>
+                                                <span class="numText">0.9%</span>
+                                            </span>
+                                            <span>
+                                                <img src="/img/icon/starIcon.svg" alt="노란색 별모양 평점 아이콘">
+                                                <span class="numText">7.62</span>
+                                            </span>
+                                        </span>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <span class="topContent">
+                                        <img src="/img/poster/betterDays-p01.jpeg" alt="'소년시절의 너' 포스터 이미지">
+                                        <em class="rankNumber">7</em>
+                                        <span class="likeBtn">
+                                            <img id="heart" src="/img/icon/heartIcon.svg" alt="좋아요 아이콘">
+                                        </span>
+                                        <span class="hoverBtn">
+                                            <a href="#">예매하기</a>
+                                            <a href="#">상세보기</a>
+                                        </span>
+                                    </span>
+                                    <a href="#">
+                                        <span class="middleContent">
+                                            <img src="/img/age/age15.svg" alt="15세 이상 관람가 아이콘">
+                                            <strong>소년시절의 너</strong>
+                                        </span>
+                                        <span class="bottomContent">
+                                            <span>
+                                                <span>예매율</span>
+                                                <span class="numText">0.7%</span>
+                                            </span>
+                                            <span>
+                                                <img src="/img/icon/starIcon.svg" alt="노란색 별모양 평점 아이콘">
+                                                <span class="numText">9.07</span>
+                                            </span>
+                                        </span>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <span class="topContent">
+                                        <img src="/img/poster/beetlejuiceBeetlejuice-p01.jpeg" alt="'비틀쥬스 비틀쥬스' 포스터 이미지">
+                                        <em class="rankNumber">8</em>
+                                        <span class="likeBtn">
+                                            <img id="heart" src="/img/icon/heartIcon.svg" alt="좋아요 아이콘">
+                                        </span>
+                                        <span class="hoverBtn">
+                                            <a href="#">예매하기</a>
+                                            <a href="#">상세보기</a>
+                                        </span>
+                                    </span>
+                                    <a href="#">
+                                        <span class="middleContent">
+                                            <img src="/img/age/age12.svg" alt="12세 이상 관람가 아이콘">
+                                            <strong>비틀쥬스 비틀쥬스</strong>
+                                        </span>
+                                        <span class="bottomContent">
+                                            <span>
+                                                <span>예매율</span>
+                                                <span class="numText">0.5%</span>
+                                            </span>
+                                            <span>
+                                                <img src="/img/icon/starIcon.svg" alt="노란색 별모양 평점 아이콘">
+                                                <span class="numText">7.55</span>
+                                            </span>
+                                        </span>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <span class="topContent">
+                                        <img src="/img/poster/julietNaked-p01.jpeg" alt="'줄리엣, 네이키드' 포스터 이미지">
+                                        <span class="rankNumber">AD</span>
+                                        <span class="likeBtn">
+                                            <img id="heart" src="/img/icon/heartIcon.svg" alt="좋아요 아이콘">
+                                        </span>
+                                        <span class="hoverBtn">
+                                            <a href="#">상세보기</a>
+                                        </span>
+                                    </span>
+                                    <span class="adClock">
+                                        <img src="/img/icon/clockIcon.svg" alt="시계 모양 아이콘">
+                                        <span>2024.10.01. 12:00 기준</span>
+                                    </span>
+                                </div>
+                            <!-- 9~12 -->
+                                <div class="swiper-slide">
+                                    <span class="topContent">
+                                        <img src="/img/poster/victory-p01.jpeg" alt="'빅토리' 포스터 이미지">
+                                        <em class="rankNumber">9</em>
+                                        <span class="likeBtn">
+                                            <img id="heart" src="/img/icon/heartIcon.svg" alt="좋아요 아이콘">
+                                        </span>
+                                        <span class="hoverBtn">
+                                            <a href="#">예매하기</a>
+                                            <a href="#">상세보기</a>
+                                        </span>
+                                    </span>
+                                    <a href="#">
+                                        <span class="middleContent">
+                                            <img src="/img/age/age12.svg" alt="12세 이상 관람가 아이콘">
+                                            <strong>빅토리</strong>
+                                        </span>
+                                        <span class="bottomContent">
+                                            <span>
+                                                <span>예매율</span>
+                                                <span class="numText">0.5%</span>
+                                            </span>
+                                            <span>
+                                                <img src="/img/icon/starIcon.svg" alt="노란색 별모양 평점 아이콘">
+                                                <span class="numText">8.22</span>
+                                            </span>
+                                        </span>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <span class="topContent">
+                                        <img src="/img/poster/blesser-p01.jpeg" alt="'그녀에게' 포스터 이미지">
+                                        <em class="rankNumber">10</em>
+                                        <span class="likeBtn">
+                                            <img id="heart" src="/img/icon/heartIcon.svg" alt="좋아요 아이콘">
+                                        </span>
+                                        <span class="hoverBtn">
+                                            <a href="#">예매하기</a>
+                                            <a href="#">상세보기</a>
+                                        </span>
+                                    </span>
+                                    <a href="#">
+                                        <span class="middleContent">
+                                            <img src="/img/age/ageAll.svg" alt="전체 관람가 아이콘">
+                                            <strong>그녀에게</strong>
+                                        </span>
+                                        <span class="bottomContent">
+                                            <span>
+                                                <span>예매율</span>
+                                                <span class="numText">0.5%</span>
+                                            </span>
+                                            <span>
+                                                <img src="/img/icon/starIcon.svg" alt="노란색 별모양 평점 아이콘">
+                                                <span class="numText">9.6</span>
+                                            </span>
+                                        </span>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <span class="topContent">
+                                        <img src="/img/poster/myLove-p01.jpeg" alt="'비긴 어게인' 포스터 이미지">
+                                        <em class="rankNumber">11</em>
+                                        <span class="likeBtn">
+                                            <img id="heart" src="/img/icon/heartIcon.svg" alt="좋아요 아이콘">
+                                        </span>
+                                        <span class="hoverBtn">
+                                            <a href="#">예매하기</a>
+                                            <a href="#">상세보기</a>
+                                        </span>
+                                    </span>
+                                    <a href="#">
+                                        <span class="middleContent">
+                                            <img src="/img/age/age15.svg" alt="15세 이상 관람가 아이콘">
+                                            <strong>비긴 어게인</strong>
+                                        </span>
+                                        <span class="bottomContent">
+                                            <span>
+                                                <span>예매율</span>
+                                                <span class="numText">0.4%</span>
+                                            </span>
+                                            <span>
+                                                <img src="/img/icon/starIcon.svg" alt="노란색 별모양 평점 아이콘">
+                                                <span class="numText">9.13</span>
+                                            </span>
+                                        </span>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <span class="topContent">
+                                        <img src="/img/poster/cashOut-p01.jpeg" alt="'캐시 아웃' 포스터 이미지">
+                                        <em class="rankNumber">12</em>
+                                        <span class="likeBtn">
+                                            <img id="heart" src="/img/icon/heartIcon.svg" alt="좋아요 아이콘">
+                                        </span>
+                                        <span class="hoverBtn">
+                                            <a href="#">예매하기</a>
+                                            <a href="#">상세보기</a>
+                                        </span>
+                                    </span>
+                                    <a href="#">
+                                        <span class="middleContent">
+                                            <img src="/img/age/age12.svg" alt="12세 이상 관람가 아이콘">
+                                            <strong>캐시 아웃</strong>
+                                        </span>
+                                        <span class="bottomContent">
+                                            <span>
+                                                <span>예매율</span>
+                                                <span class="numText">0.3%</span>
+                                            </span>
+                                            <span>
+                                                <img src="/img/icon/starIcon.svg" alt="노란색 별모양 평점 아이콘">
+                                                <span class="numText">6.79</span>
+                                            </span>
+                                        </span>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <span class="topContent">
+                                        <img src="/img/poster/guyRitchiesTheCovenant-p01.jpeg" alt="'더 커버넌트' 포스터 이미지">
+                                        <span class="rankNumber">AD</span>
+                                        <span class="likeBtn">
+                                            <img id="heart" src="/img/icon/heartIcon.svg" alt="좋아요 아이콘">
+                                        </span>
+                                        <span class="hoverBtn">
+                                            <a href="#">상세보기</a>
+                                        </span>
+                                    </span>
+                                    <span class="adClock">
+                                        <img src="/img/icon/clockIcon.svg" alt="시계 모양 아이콘">
+                                        <span>2024.10.01. 12:00 기준</span>
+                                    </span>
+                                </div>
+                            <!-- 13~16 -->
+                                <div class="swiper-slide">
+                                    <span class="topContent">
+                                        <img src="/img/poster/laTraviataAtTheEndOfSummer-p01.jpeg" alt="'여름이 끝날 무렵의 라트라비아타' 포스터 이미지">
+                                        <em class="rankNumber">13</em>
+                                        <span class="likeBtn">
+                                            <img id="heart" src="/img/icon/heartIcon.svg" alt="좋아요 아이콘">
+                                        </span>
+                                        <span class="hoverBtn">
+                                            <a href="#">예매하기</a>
+                                            <a href="#">상세보기</a>
+                                        </span>
+                                    </span>
+                                    <a href="#">
+                                        <span class="middleContent">
+                                            <img src="/img/age/ageAll.svg" alt="전체 관람가 아이콘">
+                                            <strong>여름이 끝날 무렵의 라트라비아타</strong>
+                                        </span>
+                                        <span class="bottomContent">
+                                            <span>
+                                                <span>예매율</span>
+                                                <span class="numText">0.2%</span>
+                                            </span>
+                                            <span>
+                                                <img src="/img/icon/starIcon.svg" alt="노란색 별모양 평점 아이콘">
+                                                <span class="numText">9.27</span>
+                                            </span>
+                                        </span>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <span class="topContent">
+                                        <img src="/img/poster/insideOut2-p01.jpeg" alt="'인사이드 아웃 2' 포스터 이미지">
+                                        <em class="rankNumber">14</em>
+                                        <span class="likeBtn">
+                                            <img id="heart" src="/img/icon/heartIcon.svg" alt="좋아요 아이콘">
+                                        </span>
+                                        <span class="hoverBtn">
+                                            <a href="#">예매하기</a>
+                                            <a href="#">상세보기</a>
+                                        </span>
+                                    </span>
+                                    <a href="#">
+                                        <span class="middleContent">
+                                            <img src="/img/age/ageAll.svg" alt="전체 관람가 아이콘">
+                                            <strong>인사이드 아웃 2</strong>
+                                        </span>
+                                        <span class="bottomContent">
+                                            <span>
+                                                <span>예매율</span>
+                                                <span class="numText">0.2%</span>
+                                            </span>
+                                            <span>
+                                                <img src="/img/icon/starIcon.svg" alt="노란색 별모양 평점 아이콘">
+                                                <span class="numText">8.94</span>
+                                            </span>
+                                        </span>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <span class="topContent">
+                                        <img src="/img/poster/twisters-p01.jpeg" alt="'트위스터스' 포스터 이미지">
+                                        <em class="rankNumber">15</em>
+                                        <span class="likeBtn">
+                                            <img id="heart" src="/img/icon/heartIcon.svg" alt="좋아요 아이콘">
+                                        </span>
+                                        <span class="hoverBtn">
+                                            <a href="#">예매하기</a>
+                                            <a href="#">상세보기</a>
+                                        </span>
+                                    </span>
+                                    <a href="#">
+                                        <span class="middleContent">
+                                            <img src="/img/age/age12.svg" alt="12세 이상 관람가 아이콘">
+                                            <strong>트위스터스</strong>
+                                        </span>
+                                        <span class="bottomContent">
+                                            <span>
+                                                <span>예매율</span>
+                                                <span class="numText">0.2%</span>
+                                            </span>
+                                            <span>
+                                                <img src="/img/icon/starIcon.svg" alt="노란색 별모양 평점 아이콘">
+                                                <span class="numText">8.29</span>
+                                            </span>
+                                        </span>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <span class="topContent">
+                                        <img src="/img/poster/perfectDays-p01.jpeg" alt="'퍼펙트 데이즈' 포스터 이미지">
+                                        <em class="rankNumber">16</em>
+                                        <span class="likeBtn">
+                                            <img id="heart" src="/img/icon/heartIcon.svg" alt="좋아요 아이콘">
+                                        </span>
+                                        <span class="hoverBtn">
+                                            <a href="#">예매하기</a>
+                                            <a href="#">상세보기</a>
+                                        </span>
+                                    </span>
+                                    <a href="#">
+                                        <span class="middleContent">
+                                            <img src="/img/age/age12.svg" alt="12세 이상 관람가 아이콘">
+                                            <strong>퍼펙트 데이즈</strong>
+                                        </span>
+                                        <span class="bottomContent">
+                                            <span>
+                                                <span>예매율</span>
+                                                <span class="numText">0.1%</span>
+                                            </span>
+                                            <span>
+                                                <img src="/img/icon/starIcon.svg" alt="노란색 별모양 평점 아이콘">
+                                                <span class="numText">8.74</span>
+                                            </span>
+                                        </span>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <span class="topContent">
+                                        <img src="/img/poster/loveInTheBigCity-p01.jpeg" alt="'대도시의 사랑법' 포스터 이미지">
+                                        <span class="rankNumber">AD</span>
+                                        <span class="likeBtn">
+                                            <img id="heart" src="/img/icon/heartIcon.svg" alt="좋아요 아이콘">
+                                        </span>
+                                        <span class="hoverBtn">
+                                            <a href="#">상세보기</a>
+                                        </span>
+                                    </span>
+                                    <span class="adClock">
+                                        <img src="/img/icon/clockIcon.svg" alt="시계 모양 아이콘">
+                                        <span>2024.10.01. 12:00 기준</span>
+                                    </span>
+                                </div>
+                            <!-- 17~20 -->
+                                <div class="swiper-slide">
+                                    <span class="topContent">
+                                        <img src="/img/poster/springGarden-p01.jpeg" alt="'늘봄가든' 포스터 이미지">
+                                        <em class="rankNumber">17</em>
+                                        <span class="likeBtn">
+                                            <img id="heart" src="/img/icon/heartIcon.svg" alt="좋아요 아이콘">
+                                        </span>
+                                        <span class="hoverBtn">
+                                            <a href="#">예매하기</a>
+                                            <a href="#">상세보기</a>
+                                        </span>
+                                    </span>
+                                    <a href="#">
+                                        <span class="middleContent">
+                                            <img src="/img/age/age15.svg" alt="15세 이상 관람가 아이콘">
+                                            <strong>늘봄가든</strong>
+                                        </span>
+                                        <span class="bottomContent">
+                                            <span>
+                                                <span>예매율</span>
+                                                <span class="numText">0.1%</span>
+                                            </span>
+                                            <span>
+                                                <img src="/img/icon/starIcon.svg" alt="노란색 별모양 평점 아이콘">
+                                                <span class="numText">5.79</span>
+                                            </span>
+                                        </span>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <span class="topContent">
+                                        <img src="/img/poster/deadpoolAwolverine-p01.jpeg" alt="'데드풀과 울버린' 포스터 이미지">
+                                        <em class="rankNumber">18</em>
+                                        <span class="likeBtn">
+                                            <img id="heart" src="/img/icon/heartIcon.svg" alt="좋아요 아이콘">
+                                        </span>
+                                        <span class="hoverBtn">
+                                            <a href="#">예매하기</a>
+                                            <a href="#">상세보기</a>
+                                        </span>
+                                    </span>
+                                    <a href="#">
+                                        <span class="middleContent">
+                                            <img src="/img/age/age19.svg" alt="청소년 관람불가 아이콘">
+                                            <strong>데드풀과 울버린</strong>
+                                        </span>
+                                        <span class="bottomContent">
+                                            <span>
+                                                <span>예매율</span>
+                                                <span class="numText">0.0%</span>
+                                            </span>
+                                            <span>
+                                                <img src="/img/icon/starIcon.svg" alt="노란색 별모양 평점 아이콘">
+                                                <span class="numText">7.69</span>
+                                            </span>
+                                        </span>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <span class="topContent">
+                                        <img src="/img/poster/kill-p01.jpeg" alt="'킬' 포스터 이미지">
+                                        <em class="rankNumber">19</em>
+                                        <span class="likeBtn">
+                                            <img id="heart" src="/img/icon/heartIcon.svg" alt="좋아요 아이콘">
+                                        </span>
+                                        <span class="hoverBtn">
+                                            <a href="#">예매하기</a>
+                                            <a href="#">상세보기</a>
+                                        </span>
+                                    </span>
+                                    <a href="#">
+                                        <span class="middleContent">
+                                            <img src="/img/age/age19.svg" alt="청소년 관람불가 아이콘">
+                                            <strong>킬</strong>
+                                        </span>
+                                        <span class="bottomContent">
+                                            <span>
+                                                <span>예매율</span>
+                                                <span class="numText">0.0%</span>
+                                            </span>
+                                            <span>
+                                                <img src="/img/icon/starIcon.svg" alt="노란색 별모양 평점 아이콘">
+                                                <span class="numText">6.93</span>
+                                            </span>
+                                        </span>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <span class="topContent">
+                                        <img src="/img/poster/escape-p01.jpeg" alt="'탈주' 포스터 이미지">
+                                        <em class="rankNumber">20</em>
+                                        <span class="likeBtn">
+                                            <img id="heart" src="/img/icon/heartIcon.svg" alt="좋아요 아이콘">
+                                        </span>
+                                        <span class="hoverBtn">
+                                            <a href="#">예매하기</a>
+                                            <a href="#">상세보기</a>
+                                        </span>
+                                    </span>
+                                    <a href="#">
+                                        <span class="middleContent">
+                                            <img src="/img/age/age12.svg" alt="12세 이상 관람가 아이콘">
+                                            <strong>탈주</strong>
+                                        </span>
+                                        <span class="bottomContent">
+                                            <span>
+                                                <span>예매율</span>
+                                                <span class="numText">0.0%</span>
+                                            </span>
+                                            <span>
+                                                <img src="/img/icon/starIcon.svg" alt="노란색 별모양 평점 아이콘">
+                                                <span class="numText">8.04</span>
+                                            </span>
+                                        </span>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <span class="topContent">
+                                        <img src="/img/poster/banelAadama-p01.jpeg" alt="'바넬과 아다마' 포스터 이미지">
+                                        <span class="rankNumber">AD</span>
+                                        <span class="likeBtn">
+                                            <img id="heart" src="/img/icon/heartIcon.svg" alt="좋아요 아이콘">
+                                        </span>
+                                        <span class="hoverBtn">
+                                            <a href="#">상세보기</a>
+                                        </span>
+                                    </span>
+                                    <span class="adClock">
+                                        <img src="/img/icon/clockIcon.svg" alt="시계 모양 아이콘">
+                                        <span>2024.10.01. 12:00 기준</span>
+                                    </span>
+                                </div>
+                        </div>
+                        <div class="d-none d-lg-flex swiper-button nextBtn">
+                            <img src="/img/icon/arrowIcon.svg" alt="우측 화살표 이미지">
+                        </div>
+                        <div class="d-none d-lg-flex swiper-button prevBtn">
+                            <img src="/img/icon/arrowIcon.svg" alt="좌측 화살표 이미지">
+                        </div>
+                    </div>
+                    <div id="dDayRankContent" class="swiper mySwiper tab-pane fade show" role="tabpanel" aria-labelledby="pills-home-tab" tabindex="0">
+                        <div class="swiper-wrapper">
+                            <!-- 1~4 -->
+                                <div class="swiper-slide">
+                                    <span class="topContent">
+                                        <img src="/img/poster/iTheExecutioner2024-p01.jpeg" alt="'베테랑2' 포스터 이미지">
+                                        <em class="rankNumber">1</em>
+                                        <span class="likeBtn">
+                                            <img id="heart" src="/img/icon/heartIcon.svg" alt="좋아요 아이콘">
+                                        </span>
+                                        <span class="hoverBtn">
+                                            <a href="#">예매하기</a>
+                                            <a href="#">상세보기</a>
+                                        </span>
+                                    </span>
+                                    <a href="#">
+                                        <span class="middleContent">
+                                            <img src="/img/age/age15.svg" alt="15세 이상 관람가 아이콘">
+                                            <strong>베테랑2</strong>
+                                        </span>
+                                        <span class="bottomContent">
+                                            <span>
+                                                <span>예매율</span>
+                                                <span class="numText">72.1%</span>
+                                            </span>
+                                            <span>
+                                                <img src="/img/icon/starIcon.svg" alt="노란색 별모양 평점 아이콘">
+                                                <span class="numText">8.9</span>
+                                            </span>
+                                        </span>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <span class="topContent">
+                                        <img src="/img/poster/myDearestFuBao-p01.jpeg" alt="'안녕, 할부지' 포스터 이미지">
+                                        <em class="rankNumber">2</em>
+                                        <span class="likeBtn">
+                                            <img id="heart" src="/img/icon/heartIcon.svg" alt="좋아요 아이콘">
+                                        </span>
+                                        <span class="hoverBtn">
+                                            <a href="#">예매하기</a>
+                                            <a href="#">상세보기</a>
+                                        </span>
+                                    </span>
+                                    <a href="#">
+                                        <span class="middleContent">
+                                            <img src="/img/age/ageAll.svg" alt="전체 관람가 아이콘">
+                                            <strong>안녕, 할부지</strong>
+                                        </span>
+                                        <span class="bottomContent">
+                                            <span>
+                                                <span>예매율</span>
+                                                <span class="numText">8.1%</span>
+                                            </span>
+                                            <span>
+                                                <img src="/img/icon/starIcon.svg" alt="노란색 별모양 평점 아이콘">
+                                                <span class="numText">8.57</span>
+                                            </span>
+                                        </span>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <span class="topContent">
+                                        <img src="/img/poster/beginAgain-p01.jpeg" alt="'비긴 어게인' 포스터 이미지">
+                                        <em class="rankNumber">3</em>
+                                        <span class="likeBtn">
+                                            <img id="heart" src="/img/icon/heartIcon.svg" alt="좋아요 아이콘">
+                                        </span>
+                                        <span class="hoverBtn">
+                                            <a href="#">예매하기</a>
+                                            <a href="#">상세보기</a>
+                                        </span>
+                                    </span>
+                                    <a href="#">
+                                        <span class="middleContent">
+                                            <img src="/img/age/age15.svg" alt="15세 이상 관람가 아이콘">
+                                            <strong>비긴 어게인</strong>
+                                        </span>
+                                        <span class="bottomContent">
+                                            <span>
+                                                <span>예매율</span>
+                                                <span class="numText">7.9%</span>
+                                            </span>
+                                            <span>
+                                                <img src="/img/icon/starIcon.svg" alt="노란색 별모양 평점 아이콘">
+                                                <span class="numText">9.13</span>
+                                            </span>
+                                        </span>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <span class="topContent">
+                                        <img src="/img/poster/alienRomulus-p01.jpeg" alt="'에이리언: 로물루스' 포스터 이미지">
+                                        <em class="rankNumber">4</em>
+                                        <span class="likeBtn">
+                                            <img id="heart" src="/img/icon/heartIcon.svg" alt="좋아요 아이콘">
+                                        </span>
+                                        <span class="hoverBtn">
+                                            <a href="#">예매하기</a>
+                                            <a href="#">상세보기</a>
+                                        </span>
+                                    </span>
+                                    <a href="#">
+                                        <span class="middleContent">
+                                            <img src="/img/age/age15.svg" alt="15세 이상 관람가 아이콘">
+                                            <strong>에이리언: 로물루스</strong>
+                                        </span>
+                                        <span class="bottomContent">
+                                            <span>
+                                                <span>예매율</span>
+                                                <span class="numText">1.2%</span>
+                                            </span>
+                                            <span>
+                                                <img src="/img/icon/starIcon.svg" alt="노란색 별모양 평점 아이콘">
+                                                <span class="numText">8.76</span>
+                                            </span>
+                                        </span>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <span class="topContent">
+                                        <img src="/img/poster/workToDo-p01.jpeg" alt="'해야 할 일' 포스터 이미지">
+                                        <span class="rankNumber">AD</span>
+                                        <span class="likeBtn">
+                                            <img id="heart" src="/img/icon/heartIcon.svg" alt="좋아요 아이콘">
+                                        </span>
+                                        <span class="hoverBtn">
+                                            <a href="#">상세보기</a>
+                                        </span>
+                                    </span>
+                                    <span class="adClock">
+                                        <img src="/img/icon/clockIcon.svg" alt="시계 모양 아이콘">
+                                        <span>2024.10.01. 12:00 기준</span>
+                                    </span>
+                                </div>
+                            <!-- 5~8 -->
+                                <div class="swiper-slide">
+                                    <span class="topContent">
+                                        <img src="/img/poster/pilot-p01.jpeg" alt="'파일럿' 포스터 이미지">
+                                        <em class="rankNumber">5</em>
+                                        <span class="likeBtn">
+                                            <img id="heart" src="/img/icon/heartIcon.svg" alt="좋아요 아이콘">
+                                        </span>
+                                        <span class="hoverBtn">
+                                            <a href="#">예매하기</a>
+                                            <a href="#">상세보기</a>
+                                        </span>
+                                    </span>
+                                    <a href="#">
+                                        <span class="middleContent">
+                                            <img src="/img/age/age12.svg" alt="12세 이상 관람가 아이콘">
+                                            <strong>파일럿</strong>
+                                        </span>
+                                        <span class="bottomContent">
+                                            <span>
+                                                <span>예매율</span>
+                                                <span class="numText">1.0%</span>
+                                            </span>
+                                            <span>
+                                                <img src="/img/icon/starIcon.svg" alt="노란색 별모양 평점 아이콘">
+                                                <span class="numText">7.72</span>
+                                            </span>
+                                        </span>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <span class="topContent">
+                                        <img src="/img/poster/speakNoEvil-p01.jpeg" alt="'스픽 노 이블' 포스터 이미지">
+                                        <em class="rankNumber">6</em>
+                                        <span class="likeBtn">
+                                            <img id="heart" src="/img/icon/heartIcon.svg" alt="좋아요 아이콘">
+                                        </span>
+                                        <span class="hoverBtn">
+                                            <a href="#">예매하기</a>
+                                            <a href="#">상세보기</a>
+                                        </span>
+                                    </span>
+                                    <a href="#">
+                                        <span class="middleContent">
+                                            <img src="/img/age/age15.svg" alt="15세 이상 관람가 아이콘">
+                                            <strong>스픽 노 이블</strong>
+                                        </span>
+                                        <span class="bottomContent">
+                                            <span>
+                                                <span>예매율</span>
+                                                <span class="numText">0.9%</span>
+                                            </span>
+                                            <span>
+                                                <img src="/img/icon/starIcon.svg" alt="노란색 별모양 평점 아이콘">
+                                                <span class="numText">7.62</span>
+                                            </span>
+                                        </span>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <span class="topContent">
+                                        <img src="/img/poster/betterDays-p01.jpeg" alt="'소년시절의 너' 포스터 이미지">
+                                        <em class="rankNumber">7</em>
+                                        <span class="likeBtn">
+                                            <img id="heart" src="/img/icon/heartIcon.svg" alt="좋아요 아이콘">
+                                        </span>
+                                        <span class="hoverBtn">
+                                            <a href="#">예매하기</a>
+                                            <a href="#">상세보기</a>
+                                        </span>
+                                    </span>
+                                    <a href="#">
+                                        <span class="middleContent">
+                                            <img src="/img/age/age15.svg" alt="15세 이상 관람가 아이콘">
+                                            <strong>소년시절의 너</strong>
+                                        </span>
+                                        <span class="bottomContent">
+                                            <span>
+                                                <span>예매율</span>
+                                                <span class="numText">0.7%</span>
+                                            </span>
+                                            <span>
+                                                <img src="/img/icon/starIcon.svg" alt="노란색 별모양 평점 아이콘">
+                                                <span class="numText">9.07</span>
+                                            </span>
+                                        </span>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <span class="topContent">
+                                        <img src="/img/poster/beetlejuiceBeetlejuice-p01.jpeg" alt="'비틀쥬스 비틀쥬스' 포스터 이미지">
+                                        <em class="rankNumber">8</em>
+                                        <span class="likeBtn">
+                                            <img id="heart" src="/img/icon/heartIcon.svg" alt="좋아요 아이콘">
+                                        </span>
+                                        <span class="hoverBtn">
+                                            <a href="#">예매하기</a>
+                                            <a href="#">상세보기</a>
+                                        </span>
+                                    </span>
+                                    <a href="#">
+                                        <span class="middleContent">
+                                            <img src="/img/age/age12.svg" alt="12세 이상 관람가 아이콘">
+                                            <strong>비틀쥬스 비틀쥬스</strong>
+                                        </span>
+                                        <span class="bottomContent">
+                                            <span>
+                                                <span>예매율</span>
+                                                <span class="numText">0.5%</span>
+                                            </span>
+                                            <span>
+                                                <img src="/img/icon/starIcon.svg" alt="노란색 별모양 평점 아이콘">
+                                                <span class="numText">7.55</span>
+                                            </span>
+                                        </span>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <span class="topContent">
+                                        <img src="/img/poster/julietNaked-p01.jpeg" alt="'줄리엣, 네이키드' 포스터 이미지">
+                                        <span class="rankNumber">AD</span>
+                                        <span class="likeBtn">
+                                            <img id="heart" src="/img/icon/heartIcon.svg" alt="좋아요 아이콘">
+                                        </span>
+                                        <span class="hoverBtn">
+                                            <a href="#">상세보기</a>
+                                        </span>
+                                    </span>
+                                    <span class="adClock">
+                                        <img src="/img/icon/clockIcon.svg" alt="시계 모양 아이콘">
+                                        <span>2024.10.01. 12:00 기준</span>
+                                    </span>
+                                </div>
+                            <!-- 9~12 -->
+                                <div class="swiper-slide">
+                                    <span class="topContent">
+                                        <img src="/img/poster/victory-p01.jpeg" alt="'빅토리' 포스터 이미지">
+                                        <em class="rankNumber">9</em>
+                                        <span class="likeBtn">
+                                            <img id="heart" src="/img/icon/heartIcon.svg" alt="좋아요 아이콘">
+                                        </span>
+                                        <span class="hoverBtn">
+                                            <a href="#">예매하기</a>
+                                            <a href="#">상세보기</a>
+                                        </span>
+                                    </span>
+                                    <a href="#">
+                                        <span class="middleContent">
+                                            <img src="/img/age/age12.svg" alt="12세 이상 관람가 아이콘">
+                                            <strong>빅토리</strong>
+                                        </span>
+                                        <span class="bottomContent">
+                                            <span>
+                                                <span>예매율</span>
+                                                <span class="numText">0.5%</span>
+                                            </span>
+                                            <span>
+                                                <img src="/img/icon/starIcon.svg" alt="노란색 별모양 평점 아이콘">
+                                                <span class="numText">8.22</span>
+                                            </span>
+                                        </span>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <span class="topContent">
+                                        <img src="/img/poster/blesser-p01.jpeg" alt="'그녀에게' 포스터 이미지">
+                                        <em class="rankNumber">10</em>
+                                        <span class="likeBtn">
+                                            <img id="heart" src="/img/icon/heartIcon.svg" alt="좋아요 아이콘">
+                                        </span>
+                                        <span class="hoverBtn">
+                                            <a href="#">예매하기</a>
+                                            <a href="#">상세보기</a>
+                                        </span>
+                                    </span>
+                                    <a href="#">
+                                        <span class="middleContent">
+                                            <img src="/img/age/ageAll.svg" alt="전체 관람가 아이콘">
+                                            <strong>그녀에게</strong>
+                                        </span>
+                                        <span class="bottomContent">
+                                            <span>
+                                                <span>예매율</span>
+                                                <span class="numText">0.5%</span>
+                                            </span>
+                                            <span>
+                                                <img src="/img/icon/starIcon.svg" alt="노란색 별모양 평점 아이콘">
+                                                <span class="numText">9.6</span>
+                                            </span>
+                                        </span>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <span class="topContent">
+                                        <img src="/img/poster/myLove-p01.jpeg" alt="'비긴 어게인' 포스터 이미지">
+                                        <em class="rankNumber">11</em>
+                                        <span class="likeBtn">
+                                            <img id="heart" src="/img/icon/heartIcon.svg" alt="좋아요 아이콘">
+                                        </span>
+                                        <span class="hoverBtn">
+                                            <a href="#">예매하기</a>
+                                            <a href="#">상세보기</a>
+                                        </span>
+                                    </span>
+                                    <a href="#">
+                                        <span class="middleContent">
+                                            <img src="/img/age/age15.svg" alt="15세 이상 관람가 아이콘">
+                                            <strong>비긴 어게인</strong>
+                                        </span>
+                                        <span class="bottomContent">
+                                            <span>
+                                                <span>예매율</span>
+                                                <span class="numText">0.4%</span>
+                                            </span>
+                                            <span>
+                                                <img src="/img/icon/starIcon.svg" alt="노란색 별모양 평점 아이콘">
+                                                <span class="numText">9.13</span>
+                                            </span>
+                                        </span>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <span class="topContent">
+                                        <img src="/img/poster/cashOut-p01.jpeg" alt="'캐시 아웃' 포스터 이미지">
+                                        <em class="rankNumber">12</em>
+                                        <span class="likeBtn">
+                                            <img id="heart" src="/img/icon/heartIcon.svg" alt="좋아요 아이콘">
+                                        </span>
+                                        <span class="hoverBtn">
+                                            <a href="#">예매하기</a>
+                                            <a href="#">상세보기</a>
+                                        </span>
+                                    </span>
+                                    <a href="#">
+                                        <span class="middleContent">
+                                            <img src="/img/age/age12.svg" alt="12세 이상 관람가 아이콘">
+                                            <strong>캐시 아웃</strong>
+                                        </span>
+                                        <span class="bottomContent">
+                                            <span>
+                                                <span>예매율</span>
+                                                <span class="numText">0.3%</span>
+                                            </span>
+                                            <span>
+                                                <img src="/img/icon/starIcon.svg" alt="노란색 별모양 평점 아이콘">
+                                                <span class="numText">6.79</span>
+                                            </span>
+                                        </span>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <span class="topContent">
+                                        <img src="/img/poster/guyRitchiesTheCovenant-p01.jpeg" alt="'더 커버넌트' 포스터 이미지">
+                                        <span class="rankNumber">AD</span>
+                                        <span class="likeBtn">
+                                            <img id="heart" src="/img/icon/heartIcon.svg" alt="좋아요 아이콘">
+                                        </span>
+                                        <span class="hoverBtn">
+                                            <a href="#">상세보기</a>
+                                        </span>
+                                    </span>
+                                    <span class="adClock">
+                                        <img src="/img/icon/clockIcon.svg" alt="시계 모양 아이콘">
+                                        <span>2024.10.01. 12:00 기준</span>
+                                    </span>
+                                </div>
+                            <!-- 13~16 -->
+                                <div class="swiper-slide">
+                                    <span class="topContent">
+                                        <img src="/img/poster/laTraviataAtTheEndOfSummer-p01.jpeg" alt="'여름이 끝날 무렵의 라트라비아타' 포스터 이미지">
+                                        <em class="rankNumber">13</em>
+                                        <span class="likeBtn">
+                                            <img id="heart" src="/img/icon/heartIcon.svg" alt="좋아요 아이콘">
+                                        </span>
+                                        <span class="hoverBtn">
+                                            <a href="#">예매하기</a>
+                                            <a href="#">상세보기</a>
+                                        </span>
+                                    </span>
+                                    <a href="#">
+                                        <span class="middleContent">
+                                            <img src="/img/age/ageAll.svg" alt="전체 관람가 아이콘">
+                                            <strong>여름이 끝날 무렵의 라트라비아타</strong>
+                                        </span>
+                                        <span class="bottomContent">
+                                            <span>
+                                                <span>예매율</span>
+                                                <span class="numText">0.2%</span>
+                                            </span>
+                                            <span>
+                                                <img src="/img/icon/starIcon.svg" alt="노란색 별모양 평점 아이콘">
+                                                <span class="numText">9.27</span>
+                                            </span>
+                                        </span>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <span class="topContent">
+                                        <img src="/img/poster/insideOut2-p01.jpeg" alt="'인사이드 아웃 2' 포스터 이미지">
+                                        <em class="rankNumber">14</em>
+                                        <span class="likeBtn">
+                                            <img id="heart" src="/img/icon/heartIcon.svg" alt="좋아요 아이콘">
+                                        </span>
+                                        <span class="hoverBtn">
+                                            <a href="#">예매하기</a>
+                                            <a href="#">상세보기</a>
+                                        </span>
+                                    </span>
+                                    <a href="#">
+                                        <span class="middleContent">
+                                            <img src="/img/age/ageAll.svg" alt="전체 관람가 아이콘">
+                                            <strong>인사이드 아웃 2</strong>
+                                        </span>
+                                        <span class="bottomContent">
+                                            <span>
+                                                <span>예매율</span>
+                                                <span class="numText">0.2%</span>
+                                            </span>
+                                            <span>
+                                                <img src="/img/icon/starIcon.svg" alt="노란색 별모양 평점 아이콘">
+                                                <span class="numText">8.94</span>
+                                            </span>
+                                        </span>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <span class="topContent">
+                                        <img src="/img/poster/twisters-p01.jpeg" alt="'트위스터스' 포스터 이미지">
+                                        <em class="rankNumber">15</em>
+                                        <span class="likeBtn">
+                                            <img id="heart" src="/img/icon/heartIcon.svg" alt="좋아요 아이콘">
+                                        </span>
+                                        <span class="hoverBtn">
+                                            <a href="#">예매하기</a>
+                                            <a href="#">상세보기</a>
+                                        </span>
+                                    </span>
+                                    <a href="#">
+                                        <span class="middleContent">
+                                            <img src="/img/age/age12.svg" alt="12세 이상 관람가 아이콘">
+                                            <strong>트위스터스</strong>
+                                        </span>
+                                        <span class="bottomContent">
+                                            <span>
+                                                <span>예매율</span>
+                                                <span class="numText">0.2%</span>
+                                            </span>
+                                            <span>
+                                                <img src="/img/icon/starIcon.svg" alt="노란색 별모양 평점 아이콘">
+                                                <span class="numText">8.29</span>
+                                            </span>
+                                        </span>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <span class="topContent">
+                                        <img src="/img/poster/perfectDays-p01.jpeg" alt="'퍼펙트 데이즈' 포스터 이미지">
+                                        <em class="rankNumber">16</em>
+                                        <span class="likeBtn">
+                                            <img id="heart" src="/img/icon/heartIcon.svg" alt="좋아요 아이콘">
+                                        </span>
+                                        <span class="hoverBtn">
+                                            <a href="#">예매하기</a>
+                                            <a href="#">상세보기</a>
+                                        </span>
+                                    </span>
+                                    <a href="#">
+                                        <span class="middleContent">
+                                            <img src="/img/age/age12.svg" alt="12세 이상 관람가 아이콘">
+                                            <strong>퍼펙트 데이즈</strong>
+                                        </span>
+                                        <span class="bottomContent">
+                                            <span>
+                                                <span>예매율</span>
+                                                <span class="numText">0.1%</span>
+                                            </span>
+                                            <span>
+                                                <img src="/img/icon/starIcon.svg" alt="노란색 별모양 평점 아이콘">
+                                                <span class="numText">8.74</span>
+                                            </span>
+                                        </span>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <span class="topContent">
+                                        <img src="/img/poster/loveInTheBigCity-p01.jpeg" alt="'대도시의 사랑법' 포스터 이미지">
+                                        <span class="rankNumber">AD</span>
+                                        <span class="likeBtn">
+                                            <img id="heart" src="/img/icon/heartIcon.svg" alt="좋아요 아이콘">
+                                        </span>
+                                        <span class="hoverBtn">
+                                            <a href="#">상세보기</a>
+                                        </span>
+                                    </span>
+                                    <span class="adClock">
+                                        <img src="/img/icon/clockIcon.svg" alt="시계 모양 아이콘">
+                                        <span>2024.10.01. 12:00 기준</span>
+                                    </span>
+                                </div>
+                            <!-- 17~20 -->
+                                <div class="swiper-slide">
+                                    <span class="topContent">
+                                        <img src="/img/poster/springGarden-p01.jpeg" alt="'늘봄가든' 포스터 이미지">
+                                        <em class="rankNumber">17</em>
+                                        <span class="likeBtn">
+                                            <img id="heart" src="/img/icon/heartIcon.svg" alt="좋아요 아이콘">
+                                        </span>
+                                        <span class="hoverBtn">
+                                            <a href="#">예매하기</a>
+                                            <a href="#">상세보기</a>
+                                        </span>
+                                    </span>
+                                    <a href="#">
+                                        <span class="middleContent">
+                                            <img src="/img/age/age15.svg" alt="15세 이상 관람가 아이콘">
+                                            <strong>늘봄가든</strong>
+                                        </span>
+                                        <span class="bottomContent">
+                                            <span>
+                                                <span>예매율</span>
+                                                <span class="numText">0.1%</span>
+                                            </span>
+                                            <span>
+                                                <img src="/img/icon/starIcon.svg" alt="노란색 별모양 평점 아이콘">
+                                                <span class="numText">5.79</span>
+                                            </span>
+                                        </span>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <span class="topContent">
+                                        <img src="/img/poster/deadpoolAwolverine-p01.jpeg" alt="'데드풀과 울버린' 포스터 이미지">
+                                        <em class="rankNumber">18</em>
+                                        <span class="likeBtn">
+                                            <img id="heart" src="/img/icon/heartIcon.svg" alt="좋아요 아이콘">
+                                        </span>
+                                        <span class="hoverBtn">
+                                            <a href="#">예매하기</a>
+                                            <a href="#">상세보기</a>
+                                        </span>
+                                    </span>
+                                    <a href="#">
+                                        <span class="middleContent">
+                                            <img src="/img/age/age19.svg" alt="청소년 관람불가 아이콘">
+                                            <strong>데드풀과 울버린</strong>
+                                        </span>
+                                        <span class="bottomContent">
+                                            <span>
+                                                <span>예매율</span>
+                                                <span class="numText">0.0%</span>
+                                            </span>
+                                            <span>
+                                                <img src="/img/icon/starIcon.svg" alt="노란색 별모양 평점 아이콘">
+                                                <span class="numText">7.69</span>
+                                            </span>
+                                        </span>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <span class="topContent">
+                                        <img src="/img/poster/kill-p01.jpeg" alt="'킬' 포스터 이미지">
+                                        <em class="rankNumber">19</em>
+                                        <span class="likeBtn">
+                                            <img id="heart" src="/img/icon/heartIcon.svg" alt="좋아요 아이콘">
+                                        </span>
+                                        <span class="hoverBtn">
+                                            <a href="#">예매하기</a>
+                                            <a href="#">상세보기</a>
+                                        </span>
+                                    </span>
+                                    <a href="#">
+                                        <span class="middleContent">
+                                            <img src="/img/age/age19.svg" alt="청소년 관람불가 아이콘">
+                                            <strong>킬</strong>
+                                        </span>
+                                        <span class="bottomContent">
+                                            <span>
+                                                <span>예매율</span>
+                                                <span class="numText">0.0%</span>
+                                            </span>
+                                            <span>
+                                                <img src="/img/icon/starIcon.svg" alt="노란색 별모양 평점 아이콘">
+                                                <span class="numText">6.93</span>
+                                            </span>
+                                        </span>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <span class="topContent">
+                                        <img src="/img/poster/escape-p01.jpeg" alt="'탈주' 포스터 이미지">
+                                        <em class="rankNumber">20</em>
+                                        <span class="likeBtn">
+                                            <img id="heart" src="/img/icon/heartIcon.svg" alt="좋아요 아이콘">
+                                        </span>
+                                        <span class="hoverBtn">
+                                            <a href="#">예매하기</a>
+                                            <a href="#">상세보기</a>
+                                        </span>
+                                    </span>
+                                    <a href="#">
+                                        <span class="middleContent">
+                                            <img src="/img/age/age12.svg" alt="12세 이상 관람가 아이콘">
+                                            <strong>탈주</strong>
+                                        </span>
+                                        <span class="bottomContent">
+                                            <span>
+                                                <span>예매율</span>
+                                                <span class="numText">0.0%</span>
+                                            </span>
+                                            <span>
+                                                <img src="/img/icon/starIcon.svg" alt="노란색 별모양 평점 아이콘">
+                                                <span class="numText">8.04</span>
+                                            </span>
+                                        </span>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <span class="topContent">
+                                        <img src="/img/poster/banelAadama-p01.jpeg" alt="'바넬과 아다마' 포스터 이미지">
+                                        <span class="rankNumber">AD</span>
+                                        <span class="likeBtn">
+                                            <img id="heart" src="/img/icon/heartIcon.svg" alt="좋아요 아이콘">
+                                        </span>
+                                        <span class="hoverBtn">
+                                            <a href="#">상세보기</a>
+                                        </span>
+                                    </span>
+                                    <span class="adClock">
+                                        <img src="/img/icon/clockIcon.svg" alt="시계 모양 아이콘">
+                                        <span>2024.10.01. 12:00 기준</span>
+                                    </span>
+                                </div>
+                        </div>
+                        <div class="d-none d-lg-flex swiper-button nextBtn">
+                            <img src="/img/icon/arrowIcon.svg" alt="우측 화살표 이미지">
+                        </div>
+                        <div class="d-none d-lg-flex swiper-button prevBtn">
+                            <img src="/img/icon/arrowIcon.svg" alt="좌측 화살표 이미지">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="reviewBox" class="d-none">
+        <span class="titleBox">
+            <h2 class="contentsTitle">관람평</h2>
+            <a class="plusBtn" href="#">
+                <span>더보기</span>
+                <img src="/img/icon/arrowIcon.svg" alt="더보기 아이콘">
+            </a>
+        </span>
+        <ul id="reviewList">
+            <li>
+                <span class="reviewLeft">
+                    <span class="reviewMovieName">
+                        <img src="/img/age/age12.svg" alt="12세 이상 관람가">
+                        <span>파일럿</span>
+                    </span>
+                    <span class="reviewImg">
+                        <img src="/img/poster/pilot-p01.jpeg" alt="'파일럿' 포스터 이미지">
+                    </span>
+                </span>
+                <span class="reviewText">
+                    <span class="text01">
+                        <span class="userName">
+                            김소정님
+                        </span>
+                        <span class="text">
+                            <span class="textTitle">
+                                코미디의 정석, 조정석!
+                            </span>
+                            <span class="textcontent">
+                                역시 코미디하면 조정석 배우<br>
+                                온가족이 재밌게 보고 갑니다
+                            </span>
+                        </span>
+                    </span>
+                    <span class="text02">
+                        <ul class="reviewTag">
+                            <li>
+                                <span>#</span>
+                                <span>20</span>
+                            </li>
+                            <li>
+                                <span>#</span>
+                                <span>여자</span>
+                            </li>
+                            <li>
+                                <span>#</span>
+                                <span>한국</span>
+                            </li>
+                            <li>
+                                <span>#</span>
+                                <span>코미디</span>
+                            </li>
+                        </ul>
+                        <span class="reviewNum">
+                            <img src="/img/icon/starIcon.svg" alt="별점 아이콘">
+                            <strong>4.5</strong>
+                        </span>
+                    </span>
+                </span>
+            </li>
+            <li>
+                <span class="reviewLeft">
+                    <span class="reviewMovieName">
+                        <img src="/img/age/age12.svg" alt="12세 이상 관람가">
+                        <span>파일럿</span>
+                    </span>
+                    <span class="reviewImg">
+                        <img src="/img/poster/pilot-p01.jpeg" alt="'파일럿' 포스터 이미지">
+                    </span>
+                </span>
+                <span class="reviewText">
+                    <span class="text01">
+                        <span class="userName">
+                            김소정님
+                        </span>
+                        <span class="text">
+                            <span class="textTitle">
+                                코미디의 정석, 조정석!
+                            </span>
+                            <span class="textcontent">
+                                역시 코미디하면 조정석 배우<br>
+                                온가족이 재밌게 보고 갑니다
+                            </span>
+                        </span>
+                    </span>
+                    <span class="text02">
+                        <ul class="reviewTag">
+                            <li>
+                                <span>#</span>
+                                <span>20</span>
+                            </li>
+                            <li>
+                                <span>#</span>
+                                <span>여자</span>
+                            </li>
+                            <li>
+                                <span>#</span>
+                                <span>한국</span>
+                            </li>
+                            <li>
+                                <span>#</span>
+                                <span>코미디</span>
+                            </li>
+                        </ul>
+                        <span class="reviewNum">
+                            <img src="/img/icon/starIcon.svg" alt="별점 아이콘">
+                            <strong>4.5</strong>
+                        </span>
+                    </span>
+                </span>
+            </li>
+            <li>
+                <span class="reviewLeft">
+                    <span class="reviewMovieName">
+                        <img src="/img/age/age12.svg" alt="12세 이상 관람가">
+                        <span>파일럿</span>
+                    </span>
+                    <span class="reviewImg">
+                        <img src="/img/poster/pilot-p01.jpeg" alt="'파일럿' 포스터 이미지">
+                    </span>
+                </span>
+                <span class="reviewText">
+                    <span class="text01">
+                        <span class="userName">
+                            김소정님
+                        </span>
+                        <span class="text">
+                            <span class="textTitle">
+                                코미디의 정석, 조정석!
+                            </span>
+                            <span class="textcontent">
+                                역시 코미디하면 조정석 배우<br>
+                                온가족이 재밌게 보고 갑니다
+                            </span>
+                        </span>
+                    </span>
+                    <span class="text02">
+                        <ul class="reviewTag">
+                            <li>
+                                <span>#</span>
+                                <span>20</span>
+                            </li>
+                            <li>
+                                <span>#</span>
+                                <span>여자</span>
+                            </li>
+                            <li>
+                                <span>#</span>
+                                <span>한국</span>
+                            </li>
+                            <li>
+                                <span>#</span>
+                                <span>코미디</span>
+                            </li>
+                        </ul>
+                        <span class="reviewNum">
+                            <img src="/img/icon/starIcon.svg" alt="별점 아이콘">
+                            <strong>4.5</strong>
+                        </span>
+                    </span>
+                </span>
+            </li>
+        </ul>
+    </section>
+    <section id="middleBannerBox">
+        <div id="middleBanner" class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide middleBannerImg01"><a href="#"><img src="/img/banner/mainB/theLivesOfOthers-mB01.jpg" alt=""></a></div>
+                <div class="swiper-slide middleBannerImg02"><a href="#"><img src="/img/banner/mainB/theLivesOfOthers-mB01.jpg" alt=""></a></div>
+                <div class="swiper-slide middleBannerImg03"><a href="#"><img src="/img/banner/mainB/theLivesOfOthers-mB01.jpg" alt=""></a></div>
+            </div>
+        </div>
+    </section>
+    <section id="eventBox" class="mx-auto d-flex flex-column">
+        <span class="titleBox">
+            <h2 class="contentsTitle">이벤트</h2>
+            <a class="plusBtn" href="#">
+                <span>더보기</span>
+                <img src="/img/icon/arrowIcon.svg" alt="더보기 아이콘">
+            </a>
+        </span>
+        <div class="eventContentBox d-flex flex-column flex-md-row">
+            <div class="eventImg tab-content">
+                <span class="tab-pane active" id="member" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
+                    <img src="/img/stillcut/alienRomulus-s01.jpeg" alt="에이리언">
+                </span>
+                <span class="tab-pane" id="nonMember" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
+                    <img src="/img/stillcut/beetlejuiceBeetlejuice-s04.jpeg" alt="비틀쥬스">
+                </span>
+                <span class="tab-pane" id="sns" role="tabpanel" aria-labelledby="messages-tab" tabindex="0">
+                    <img src="/img/stillcut/iTheExecutioner2024-s01.jpeg" alt="베테랑2">
+                </span>
+                <span class="tab-pane" id="qr" role="tabpanel" aria-labelledby="messages-tab" tabindex="0">
+                    <img src="/img/stillcut/speakNoEvil-s13.jpeg" alt="스픽 노 이블">
+                </span>
+                <span class="tab-pane" id="qr" role="tabpanel" aria-labelledby="messages-tab" tabindex="0">
+                    <img src="/img/promotion/iTheExecutioner2024-m02.jpeg" alt="베테랑2">
+                </span>
+            </div>
+            <div id="topBox" class="d-flex flex-column">
+                <!-- Nav tabs -->
+                <ul class="nav justify-content-center" id="myTab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#member" role="tab" aria-controls="home" aria-selected="true">
+                            <span class="eventTitle">[에이리언]</span>
+                            <span class="eventContent">오리지널 티켓 배포</span>
+                        </a>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#nonMember" role="tab" aria-controls="profile" aria-selected="false">
+                            <span class="eventTitle">[비틀쥬스]</span>
+                            <span class="eventContent">배우 및 감독 내한 시사회</span>
+                        </a>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link" id="messages-tab" data-bs-toggle="tab" data-bs-target="#sns" role="tab" aria-controls="messages" aria-selected="false">
+                            <span class="eventTitle">[베테랑2]</span>
+                            <span class="eventContent">VIP 초청 시사회</span>
+                        </a>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link" id="messages-tab" data-bs-toggle="tab" data-bs-target="#qr" role="tab" aria-controls="messages" aria-selected="false">
+                            <span class="eventTitle">[스픽 노 이블]</span>
+                            <span class="eventContent">스페셜 포스터 증정</span>
+                        </a>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link" id="messages-tab" data-bs-toggle="tab" data-bs-target="#qr" role="tab" aria-controls="messages" aria-selected="false">
+                            <span class="eventTitle">[베테랑2]</span>
+                            <span class="eventContent">감독과의 대화</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <section id="previewBox" class="d-flex flex-column mx-auto">
+        <span class="titleBox d-flex justify-content-between">
+            <h2 class="contentsTitle">시사회</h2>
+            <a class="plusBtn" href="#">
+                <span>더보기</span>
+                <img src="/img/icon/arrowIcon.svg" alt="더보기 아이콘">
+            </a>
+        </span>
+        <ul class="previewContent d-flex flex-wrap justify-content-between">
+            <li class="previewHover item">
+                <a href="#">
+                    <img src="/img/stillcut/beetlejuiceBeetlejuice-s01.jpeg" alt="비틀쥬스">
+                    <span>[경기] 비틀쥬스 비틀쥬스 시사회</span>
+                </a>
+            </li>
+            <li class="item">
+                <a href="#">
+                    <img src="/img/stillcut/alienRomulus-s05.jpeg" alt="에이리언 로울루스">
+                    <span>[부산] 재상영 기념 시사회</span>
+                </a>
+            </li>
+            <li class="item">
+                <a href="#">
+                    <img src="/img/stillcut/speakNoEvil-s11.jpeg" alt="스픽 노 이블">
+                    <span>[광주] 광주문화회관 시사회</span>
+                </a>
+            </li>
+            <li class="item">
+                <a href="#">
+                    <img src="/img/stillcut/iTheExecutioner2024-s04.jpeg" alt="베테랑2">
+                    <span>[대전] 전국투어 시사회</span>
+                </a>
+            </li>        
+        </ul>
+    </section>
+    <section id="middleBannerBox">
+        <div id="middleBanner" class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide middleBannerImg01"><a href="#"><img src="/img/banner/mainB/theLivesOfOthers-mB01.jpg" alt=""></a></div>
+                <div class="swiper-slide middleBannerImg02"><a href="#"><img src="/img/banner/mainB/theLivesOfOthers-mB01.jpg" alt=""></a></div>
+                <div class="swiper-slide middleBannerImg03"><a href="#"><img src="/img/banner/mainB/theLivesOfOthers-mB01.jpg" alt=""></a></div>
+            </div>
+        </div>
+    </section>
+    <section id="storeBox">
+        <span class="titleBox">
+            <h2 class="contentsTitle">스토어</h2>
+            <a class="plusBtn" href="#">
+                <span>더보기</span>
+                <img src="/img/icon/arrowIcon.svg" alt="더보기 아이콘">
+            </a>
+        </span>
+        <div id="storeList" class="d-flex justify-content-lg-between flex-column flex-lg-row">
+            <span class="storeContent">
+                <span class="region">관람권</span>
+                <span class="storeText">
+                    <span class="storeTitle">
+                        <span class="itemName">영화관람권</span>
+                        <span class="itemPrice">1인 9,000원</span>
+                    </span>
+                    <span class="storeInfo">
+                        1인 또는 2인으로 구매 가능한 영화관람권<br>
+                        소중한 사람에게 힐링을 선물하세요!
+                    </span>
+                </span>
+                <img src="/img/store/giftCard.jpg" alt="상품권">
+            </span>
+            <span class="storeContent">
+                <span class="region">포토카드</span>
+                <span class="storeText">
+                    <span class="storeTitle">
+                        <span class="itemName">비마이펫 포토카드</span>
+                        <span class="itemPrice">3,000원</span>
+                    </span>
+                    <span class="storeInfo">
+                        비마이펫의 사랑스러운 포토카드(5종)<br>
+                        1매 가격입니다
+                    </span>
+                </span>
+                <img src="/img/store/798637a823a847be8ca4753056c291b0.png" alt="포토카드">
+            </span>
+            <span class="storeContent">
+                <span class="region">HOT</span>
+                <span class="storeText">
+                    <span class="storeTitle">
+                        <span class="itemName">콤보세트</span>
+                        <span class="itemPrice">9,000원</span>
+                    </span>
+                    <span class="storeInfo">
+                        영화 볼 때 빠질 수 없는<br>
+                        소담씨네 콤보세트!
+                    </span>
+                </span>
+                <img src="/img/store/popcorn.jpg" alt="콤보세트">
+            </span>
+        </div>
+    </section>
+    <section id="instagramBox">
+        <span class="titleBox">
+            <h2 class="contentsTitle">인스타그램</h2>
+            <a class="plusBtn" href="#">
+                <span>더보기</span>
+                <img src="/img/icon/arrowIcon.svg" alt="더보기 아이콘">
+            </a>
+        </span>
+        <div class="logo-slider">
+            <div class="logo-slide-track01">
+                <div class="slide">
+                    <img src="/img/insta/insta4.jpg" alt="베테랑2"/>
+                </div>
+                <div class="slide">
+                    <img src="/img/insta/insta2.jpg" alt="베테랑2 스틸컷"/>
+                </div>
+                <div class="slide">
+                    <img src="/img/insta/insta3.jpg" alt="베테랑2 배우 정해인"/>
+                </div>
+                <div class="slide">
+                    <img src="/img/insta/insta01.jpg" alt="9월 개봉작 안내"/>
+                </div>
+                <div class="slide">
+                    <img src="/img/insta/insta4.jpg" alt="베테랑2 스틸컷"/>
+                </div>
+                <div class="slide">
+                    <img src="/img/insta/insta5.jpg" alt="인스타그램"/>
+                </div>
+                <div class="slide">
+                    <img src="/img/insta/insta6.jpg" alt="파일럿"/>
+                </div>
+                <div class="slide">
+                    <img src="/img/insta/insta7.jpg" alt="빅토리"/>
+                </div>
+                <div class="slide">
+                    <img src="/img/insta/insta8.jpg" alt="대도시의 사랑법"/>
+                </div>
+                <div class="slide">
+                    <img src="/img/insta/insta9.jpg" alt="비틀쥬스 비틀쥬스"/>
+                </div>
+            </div>
+            <div class="logo-slide-track02">
+                <div class="slide">
+                    <img src="/img/insta/insta10.jpg" alt="스픽 노 이블"/>
+                </div>
+                <div class="slide">
+                    <img src="/img/insta/insta11.jpg" alt="스픽 노 이블"/>
+                </div>
+                <div class="slide">
+                    <img src="/img/insta/insta15.jpg" alt="여름이 끝날 무렵의 라트라비아타"/>
+                </div>
+                <div class="slide">
+                    <img src="/img/insta/insta13.jpg" alt="비긴어게인"/>
+                </div>
+                <div class="slide">
+                    <img src="/img/insta/insta14.jpg" alt="데드풀과 울버린"/>
+                </div>
+                <div class="slide">
+                    <img src="/img/insta/insta15.jpg" alt="여름이 끝날 무렵의 라트라비아타"/>
+                </div>
+                <div class="slide">
+                    <img src="/img/insta/insta16.jpg" alt="탈주"/>
+                </div>
+                <div class="slide">
+                    <img src="/img/insta/insta4.jpg" alt="베테랑2"/>
+                </div>
+                <div class="slide">
+                    <img src="/img/insta/insta2.jpg" alt="베테랑2"/>
+                </div>
+                <div class="slide">
+                    <img src="/img/insta/insta3.jpg" alt="베테랑2"/>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="noticeFnqBox" class="d-flex flex-wrap">
+        <article id="noticeBox">
+            <span class="titleBox">
+                <h2 class="contentsTitle">공지사항</h2>
+                <a class="plusBtn" href="#">
+                    <span>더보기</span>
+                    <img src="/img/icon/arrowIcon.svg" alt="더보기 아이콘">
+                </a>
+            </span>
+            <ul>
+                <li>
+                    <a href="#">
+                        <span>11월 문화의 날 이벤트 안내</span>
+                        <span>2024.10.20</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span>예비 25학번 모여라! 수험표 이벤트 안내</span>
+                        <span>2024.10.20</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span>2024년 11월 시스템 점검 공지</span>
+                        <span>2024.10.20</span>
+                    </a>
+                </li>
+            </ul>
+        </article>
+        <article id="fnqBox">
+            <span class="titleBox">
+                <h2 class="contentsTitle">자주 묻는 질문</h2>
+                <a class="plusBtn" href="#">
+                    <span>더보기</span>
+                    <img src="/img/icon/arrowIcon.svg" alt="더보기 아이콘">
+                </a>
+            </span>
+            <ul>
+                <li>
+                    <a href="#">
+                        <span>[영화] 상영관 내 외부 음식물 반입 가능한가요?</span>
+                        <!-- <span>2024.10.20</span> -->
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span>[빠른입장] QR코드 캡쳐화면도 입장 가능한가요?</span>
+                        <!-- <span>2024.10.20</span> -->
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span>[예매] 어린이 좌석으로만 예매할 수 없나요?</span>
+                        <!-- <span>2024.10.20</span> -->
+                    </a>
+                </li>
+            </ul>
+        </article>
+    </section>
+</main>
+
+
+<?php include_once("./layout/footer.html"); ?>
