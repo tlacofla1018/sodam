@@ -21,11 +21,11 @@ var swiper01 = new Swiper("#mainBanner.swiper.mySwiper", {
 var swiper02 = new Swiper("#nowRankContent.swiper.mySwiper", {
     slidesPerView: 5,
     slidesPerGroup: 5,
-    spaceBetween: 30,
+    // spaceBetween: 10,
     loop: true,
     navigation: {
-        nextEl: "#nowRankContent .nextBtn",
-        prevEl: "#nowRankContent .prevBtn",
+        nextEl: ".nextBtn",
+        prevEl: ".prevBtn",
     },
     breakpoints: {
         1220: {
@@ -54,7 +54,7 @@ var swiper02 = new Swiper("#nowRankContent.swiper.mySwiper", {
 var swiper03 = new Swiper("#recentRankContent.swiper.mySwiper", {
     slidesPerView: 5,
     slidesPerGroup: 5,
-    spaceBetween: 30,
+    // spaceBetween: 30,
     loop: true,
     navigation: {
         nextEl: "#recentRankContent .nextBtn",
@@ -88,7 +88,7 @@ var swiper03 = new Swiper("#recentRankContent.swiper.mySwiper", {
 var swiper04 = new Swiper("#scheduledRankContent.swiper.mySwiper", {
     slidesPerView: 5,
     slidesPerGroup: 5,
-    spaceBetween: 30,
+    // spaceBetween: 30,
     loop: true,
     navigation: {
         nextEl: "#scheduledRankContent .nextBtn",
@@ -121,7 +121,7 @@ var swiper04 = new Swiper("#scheduledRankContent.swiper.mySwiper", {
 var swiper05 = new Swiper("#dDayRankContent.swiper.mySwiper", {
     slidesPerView: 5,
     slidesPerGroup: 5,
-    spaceBetween: 30,
+    // spaceBetween: 30,
     loop: true,
     navigation: {
         nextEl: "#dDayRankContent .nextBtn",

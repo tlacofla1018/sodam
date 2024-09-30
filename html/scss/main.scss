@@ -42,19 +42,348 @@ article{
 
 // 메인 인덱스 페이지
 #mainMain{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 120px;
+    transform: translateY(-60px);
+    margin: 0 0 -60px;
     // 섹션1. 메인배너
     #mainBannerBox{
         width: 100%;
         max-width: 1920px;
-        height: 800px;
-        transform: translateY(-60px);
-        margin-bottom: -60px;
-        background-color: #333;
+        #mainBanner{
+            position: relative;
+            .swiper-wrapper{
+                .swiper-slide{
+                    a{
+                        img{
+                            display: block;
+                            width: 100%;
+                            height: 800px;
+                            object-fit: cover;
+                        }
+                    }
+                }
+            }
+            // 스와이퍼 페이지네이션
+            .swiper-button{
+                opacity: 0;
+                width: 2.625rem;
+                height: 2.625rem;
+                border-radius: 50%;
+                background-color: rgba(0, 0, 0, 0.2);
+                position: absolute;
+                top: calc(400px - 21px);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                z-index: 2;
+                button{
+                    margin-left: -6px;
+                    &::after{
+                        content: "";
+                        display: block;
+                        width: 1rem;
+                        height: 1rem;
+                        border-top: solid 2px #fff;
+                        border-right: solid 2px #fff;
+                        transform: rotate(45deg);
+                    }
+                }
+            }
+            .swiper-button.nextBtn{
+                right: 12%;
+            }
+            .swiper-button.prevBtn{
+                left: 12%;
+                transform: rotate(180deg);
+            }
+            &:hover .swiper-button{
+                opacity: 1;
+            }
+        }
     }
     // 섹션2. 영화순위
     #movieRankBox{
         width: 100%;
         max-width: 1280px;
+        gap: 20px;
+        .contentsBox{
+            gap: 60px;
+            border-radius: 8px;
+            padding: 20px 30px;
+            background-color: #333;
+            #movieRank{
+                gap: 20px;
+                .rankTitle{
+                    gap: 20px;
+                    padding-left: 10px;
+                    li{
+                        button{
+                            text-align: center;
+                            line-height: 24px;
+                            box-sizing: border-box;
+                            color: #969696;
+                            font-size: 1rem;
+                            font-weight: 500;
+                            &.active{
+                                background-color: #333;
+                                color: #fff;
+                            }
+                        }
+                    }
+                }
+                .rankContent{
+                    > div{
+                        position: relative;
+                        .swiper.mySwiper{
+                            width: 100%;
+                            height: 100%;
+                            > .swiper-wrapper{
+                                width: 100%;
+                                display: flex;
+                                > .swiper-slide.swiper-slide-active{
+                                    margin: 0;
+                                }
+                                > .swiper-slide{
+                                    width: 100%;
+                                    display: flex;
+                                    flex-direction: column;
+                                    .topContent{
+                                        width: 232px;
+                                        display: block;
+                                        position: relative;
+                                        padding-bottom: 20px;
+                                        &::before{
+                                            content: '';
+                                            display: block;
+                                            position: absolute;
+                                            left: 0;
+                                            top: 0;
+                                            width: 100%;
+                                            height: 330px;
+                                            border-radius: 8px;
+                                            background-color: transparent;
+                                            transition: all 0.4s ease-in-out;
+                                            z-index: 1;
+                                        }
+                                        &:hover::before{
+                                            background-color: rgb(0, 0, 0, .6);
+                                            border: solid 1px rgb(229, 9, 20, .6);
+                                        }
+                                        > img{
+                                            display: block;
+                                            width: 100%;
+                                            height: 330px;
+                                            object-fit: cover;
+                                            border-radius: 8px;
+                                            border: solid 1px rgb(255, 255, 255, .1);
+                                            box-sizing: border-box;
+                                        }
+                                        .rankNumber{
+                                            font-family: "Roboto", sans-serif;
+                                            font-style: italic;
+                                            font-weight: 700;
+                                            font-size: 3rem;
+                                            line-height: 56px;
+                                            color: #fff;
+                                            position: absolute;
+                                            top: 294px;
+                                            left: 0;
+                                            padding-left: 12px;
+                                            width: 100%;
+                                            display: block;
+                                            z-index: 3;
+                                            &::after{
+                                                content: '';
+                                                display: block;
+                                                width: 100%;
+                                                height: 50px;
+                                                position: absolute;
+                                                bottom: 20px;
+                                                left: 0;
+                                                border-radius: 8px;
+                                                background: linear-gradient(to top, rgb(0, 0, 0, .6), rgb(0, 0, 0, 0));
+                                                z-index: -1;
+                                            }
+                                        }
+                                        .likeBtn{
+                                            position: absolute;
+                                            top: 10px;
+                                            right: 10px;
+                                            display: none;
+                                            align-items: center;
+                                            justify-content: center;
+                                            width: 36px;
+                                            height: 36px;
+                                            // background-color: rgb(0, 0, 0, 0.6);
+                                            border-radius: 50%;
+                                            cursor: pointer;
+                                            transition: all 0.4s ease-in-out;
+                                            z-index: 3;
+                                            > img{
+                                                display: block;
+                                                width: 24px;
+                                                height: 24px;
+                                                object-fit: cover;
+                                            }
+                                        }
+                                        &:hover .likeBtn{
+                                            display: flex;
+                                        }
+                                        .hoverBtn{
+                                            display: none;
+                                            flex-direction: column;
+                                            gap: 10px;
+                                            justify-content: center;
+                                            align-items: center;
+                                            position: absolute;
+                                            top: 0;
+                                            left: 0;
+                                            width: 100%;
+                                            height: 330px;
+                                            transition: all 0.4s ease-in-out;
+                                            z-index: 2;
+                                            a{
+                                                display: block;
+                                                font-weight: 500;
+                                                line-height: 26px;
+                                                padding: 6px 66px;
+                                                color: #fff;
+                                                border: solid 1px #FFF;
+                                                border-radius: 8px;
+                                                &:hover{
+                                                    background-color: #fff;
+                                                    color: #333;
+                                                }
+                                            }
+                                        }
+                                        &:hover .hoverBtn{
+                                            display: flex;
+                                        }
+                                    }
+                                    > a{
+                                        color: #fff;
+                                        width: 232px;
+                                        display: block;
+                                        .middleContent{
+                                            display: flex;
+                                            gap: 6px;
+                                            justify-content: center;
+                                            align-items: center;
+                                            margin-bottom: 6px;
+                                            img{
+                                                display: inline-block;
+                                                width: 24px;
+                                                height: 24px;
+                                                object-fit: cover;
+                                            }
+                                            strong{
+                                                // @include movieName;
+                                                display: inline-block;
+                                            }
+                                        }
+                                        .bottomContent{
+                                            display: flex;
+                                            gap: 6px;
+                                            justify-content: center;
+                                            align-items: center;
+                                            > span{
+                                                display: flex;
+                                                gap: 4px;
+                                                align-items: center;
+                                                &::after{
+                                                    // @include afterLine14px;
+                                                    margin-left: 2px;
+                                                }
+                                                &:last-child::after{
+                                                    display: none;
+                                                }
+                                                span{
+                                                    display: inline-block;
+                                                    font-size: 14px;
+                                                    line-height: 20px;
+                                                }
+                                                .numText{
+                                                    display: inline-block;
+                                                    font-weight: 600;
+                                                    font-size: 14px;
+                                                    line-height: 20px;
+                                                }
+                                                img{
+                                                    display: inline-block;
+                                                    width: 14px;
+                                                    height: 14px;
+                                                    object-fit: cover;
+                                                }
+                                            }
+                                        }
+                                    }
+                                    .adClock{
+                                        display: flex;
+                                        align-items: center;
+                                        justify-content: flex-end;
+                                        gap: 4px;
+                                        color: #fff;
+                                        padding-right: 8px;
+                                        img{
+                                            display: block;
+                                            width: 14px;
+                                            height: 14px;
+                                            object-fit: cover;
+                                        }
+                                        span{
+                                            display: block;
+                                            font-size: 12px;
+                                            line-height: 20px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        // 스와이퍼 페이지네이션
+                        .swiper-button{
+                            width: 42px;
+                            height: 42px;
+                            border-radius: 50%;
+                            background-color: rgba(0, 0, 0, 0.2);
+                            position: absolute;
+                            top: calc(165px - 21px);
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            z-index: 2;
+                            img{
+                                width: 32px;
+                                height: 32px;
+                            }
+                        }
+                        .swiper-button.nextBtn{
+                            right: -21px;
+                            transform: rotate(180deg);
+                        }
+                        .swiper-button.prevBtn{
+                            left: -21px;
+                        }
+                        .swiper-pagination-bullet {
+                            width: 14px;
+                            height: 14px;
+                            text-align: center;
+                            line-height: 20px;
+                            font-size: 12px;
+                            color: #000;
+                            opacity: 1;
+                            background: rgba(0, 0, 0, 0.2);
+                        }
+                        .swiper-pagination-bullet-active {
+                            color: #fff;
+                            background: #007aff;
+                        }
+                    }
+                }
+            }
+        }
     }
     // 섹션3. 관람평
     #reviewBox{
