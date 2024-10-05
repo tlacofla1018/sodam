@@ -24,8 +24,8 @@ var swiper02 = new Swiper("#nowRankContent.swiper.mySwiper", {
     // spaceBetween: 10,
     loop: true,
     navigation: {
-        nextEl: ".nextBtn",
-        prevEl: ".prevBtn",
+        nextEl: "#nowRankContentBox .nextBtn",
+        prevEl: "#nowRankContentBox .prevBtn",
     },
     breakpoints: {
         1220: {
@@ -57,8 +57,8 @@ var swiper03 = new Swiper("#recentRankContent.swiper.mySwiper", {
     // spaceBetween: 30,
     loop: true,
     navigation: {
-        nextEl: "#recentRankContent .nextBtn",
-        prevEl: "#recentRankContent .prevBtn",
+        nextEl: "#recentRankContentBox .nextBtn",
+        prevEl: "#recentRankContentBox .prevBtn",
     },
     breakpoints: {
         1220: {
@@ -91,8 +91,8 @@ var swiper04 = new Swiper("#scheduledRankContent.swiper.mySwiper", {
     // spaceBetween: 30,
     loop: true,
     navigation: {
-        nextEl: "#scheduledRankContent .nextBtn",
-        prevEl: "#scheduledRankContent .prevBtn",
+        nextEl: "#scheduledRankContentBox .nextBtn",
+        prevEl: "#scheduledRankContentBox .prevBtn",
     },
     breakpoints: {
         1220: {
@@ -124,8 +124,8 @@ var swiper05 = new Swiper("#dDayRankContent.swiper.mySwiper", {
     // spaceBetween: 30,
     loop: true,
     navigation: {
-        nextEl: "#dDayRankContent .nextBtn",
-        prevEl: "#dDayRankContent .prevBtn",
+        nextEl: "#dDayRankContentBox .nextBtn",
+        prevEl: "#dDayRankContentBox .prevBtn",
     },
     breakpoints: {
         1220: {
@@ -151,14 +151,35 @@ var swiper05 = new Swiper("#dDayRankContent.swiper.mySwiper", {
     },
 });
 
-$(".custom-carousel").owlCarousel({
-    autoWidth: true,
-    loop: true
+// 모든 하트 요소를 선택
+const hearts = document.querySelectorAll('.likeBtn img');
+
+// 각 하트에 클릭 이벤트 리스너 추가
+hearts.forEach(heart => {
+    heart.addEventListener('click', (event) => {
+        const currentHeart = event.target; // 클릭한 하트 요소
+        
+        // 현재 하트의 src 속성을 확인하고 변경
+        if (currentHeart.src.includes('heartIcon.svg')) {
+            currentHeart.src = '/img/icon/fullHeartIcon.svg'; // 채워진 하트 이미지로 변경
+        } else {
+            currentHeart.src = '/img/icon/heartIcon.svg'; // 빈 하트 이미지로 변경
+        }
+    });
 });
-$(document).ready(function () {
-    $(".custom-carousel .item").click(function () {
-        $(".custom-carousel .item").not($(this)).removeClass("previewHover");
-        $(this).toggleClass("previewHover");
+
+
+// 모든 li 요소를 선택
+const listItems = document.querySelectorAll('.previewContent .item');
+
+// 각 li에 hover 이벤트 추가
+listItems.forEach(item => {
+    item.addEventListener('mouseover', () => {
+        // 먼저 모든 li에서 active 클래스를 제거
+        listItems.forEach(li => li.classList.remove('active'));
+
+        // 현재 마우스를 올린 li에 active 클래스 추가
+        item.classList.add('active');
     });
 });
 

@@ -1,12 +1,4 @@
 // 공통 클래스
-section{
-    border: solid 1px #fff;
-    box-sizing: border-box;
-}
-article{
-    border: solid 1px #333;
-    box-sizing: border-box;
-}
 .titleBox{
     .contentTitle01{
         color: #fff;
@@ -282,6 +274,10 @@ article{
                                             strong{
                                                 // @include movieName;
                                                 display: inline-block;
+                                                max-width: 100%;          /* 텍스트가 표시될 최대 너비 */
+                                                white-space: nowrap;    /* 텍스트를 한 줄로 표시 */
+                                                overflow: hidden;       /* 넘치는 텍스트를 숨김 */
+                                                text-overflow: ellipsis; /* 말줄임표 처리 */
                                             }
                                         }
                                         .bottomContent{
@@ -389,40 +385,391 @@ article{
     #reviewBox{
         width: 100%;
         max-width: 1280px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        #reviewList{
+            display: flex;
+            gap: 16px;
+            > li{
+                display: flex;
+                justify-content: space-between;
+                width: 416px;
+                height: 228px;
+                border-radius: 8px;
+                padding: 14px 16px;
+                border: solid 1px rgb(255, 255, 255, .1);
+                box-sizing: border-box;
+                &:hover{
+                    background-color: rgba(255, 255, 255, .2);
+                    border: solid 1px rgb(229, 9, 20, .6);
+                }
+                .reviewLeft{
+                    position: relative;
+                    display: block;
+                    width: 140px;
+                    height: 200px;
+                    .reviewMovieName{
+                        display: flex;
+                        gap: 4px;
+                        align-items: center;
+                        padding: 6px;
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        width: 100%;
+                        z-index: 1;
+                        img{
+                            width: 14px;
+                            height: 14px;
+                            object-fit: cover;
+                        }
+                        span{
+                            font-size: 1rem;
+                            color: #fff;
+                        }
+                    }
+                    .reviewImg{
+                        position: relative;
+                        display: block;
+                        width: 140px;
+                        height: 200px;
+                        img{
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                            border-radius: 8px;
+                        }
+                        &::after{
+                            content: '';
+                            display: block;
+                            width: 100%;
+                            height: 40px;
+                            bottom: 0;
+                            left: 0;
+                            position: absolute;
+                            border-radius: 8px;
+                            background: linear-gradient(to top, rgb(0, 0, 0, .6), rgb(0, 0, 0, 0));
+                        }
+                    }
+                }
+                .reviewText{
+                    width: 228px;
+                    height: 190px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    color: #fff;
+                    .text01{
+                        display: flex;
+                        flex-direction: column;
+                        gap: 10px;
+                        .userName{
+                            font-size: 1rem;
+                            font-weight: 600;
+                        }
+                        .text{
+                            display: flex;
+                            flex-direction: column;
+                            gap: 4px;
+                            .textTitle{
+                                font-size: 1rem;
+                                font-weight: 600;
+                            }
+                            .textcontent{
+                                font-size: 1rem;
+                            }
+                        }
+                    }
+                    .text02{
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: flex-end;
+                        gap: 10px;
+                        .reviewTag{
+                            display: flex;
+                            gap: 4px;
+                            justify-content: flex-end;
+                            li{
+                                display: flex;
+                                border: solid 1px #fff;
+                                border-radius: 20px;
+                                padding: 2px 6px;
+                                span{
+                                    display: block;
+                                    font-size: 14px;
+                                    font-weight: 400;
+                                    line-height: 16px;
+                                }
+                            }
+                        }
+                        .reviewNum{
+                            display: flex;
+                            align-content: center;
+                            justify-content: flex-end;
+                            gap: 4px;
+                            padding: 0 6px;
+                            img{
+                                width: 14px;
+                                height: 14px;
+                                object-fit: cover;
+                            }
+                            strong{
+                                line-height: 14px;
+                                font-size: .875rem;
+                                font-weight: 600;
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
-    // 섹션4. 광고배너1
+    // 섹션4,7. 광고배너
     #middleBannerBox{
         width: 100%;
         max-width: 1920px;
-        height: 180px;
-        background-color: #333;
+        height: 140px;
+        #middleBanner.swiper.mySwiper{
+            width: 100%;
+            height: 100%;
+            .swiper-wrapper{
+                .swiper-slide{
+                    a{
+                        img{
+                            display: block;
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                        }
+                    }
+                }
+            }
+        }
     }
     // 섹션5. 이벤트
     #eventBox{
         width: 100%;
         max-width: 1280px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        .eventContentBox{
+            display: flex;
+            .eventImg{
+                span{
+                    img{
+                        display: block;
+                        width: 640px;
+                        height: 330px;
+                        object-fit: cover;
+                        border-radius: 8px;
+                        border: solid 1px rgb(255, 255, 255, .1);
+                        box-sizing: border-box;
+                    }
+                }
+            }
+            #topBox{
+                width: 640px;
+                display: flex;
+                flex-direction: column;
+                ul{
+                    li{
+                        width: 100%;
+                        a{
+                            color: #969696;
+                            display: flex;
+                            gap: 10px;
+                            padding: 0 20px;
+                            margin: 0 10px;
+                            box-sizing: border-box;
+                            border-bottom: solid 1px #ccc;
+                            span{
+                                display: block;
+                                line-height: 66px;
+                            }
+                            .eventTitle{
+                                width: 100px;
+                                font-size: 1rem;
+                                font-weight: 500;
+                            }
+                            .eventContent{
+                                font-size: 1rem;
+                                display: flex;
+                                align-items: center;
+                                gap: 10px;
+                                &::before{
+                                    display: block;
+                                    content: '';
+                                    width: 1px;
+                                    height: 16px;
+                                    background-color: #ccc;
+                                }
+                            }
+                            &.active{
+                                color: #FFF;
+                            }
+                        }
+                        &:last-child a{
+                            border-bottom: 0;
+                        }
+                    }
+                }
+            }
+        }
     }
     // 섹션6. 시사회
     #previewBox{
         width: 100%;
         max-width: 1280px;
-    }
-    // 섹션7. 광고배너2
-    #middleBannerBox{
-        width: 100%;
-        max-width: 1920px;
-        height: 180px;
-        background-color: #333;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        .previewContent{
+            width: 100%;
+            max-width: 1280px;
+            display: flex;
+            justify-content: space-between;
+            li{
+                width: 16%;
+                transition: all 0.6s ease-in-out;
+                &.active{
+                    width: 50%;
+                }
+                a{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    gap: 10px;
+                    img{
+                        width: 100%;
+                        height: 300px;
+                        object-fit: cover;
+                        border-radius: 8px;
+                        border: solid 1px rgb(255, 255, 255, .1);
+                    }
+                    span{
+                        color: #fff;
+                        text-align: center;
+                        width: 100%;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                    }
+                }
+            }
+        }
     }
     // 섹션8. 스토어
     #storeBox{
         width: 100%;
         max-width: 1280px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        #storeList{
+            display: flex;
+            gap: 16px;
+            .storeContent{
+                position: relative;
+                overflow: hidden;
+                width: 416px;
+                height: 228px;
+                border: solid 1px rgb(255, 255, 255, .1);
+                border-radius: 8px;
+                &:hover{
+                    border: solid 1px rgb(229, 9, 20, .6);
+                }
+                &:hover img{
+                    transform: scale(1.1);
+                }
+                .region{
+                    background-color: rgb(229, 9, 20, .6);
+                    color: #fff;
+                    padding: 2px 12px;
+                    border-radius: 14px;
+                    position: absolute;
+                    top: 10px;
+                    right: 10px;
+                }
+                .storeText{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    width: 100%;
+                    box-sizing: border-box;
+                    z-index: 3;
+                    background-color: rgb(0, 0, 0, .6);
+                    span{
+                        color: #fff;
+                    }
+                    .storeTitle{
+                        display: flex;
+                        align-items: baseline;
+                        gap: 6px;
+                        line-height: 40px;
+                        padding: 0 14px;
+                        box-sizing: border-box;
+                        .itemName{
+                            font-size: 1.125rem;
+                            font-weight: 500;
+                        }
+                    }
+                    .storeInfo{
+                        font-size: .875rem;
+                        text-align: center;
+                    }
+                }
+                img{
+                    width: 416px;
+                    height: 228px;
+                    object-fit: cover;
+                    box-sizing: border-box;
+                    transition: all .8s ease-in-out;
+                }
+            }
+        }
     }
     // 섹션9. 인스타그램
     #instagramBox{
         width: 100%;
         max-width: 1280px;
+        .logo-slider{
+            overflow: hidden;
+            position: relative;
+            width: 100%;
+            .logo-slide-track01{
+                animation: logo-scroll01 60s linear infinite;
+                display: flex;
+                gap: 20px;
+                width: calc(200px * 10);
+                animation-duration: 30s;
+                animation-iteration-count: infinite;
+                .slide{
+                    height: 200px;
+                    width: 200px;
+                }
+            }
+            .logo-slide-track02{
+                animation: logo-scroll02 60s linear infinite;
+                display: flex;
+                gap: 20px;
+                width: calc(200px * 10);
+                animation-duration: 30s;
+                animation-iteration-count: infinite;
+                .slide{
+                    height: 200px;
+                    width: 200px;
+                }
+            }
+        }
     }
     // 섹션10. 공지,FAQ,Contact
     #noticeFnqContactBox{
@@ -431,8 +778,82 @@ article{
         article{
             width: 33.333%;
         }
-        #noticeBox{}
-        #faqBox{}
-        #contactBox{}
+        #noticeBox{
+            width: 33.333%;
+            max-width: 640px;
+            box-sizing: border-box;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            background-color: #191919;
+            padding: 30px;
+            ul{
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                li{
+                    a{
+                        display: flex;
+                        justify-content: space-between;
+                        color: #fff;
+                        span{
+                            display: block;
+                            line-height: 30px;
+                        }
+                    }
+                }
+            }
+        }
+        #faqBox{
+            width: 33.333%;
+            max-width: 640px;
+            box-sizing: border-box;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            background-color: #333;
+            padding: 30px;
+            ul{
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                li{
+                    a{
+                        display: flex;
+                        justify-content: space-between;
+                        color: #fff;
+                        span{
+                            display: block;
+                            line-height: 30px;
+                        }
+                    }
+                }
+            }
+        }
+        #contactBox{
+            width: 33.333%;
+            max-width: 640px;
+            box-sizing: border-box;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            background-color: #191919;
+            padding: 30px;
+            .contentsBox{
+                p{
+                    color: #fff;
+                }
+                ul{
+                    li{
+                        a{
+                            color: #fff;
+                        }
+                    }
+                }
+            }
+        }
     }
 }
