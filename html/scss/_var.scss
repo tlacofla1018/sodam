@@ -11,3 +11,26 @@
     transform: rotate(#{$angle}deg);
     display: block;
 }
+
+
+/* Main Title H2 */
+@mixin mainTitleH2Mixin ($color: #fff) {
+    font-size: 1.5rem; // 24px
+    font-weight: 700; // Bold
+    line-height: 2rem; // 32px
+    color: $color;
+}
+/* Main Title P */
+@mixin mainTitlePMixin ($color: #fff) {
+    font-size: 1rem; // 16px
+    font-weight: 500; // Medium
+    line-height: 1.5rem; // 24px
+    color: $color;
+}
+/* Main Title P */
+@mixin mainTitlePMixin ($color: #fff) {
+    font-size: 1rem; // 16px
+    font-weight: 500; // Medium
+    line-height: 1.5rem; // 24px
+    color: $color;
+}
