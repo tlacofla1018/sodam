@@ -21,6 +21,8 @@
     <link rel="stylesheet" href="/css/swiper-bundle.css"/>
     <!-- // JavaScript Full SDK 2.7.2(2024.5.22) 최신버전 업데이트 확인 필요함 -->
     <script src="https://t1.kakaocdn.net/kakao_js_sdk/2.7.2/kakao.min.js" integrity="sha384-TiCUE00h649CAMonG018J2ujOgDKW/kVWlChEuu4jK2vxfAAD0eZxzCKakxg55G4" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://static.nid.naver.com/js/naverLogin_implicit-1.0.3.js" charset="utf-8"></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
     <link rel="stylesheet" href="/css/common.css">
     <link rel="stylesheet" href="/scss/layout.min.css?var=<?php echo time(); ?>">
     <link rel="stylesheet" href="/scss/footer.min.css?var=<?php echo time(); ?>">
@@ -29,6 +31,7 @@
     <link rel="stylesheet" href="/scss/movie.min.css?var=<?php echo time(); ?>">
     <link rel="stylesheet" href="/scss/event.min.css?var=<?php echo time(); ?>">
     <link rel="stylesheet" href="/scss/media.min.css?var=<?php echo time(); ?>">
+    <link rel="stylesheet" href="/scss/booking.min.css?var=<?php echo time(); ?>">
     <style>
         /* Noto Sans KR 구글 폰트 */
         @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
@@ -37,6 +40,7 @@
     </style>
 </head>
 <body>
+    <div id="topContent"></div>
     <!------- Top Banner ------->
     <section class="topBanner">
         <div class="adCloseBtnBox">
@@ -64,28 +68,28 @@
         <nav class="gnb mx-auto">
             <ul class="gnbDepth01 d-flex justify-content-center align-items-center mx-auto">
                 <li>
-                    <a href="#">예매</a>
+                    <a href="/sub/booking.html">예매</a>
                     <ul class="gnbDepth02">
                         <li>
                             <span>
-                                <a href="#">예매하기</a>
+                                <a href="/sub/booking.html">예매하기</a>
                             </span>
                         </li>
                         <li>
                             <span>
-                                <a href="#">상영시간표</a>
+                                <a href="/sub/timeTable.html">상영시간표</a>
                             </span>
                         </li>
                         <li>
                             <span>
-                                <a href="#">할인안내</a>
+                                <a href="/sub/discountInfo.html">할인안내</a>
                             </span>
                         </li>
                     </ul>
                 </li>
                 <li>
                     <a href="/sub/movie.html">영화</a>
-                    <ul class="gnbDepth02">
+                    <ul class="gnbDepth02 d-none">
                         <li>
                             <span>
                                 <a href="#">현재상영작</a>
@@ -99,46 +103,46 @@
                     </ul>
                 </li>
                 <li>
-                    <a href="#">영화관</a>
+                    <a href="/sub/branchInfo.html">영화관</a>
                     <ul class="gnbDepth02">
                         <li>
                             <span>
-                                <a href="#">서울</a>
+                                <a href="/sub/branchInfo_S.html">서울</a>
                             </span>
                         </li>
                         <li>
                             <span>
-                                <a href="#">경기/인천</a>
+                                <a href="/sub/branchInfo_GI.html">경기/인천</a>
                             </span>
                         </li>
                         <li>
                             <span>
-                                <a href="#">충청/대전</a>
+                                <a href="/sub/branchInfo_CD.html">충청/대전</a>
                             </span>
                         </li>
                         <li>
                             <span>
-                                <a href="#">전라/광주</a>
+                                <a href="/sub/branchInfo_JG.html">전라/광주</a>
                             </span>
                         </li>
                         <li>
                             <span>
-                                <a href="#">경북/대구</a>
+                                <a href="/sub/branchInfo_GD.html">경북/대구</a>
                             </span>
                         </li>
                         <li>
                             <span>
-                                <a href="#">경남/울산/부산</a>
+                                <a href="/sub/branchInfo_GUB.html">경남/울산/부산</a>
                             </span>
                         </li>
                         <li>
                             <span>
-                                <a href="#">강원</a>
+                                <a href="/sub/branchInfo_G.html">강원</a>
                             </span>
                         </li>
                         <li>
                             <span>
-                                <a href="#">제주</a>
+                                <a href="/sub/branchInfoJ.html">제주</a>
                             </span>
                         </li>
                     </ul>
@@ -163,7 +167,7 @@
                         </li>
                         <li>
                             <span>
-                                <a href="#">제휴할인</a>
+                                <a href="/sub/eventCard.html">제휴할인</a>
                             </span>
                         </li>
                         <li>
@@ -174,11 +178,11 @@
                     </ul>
                 </li>
                 <li>
-                    <a href="#">스토어</a>
+                    <a href="/sub/store.html">스토어</a>
                     <ul class="gnbDepth02">
                         <li>
                             <span>
-                                <a href="#">베스트</a>
+                                <a href="/sub/store_hot.html">베스트</a>
                             </span>
                         </li>
                         <li>

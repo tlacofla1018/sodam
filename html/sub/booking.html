@@ -1,0 +1,52 @@
+<?php include_once("../layout/header.html"); ?>
+
+
+<main id="subBooking" class="d-flex mx-auto">
+    <div class="sidebars-container">
+        <div class="sidebar">
+            <h2>지역 선택하기</h2>
+            <ul id="region-list">
+                <li onclick="showTheaters('서울', this)" class="selected">서울</li>
+                <li onclick="showTheaters('부산', this)">부산</li>
+                <li onclick="showTheaters('인천', this)">인천</li>
+            </ul>
+        </div>
+    
+        <div class="sidebar" id="theater-container">
+            <h2>영화관 선택하기</h2>
+            <ul id="theater-list"></ul>
+        </div>
+    
+        <div class="sidebar" id="movies">
+            <h2>상영 중인 영화</h2>
+            <ul id="movie-list"></ul>
+        </div>
+    </div>
+    
+    <div class="content">
+        <h3>영화 선택하기</h3>
+        <p>지역, 영화관, 영화를 차례로 선택하세요.</p>
+        
+        <div class="selection-results">
+            <h4>선택 결과</h4>
+            <p id="selected-region">지역: 서울</p>
+            <p id="selected-theater">영화관: CGV</p>
+            <p id="selected-movie">영화: 영화1</p>
+            <p id="selected-date">날짜: 오늘</p>
+        </div>
+    
+        <h4>날짜 선택하기</h4>
+        <div class="calendar" id="calendar"></div>
+    
+        <div class="time-schedule" id="time-schedule">
+            <h4>상영 시간</h4>
+            <ul id="time-list"></ul>
+        </div>
+
+        <!-- 다음 버튼 -->
+        <button class="next-button" id="next-button" onclick="goToNext()">다음</button>
+    </div>
+</main>
+
+
+<?php include_once("../layout/footer.html"); ?>

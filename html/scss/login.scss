@@ -1,32 +1,33 @@
-#loginMain{
-    display: flex;
-    flex-direction: column;
+#subLoginMain{
     gap: 60px;
-    width: 1280px;
-    margin: 0 auto;
-    padding: 100px 0;
+    width: 100%;
+    max-width: 580px;
     #loginTabBox{
-        display: flex;
-        justify-content: space-between;
+        width: 100%;
         h2{
             color: #fff;
+            font-size: 1.5rem;
+            font-weight: 700;
+            line-height: 2rem;
         }
         #loginTab{
             .nav-item{
                 .nav-link{
+                    line-height: 24px;
                     color: #969696;
-                }
-                .active{
-                    color: #fff;
+                    font-size: 1rem;
+                    font-weight: 400;
+                    &.active{
+                        font-size: 1.125rem;
+                        font-weight: 500;
+                        color: #fff;
+                    }
                 }
             }
         }
     }
     #loginContentBox{
-        width: 60%;
-        margin: 0 auto;
-        display: flex;
-        flex-direction: column;
+        width: 100%;
         gap: 20px;
         .tab-content{
             width: 100%;

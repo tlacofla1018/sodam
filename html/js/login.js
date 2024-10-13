@@ -1,3 +1,13 @@
+<script type="text/javascript">
+var naver_id_login = new naver_id_login("YOUR_CLIENT_ID", "YOUR_CALLBACK_URL");
+var state = naver_id_login.getUniqState();
+naver_id_login.setButton("white", 2,40);
+naver_id_login.setDomain("YOUR_SERVICE_URL");
+naver_id_login.setState(state);
+naver_id_login.setPopup();
+naver_id_login.init_naver_id_login();
+</script>
+
 // JavaScript 초기화 함수 및 초기화 확인
 Kakao.init('cb34b5727280769c98e279647531734a'); // [내 애플리케이션] > [앱 키]에서 확인한 JavaScript Key 할당
 Kakao.isInitialized(); // true 값이 나와야 함

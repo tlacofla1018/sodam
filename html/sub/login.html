@@ -1,11 +1,11 @@
 <?php include_once("../layout/header.html"); ?>
 
 
-<main id="loginMain">
-    <div id="loginTabBox">
+<main id="subLoginMain" class="d-flex flex-column mx-auto">
+    <div id="loginTabBox" class="d-flex justify-content-between align-items-center">
         <h2>로그인</h2>
         <!-- Nav tabs -->
-        <ul id="loginTab" class="nav nav-underline justify-content-center" role="tablist">
+        <ul id="loginTab" class="nav nav-underline" role="tablist">
             <li class="nav-item" role="presentation">
                 <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#member" type="button" role="tab" aria-controls="home" aria-selected="true">회원 로그인</button>
             </li>
@@ -16,12 +16,12 @@
                 <button class="nav-link" id="messages-tab" data-bs-toggle="tab" data-bs-target="#sns" type="button" role="tab" aria-controls="messages" aria-selected="false">SNS 로그인</button>
             </li>
             <li class="nav-item" role="presentation">
-                <button class="nav-link" id="messages-tab" data-bs-toggle="tab" data-bs-target="#qr" type="button" role="tab" aria-controls="messages" aria-selected="false">QR 로그인</button>
+                <!-- <button class="nav-link" id="messages-tab" data-bs-toggle="tab" data-bs-target="#qr" type="button" role="tab" aria-controls="messages" aria-selected="false">QR 로그인</button> -->
             </li>
         </ul>
     </div>
 
-    <div id="loginContentBox">
+    <div id="loginContentBox" class="d-flex flex-column mx-auto">
         <!-- Tab panes -->
         <div class="tab-content">
             <div class="tab-pane active" id="member" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
@@ -85,20 +85,15 @@
                                 <span><img src="" alt=""></span>
                                 <span>Google 계정으로 로그인</span>
                             </button>
-                            <button type="button">
-                                <span><img src="" alt=""></span>
-                                <span>Naver 계정으로 로그인</span>
-                            </button>
-                            <button type="button">
-                                <a id="kakao-login-btn" href="javascript:loginWithKakao()">
-                                    <img src="https://k.kakaocdn.net/14/dn/btroDszwNrM/I6efHub1SN5KCJqLm1Ovx1/o.jpg" width="222" alt="카카오 로그인 버튼" />
-                                </a>
-                            </button>
+                            <div id="naver_id_login"></div>
+                            <a id="kakao-login-btn" href="javascript:loginWithKakao()">
+                                <img src="/img/login/kakao_login_large_wide.png" alt="카카오 로그인 버튼" />
+                            </a>
                         </div>
                     </fieldset>
                 </form>
             </div>
-            <div class="tab-pane" id="qr" role="tabpanel" aria-labelledby="messages-tab" tabindex="0">
+            <!-- <div class="tab-pane" id="qr" role="tabpanel" aria-labelledby="messages-tab" tabindex="0">
                 <form action="">
                     <fieldset>
                         <legend>QR 로그인</legend>
@@ -113,7 +108,7 @@
                         </span>
                     </fieldset>
                 </form>
-            </div>
+            </div> -->
         </div>
 
         <ul class="joinSearchBtn">

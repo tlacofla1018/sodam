@@ -1,3 +1,7 @@
+.dN1770{
+    display: none;
+}
+
 // 미디어쿼리
 @media all {
     html,body {
@@ -12,6 +16,17 @@
             max-width: 1280px;
             .gnbDepth01{
                 width: 100%;
+            }
+        }
+    }
+}
+@media(max-width: 1770px) {
+    #mainMain{
+        #noticeFnqContactBox{
+            #contactBox{
+                .dN1770{
+                    display: block;
+                }
             }
         }
     }
@@ -99,34 +114,8 @@
             }
         }
     }
-    #mainMain{
-        #previewBox{
-            .previewContent{
-                display: flex;
-                flex-wrap: wrap;
-                li{
-                    width: 32%;
-                    &.previewHover{
-                        width: 100%;
-                        a{
-                            img{
-                                height: 300px;
-                            }
-                        }
-                    }
-                    a{
-                        img{
-                            height: 120px;
-                        }
-                    }
-                }
-            }
-        }
-    }
-    #footer{
-
-    }
 }
+
 @media (max-width: 990px) {
     #mainMain{
         transform: translateY(-56px);
@@ -154,6 +143,16 @@
                 }
             }
         }
+        #previewBox{
+            .previewContent{
+                li{
+                    width: 13%;
+                    &.active{
+                        width: 58%;
+                    }
+                }
+            }
+        }
         #noticeFnqBox{
             #noticeBox{
                 width: 100%;
@@ -168,6 +167,22 @@
         }
     }
 }
+
+@media (max-width: 990px) {
+    #mainMain{
+        #previewBox{
+            .previewContent{
+                li{
+                    width: 10%;
+                    &.active{
+                        width: 66%;
+                    }
+                }
+            }
+        }
+    }
+}
+
 @media (max-width: 880px) {
     #mainMain{
         #eventBox{
@@ -195,7 +210,6 @@
 @media (max-width: 768px) {
     #mainMain{
         #mainBannerBox{
-            height: 650px;
             #mainBanner{
                 width: 100%;
                 height: 100%;
@@ -209,6 +223,28 @@
                 }
             }
         }
+        #previewBox{
+            .previewContent{
+                li{
+                    width: 32%;
+                    a{
+                        img{
+                            width: 100%;
+                            height: 100px;
+                        }
+                    }
+                    &.active{
+                        width: 100%;
+                        a{
+                            img{
+                                width: 100%;
+                                height: 200px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
         #eventBox{
             .eventContentBox{
                 .eventImg{
@@ -216,23 +252,6 @@
                 }
                 #topBox{
                     width: 100%;
-                    .nav{
-                        .nav-item{
-                            .nav-link{
-                                // span{
-                                //     line-height: 40px;
-                                // }
-                                // &.active{
-                                //     span{
-                                //         line-height: 60px;
-                                //     }
-                                // }
-                                // .eventTitle{
-                                //     display: inline;
-                                // }
-                            }
-                        }
-                    }
                 }
             }
         }    

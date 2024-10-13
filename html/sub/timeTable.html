@@ -1,0 +1,57 @@
+<?php include_once("../layout/header.html"); ?>
+
+
+<main id="subsTimeTable">
+    <h1>영화 상영 시간표</h1>
+
+    <div class="container">
+        <div class="selection">
+            <div>
+                <h2>지역 선택</h2>
+                <div class="buttons" id="regions">
+                    <!-- 지역 버튼이 여기에 추가됩니다 -->
+                </div>
+            </div>
+            <div>
+                <h2>상영관 선택</h2>
+                <div class="buttons" id="theaters">
+                    <!-- 상영관 버튼이 여기에 추가됩니다 -->
+                </div>
+            </div>
+        </div>
+
+        <div class="calendar">
+            <div class="calendar-controls">
+                <button id="prevMonth">이전 달</button>
+                <h2 id="calendarTitle">날짜 선택</h2>
+                <button id="nextMonth">다음 달</button>
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>일</th>
+                        <th>월</th>
+                        <th>화</th>
+                        <th>수</th>
+                        <th>목</th>
+                        <th>금</th>
+                        <th>토</th>
+                    </tr>
+                </thead>
+                <tbody id="calendarBody">
+                    <!-- 달력 날짜가 여기에 추가됩니다 -->
+                </tbody>
+            </table>
+        </div>
+
+        <div class="movie-schedule" id="movieSchedule">
+            <h2>영화 상영 시간표</h2>
+            <div class="times" id="times">
+                <!-- 상영 시간이 여기에 추가됩니다 -->
+            </div>
+        </div>
+    </div>
+</main>
+
+
+<?php include_once("../layout/footer.html"); ?>

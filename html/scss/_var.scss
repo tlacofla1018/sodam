@@ -1,3 +1,5 @@
+// ----------------------- Mixin ---------------------------
+
 @mixin SwiperButtonDesign ($width: 2.625rem, $height: 2.625rem, $bgColor: rgba(0, 0, 0, 0.4)) {
     width: $width;
     height: $height;
@@ -34,3 +36,6 @@
     line-height: 1.5rem; // 24px
     color: $color;
 }
+
+
+// ----------------------- class ---------------------------

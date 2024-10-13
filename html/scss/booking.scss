@@ -1,0 +1,539 @@
+#subBooking {
+    width: 100%;
+    max-width: 1280px;
+    .sidebar {
+        width: 200px; /* 사이드바의 너비 */
+        background-color: #4CAF50;
+        color: white;
+        padding: 10px;
+        box-sizing: border-box;
+        overflow-y: auto; /* 내용이 넘칠 경우 스크롤 */
+        h2 {
+            text-align: center;
+        }
+        ul {
+            list-style-type: none; /* 기본 리스트 스타일 제거 */
+            padding: 0; /* 패딩 제거 */
+            li {
+                padding: 10px;
+                background-color: #6dbf76; /* 기본 선택 항목 색상 */
+                margin: 5px 0;
+                border-radius: 5px;
+                cursor: pointer;
+                transition: background-color 0.3s;
+                color: white; /* 글자색 흰색 */
+                &:hover {
+                    background-color: #5ca063; /* 마우스 오버 색상 */
+                }
+            }
+        }
+    }
+    
+    /* 선택된 항목 색상 */
+    .selected {
+        background-color: #3e7b4c; /* 선택된 항목 색상 */
+    }
+    
+    .content {
+        position: relative;
+        flex: 1; /* 나머지 공간을 채우기 위해 flex 사용 */
+        padding: 20px;
+        background-color: #f4f4f4;
+        box-sizing: border-box;
+        h3 {
+            text-align: center;
+        }
+        /* 선택 결과 스타일 */
+        .selection-results {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #4CAF50;
+            border-radius: 5px;
+            background-color: #e8f5e9;
+        }
+        .calendar {
+            margin-top: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+    }
+    
+    .calendar-day {
+        width: 40px;
+        height: 40px;
+        border: 1px solid #4CAF50;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 2px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        &:hover {
+            background-color: #4CAF50;
+            color: white;
+        }
+    }
+    
+    .selected-date {
+        background-color: #3e7b4c; /* 선택된 날짜 색상 */
+        color: white;
+    }
+    
+    .time-schedule {
+        margin-top: 20px;
+    }
+    
+    .time-schedule ul {
+        list-style-type: none; /* 기본 리스트 스타일 제거 */
+        padding: 0; /* 패딩 제거 */
+        li {
+            padding: 5px;
+            background-color: #d4edda; /* 시간 항목 색상 */
+            margin: 5px 0;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            &:hover {
+                background-color: #c3e6cb; /* 마우스 오버 색상 */
+            }
+        }
+    }
+    
+    .sidebars-container {
+        display: flex; /* 사이드바들을 수평으로 나열 */
+    }
+    /* 다음 버튼 스타일 */
+    .next-button {
+        position: absolute; /* 고정 위치 */
+        right: 20px;
+        bottom: 20px;
+        padding: 10px 20px;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        display: none; /* 초기에는 숨김 */
+        &:hover {
+            background-color: #5ca063; /* 마우스 오버 색상 */
+        }
+    }
+}
+
+#subMovieDiscount {
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    .tabs {
+        display: flex;
+        justify-content: center;
+        margin: 20px 0;
+        .tab {
+            color: #ccc;
+            font-weight: 400;
+            cursor: pointer;
+            margin: 0 5px;
+            &:hover {
+                color: #fff;
+            }
+            &.active {
+                color: #fff;
+                font-weight: 500;
+            }
+        }
+    }
+    .content {
+        display: none;
+        padding: 20px;
+        background-color: white;
+        border-radius: 5px;
+        &.active {
+            display: block;
+        }
+        .discount-info {
+            margin-bottom: 30px;
+            .card {
+                background-color: #fff;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+                padding: 15px;
+                margin-bottom: 15px;
+                transition: box-shadow 0.3s;
+                &:hover {
+                    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+                }
+            }
+        }
+        .terms {
+            background-color: #fff;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+    }
+    .contact {
+        background-color: #fff;
+        padding: 15px;
+        border-radius: 5px;
+        margin-bottom: 20px;
+    }
+}
+
+#subsTimeTable{
+    h1 {
+        text-align: center;
+        margin: 20px 0;
+        color: #fff;
+    }
+
+    .container {
+        max-width: 900px;
+        margin: 0 auto;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        .selection {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+            div {
+                width: 48%;
+                h2 {
+                    margin-bottom: 10px;
+                    color: #4CAF50;
+                }
+            }
+        }
+    }
+
+    .buttons {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .button {
+        padding: 10px;
+        background-color: #e0e0e0;
+        margin: 5px;
+        text-align: center;
+        border-radius: 5px;
+        cursor: pointer;
+        flex: 1 1 30%;
+        transition: background-color 0.3s;
+        &:hover {
+            background-color: #bdbdbd;
+        }
+    }
+
+    .selected {
+        background-color: #4CAF50 !important;
+        color: white;
+    }
+
+    .calendar {
+        margin: 20px 0;
+    }
+
+    .calendar h2 {
+        color: #4CAF50;
+        text-align: center;
+    }
+
+    .calendar table {
+        width: 100%;
+        border-collapse: collapse;
+        text-align: center;
+    }
+
+    .calendar th, .calendar td {
+        padding: 10px;
+        border: 1px solid #ddd;
+        cursor: pointer;
+    }
+
+    .calendar td:hover {
+        background-color: #f0f0f0;
+    }
+
+    .selected-date {
+        background-color: #4CAF50;
+        color: white;
+    }
+
+    .today {
+        background-color: #FFEB3B; /* 현재 날짜 배경색 */
+        color: black;
+    }
+
+    .calendar-controls {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+
+    .calendar-controls button {
+        padding: 10px;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+    .calendar-controls button:hover {
+        background-color: #388E3C;
+    }
+
+    .movie-schedule {
+        display: none;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .movie-schedule h2 {
+        color: #4CAF50;
+    }
+
+    .times {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .time {
+        padding: 10px 15px;
+        background-color: #e0e0e0;
+        margin: 5px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+    .time:hover {
+        background-color: #bdbdbd;
+    }
+}
+
+#branchInfo{
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    color: #fff;
+    .tabs {
+        display: flex;
+        flex-wrap: wrap;
+        cursor: pointer;
+        margin-bottom: 20px;
+        .tab {
+            padding: 10px 20px;
+            border: 1px solid transparent;
+            border-bottom: none;
+            transition: background-color 0.3s;
+            &.active {
+                border: 1px solid #ccc;
+                background-color: #fff;
+                color: #333;
+            }
+        }
+    }
+    .tab-content {
+        display: none;
+        margin-top: 20px;
+    }
+    .tab-content.active {
+        display: block;
+    }
+    .container {
+        display: flex;
+        align-items: center;
+    }
+    .branch-slider {
+        width: 60%;
+        overflow: hidden;
+        margin-right: 20px;
+        position: relative;
+    }
+    .branch-slider img {
+        width: 100%;
+        height: auto;
+        max-width: 100%;
+        border-radius: 10px;
+    }
+    .branch-info {
+        width: 40%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    .map {
+        width: 80%;
+        height: 300px;
+        margin: 20px auto;
+        border: 1px solid #ccc;
+    }
+}
+
+#subEventCard{
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    a{
+        color: #fff;
+    }
+    h1 {
+        text-align: center;
+        margin-bottom: 40px;
+    }
+    .card-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .card-container > li {
+        width: 25%;
+        margin-bottom: 2rem;
+        display: flex;
+        flex-direction: column;
+    }
+    .card {
+        background-color: #ccc;
+        border-radius: 100%;
+        width: 252px;
+        height: 252px;
+        margin: 0 auto;
+        position: relative;
+        display: block;
+    }
+    .card .cardImg {
+        position: absolute;
+        left: calc((100% - 159px) / 2);
+        top: 0;
+        width: 159px;
+        height: 100%;
+        border-radius: 4%;
+        display: block;
+        overflow: hidden;
+    }
+    .card .cardImgH {
+        position: absolute;
+        left: calc((100% - 159px) / 2);
+        top: 0;
+        width: 159px;
+        height: 100%;
+        border-radius: 4%;
+        display: block;
+        overflow: hidden;
+    }
+    .card .cardImgW {
+        position: absolute;
+        left: 0;
+        top: calc((100% - 159px) / 2);
+        width: 100%;
+        height: 159px;
+        border-radius: 4%;
+        display: block;
+        overflow: hidden;
+    }
+    .card .cardImg img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+    .card:hover .cardImg {
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    /* 빛반사 효과 */
+    .card .cardImg::before {
+        content: '';
+        position: absolute;
+        top: -50%;
+        left: -50%;
+        width: 200%;
+        height: 200%;
+        background: rgba(255, 255, 255, 0.1);
+        transform: rotate(45deg);
+        transition: transform 0.6s ease-in-out;
+        pointer-events: none;
+        opacity: 0;
+    }
+
+    .card:hover .cardImg::before {
+        opacity: 1;
+        transform: rotate(45deg) translate(200%, 200%);
+        animation: lightSweep 1s ease-in-out;
+    }
+
+    @keyframes lightSweep {
+        0% {
+            transform: rotate(45deg) translate(-200%, -200%);
+        }
+        100% {
+            transform: rotate(45deg) translate(200%, 200%);
+        }
+    }
+
+    .card-title {
+        font-size: 1.5em;
+        text-align: center;
+    }
+    .card-description {
+        font-size: 1em;
+        color: #ccc;
+        text-align: center;
+    }
+}
+
+/* 반응형 스타일 */
+@media (max-width: 1366px) {
+    #subBooking,
+    #subMovieDiscount {
+        width: 100%;
+        max-width: 1366px;
+        padding: 0 2.5rem;
+    }
+}
+@media (max-width: 991px) {
+    #subBooking,
+    #subMovieDiscount {
+        width: 100%;
+        max-width: 991px;
+        padding: 0 1rem;
+        flex-direction: column;
+        .sidebar{
+            width: 33.333%;
+        }
+    }
+}
+@media (max-width: 768px) {
+    #subMovieDiscount{
+        .tab {
+            padding: 10px;
+            font-size: 14px;
+        }
+    }
+}
+@media (max-width: 600px) {
+    #subBooking {
+        width: 100%;
+        max-width: 991px;
+        padding: 0 1rem;
+        flex-direction: column;
+        .sidebars-container{
+            display: flex;
+            flex-direction: column;
+            .sidebar{
+                width: 100%;
+            }
+        }
+    }
+}
