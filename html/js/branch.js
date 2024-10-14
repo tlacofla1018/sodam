@@ -26,15 +26,21 @@ $(document).ready(function() {
     });
 });
 
-// 지도 표시 (예: 구글 맵 API 사용)
-function initMap() {
-    const map = new google.maps.Map(document.getElementById("map"), {
-        center: { lat: 37.564, lng: 127.001 }, // 서울 강남의 위도, 경도
-        zoom: 15,
+kakao.maps.load(function() {
+    const container = document.getElementById('map');
+    const options = {
+        center: new kakao.maps.LatLng(37.564, 127.001), // 서울 강남의 위도, 경도
+        level: 3 // 지도의 확대 레벨
+    };
+
+    const map = new kakao.maps.Map(container, options);
+
+    // 마커 생성
+    const markerPosition = new kakao.maps.LatLng(37.564, 127.001);
+    const marker = new kakao.maps.Marker({
+        position: markerPosition
     });
-    const marker = new google.maps.Marker({
-        position: { lat: 37.564, lng: 127.001 },
-        map: map,
-        title: "서울 강남",
-    });
-}
+
+    // 지도에 마커를 표시
+    marker.setMap(map);
+});

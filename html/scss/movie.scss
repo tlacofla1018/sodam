@@ -360,6 +360,7 @@
                         }
                         > ul{
                             gap: 20px;
+                            justify-content: center;
                             li{
                                 padding-bottom: 20px;
                                 .topContent{
@@ -517,4 +518,18 @@
         }
     }
     #movieCommonBox{}
+}
+
+@media (max-width: 768px) {
+    #subMovieMain {
+        .subMovieTabContent{
+            > div {
+                .tabBTN1{
+                    position: relative;
+                    padding: 0;
+                    margin-bottom: 20px;
+                }
+            }        
+        }
+    }
 }

@@ -1,0 +1,95 @@
+<?php include_once("../layout/header.html"); ?>
+
+<main id="eventRegionMain">
+    <h1>지역별 시사회 및 무대인사</h1>
+
+    <!-- 지역 탭 메뉴 -->
+    <div class="tab-menu">
+        <button class="active" onclick="openEventRegionTab('seoul')">서울</button>
+        <button onclick="openEventRegionTab('busan')">부산</button>
+        <button onclick="openEventRegionTab('daejeon')">대전</button>
+        <button onclick="openEventRegionTab('gwangju')">광주</button>
+    </div>
+
+    <!-- 서울 이벤트 -->
+    <div id="seoul" class="tab-content active" style="display: block;">
+        <div class="event-container">
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="https://via.placeholder.com/300x400" alt="서울 시사회 포스터">
+                    </div>
+                    <div class="flip-card-back">
+                        <h2>서울 시사회 - 영화 "A"</h2>
+                        <p>날짜: 2024년 11월 10일</p>
+                        <p>시간: 오후 7시</p>
+                        <p>장소: 서울 코엑스 메가박스</p>
+                        <button>예매하기</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 부산 이벤트 -->
+    <div id="busan" class="tab-content" style="display: none;">
+        <div class="event-container">
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="https://via.placeholder.com/300x400" alt="부산 시사회 포스터">
+                    </div>
+                    <div class="flip-card-back">
+                        <h2>부산 무대인사 - 영화 "B"</h2>
+                        <p>날짜: 2024년 11월 15일</p>
+                        <p>시간: 오후 6시</p>
+                        <p>장소: 부산 롯데시네마</p>
+                        <button>예매하기</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 대전 이벤트 -->
+    <div id="daejeon" class="tab-content" style="display: none;">
+        <div class="event-container">
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="https://via.placeholder.com/300x400" alt="대전 시사회 포스터">
+                    </div>
+                    <div class="flip-card-back">
+                        <h2>대전 시사회 - 영화 "C"</h2>
+                        <p>날짜: 2024년 11월 20일</p>
+                        <p>시간: 오후 5시</p>
+                        <p>장소: 대전 CGV</p>
+                        <button>예매하기</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 광주 이벤트 -->
+    <div id="gwangju" class="tab-content" style="display: none;">
+        <div class="event-container">
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="https://via.placeholder.com/300x400" alt="광주 시사회 포스터">
+                    </div>
+                    <div class="flip-card-back">
+                        <h2>광주 무대인사 - 영화 "D"</h2>
+                        <p>날짜: 2024년 11월 25일</p>
+                        <p>시간: 오후 4시</p>
+                        <p>장소: 광주 메가박스</p>
+                        <button>예매하기</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<?php include_once("../layout/footer.html"); ?>

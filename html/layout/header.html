@@ -23,6 +23,7 @@
     <script src="https://t1.kakaocdn.net/kakao_js_sdk/2.7.2/kakao.min.js" integrity="sha384-TiCUE00h649CAMonG018J2ujOgDKW/kVWlChEuu4jK2vxfAAD0eZxzCKakxg55G4" crossorigin="anonymous"></script>
     <script type="text/javascript" src="https://static.nid.naver.com/js/naverLogin_implicit-1.0.3.js" charset="utf-8"></script>
     <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=cb34b5727280769c98e279647531734a&autoload=false"></script>
     <link rel="stylesheet" href="/css/common.css">
     <link rel="stylesheet" href="/scss/layout.min.css?var=<?php echo time(); ?>">
     <link rel="stylesheet" href="/scss/footer.min.css?var=<?php echo time(); ?>">
@@ -152,17 +153,17 @@
                     <ul class="gnbDepth02">
                         <li>
                             <span>
-                                <a href="#">영화별 이벤트</a>
+                                <a href="#" class="d-none">영화별 이벤트</a>
                             </span>
                         </li>
                         <li>
                             <span>
-                                <a href="#">시사회/무대인사</a>
+                                <a href="#" class="d-none">시사회/무대인사</a>
                             </span>
                         </li>
                         <li>
                             <span>
-                                <a href="#">인기 이벤트</a>
+                                <a href="/sub/event.html">인기 이벤트</a>
                             </span>
                         </li>
                         <li>
@@ -172,14 +173,14 @@
                         </li>
                         <li>
                             <span>
-                                <a href="#">지역별 이벤트</a>
+                                <a href="/sub/discountInfo.html">기타할인</a>
                             </span>
                         </li>
                     </ul>
                 </li>
                 <li>
                     <a href="/sub/store.html">스토어</a>
-                    <ul class="gnbDepth02">
+                    <ul class="gnbDepth02 d-none">
                         <li>
                             <span>
                                 <a href="/sub/store_hot.html">베스트</a>
